@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "Pages/homepage"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#7B8B6F",
+        "navigationBarTitleText": "憨狗糖 HanGouT",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json"
+}
