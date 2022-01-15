@@ -1,0 +1,8 @@
+<!--Pages/menu/menu.wxml-->
+<block>
+    <view class="bg">    
+        <view class="title">
+            憨狗糖HanGouT
+        </view>
+    </view>
+</block>

@@ -1,0 +1,13 @@
+<!--Pages/homepage.wxml-->
+<block>
+    <view class="Home">
+        <image src="../../asset/img/hangou1.png" mode="widthFix"></image>
+    </view>
+    <view class="Home">
+        <text class="font-diy">HanGouT</text>
+    </view>
+    <view style="padding: 1%;"></view>
+    <view class="Home">
+        <text class="font-diy">憨 狗 糖</text>
+    </view>
+</block>
