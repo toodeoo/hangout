@@ -5,4 +5,35 @@
             憨狗糖HanGouT
         </view>
     </view>
+    <view class="margin">
+    </view>
+</block>
+
+<block>
+    <view class="body">
+        <view style="padding: 0;margin: 0;height: 10px;"></view>
+        <view class="id">
+            <image src="../../asset/img/icon-id.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的账号</text>
+            <button>></button>
+        </view>
+
+        <view class="travel">
+            <image src="../../asset/img/icon-travel.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的行程</text>
+            <button>></button>
+        </view>
+
+        <view class="share">
+            <image src="../../asset/img/icon-share.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社区分享</text>
+            <button>></button>
+        </view>
+
+        <view class="travel">
+            <image src="../../asset/img/icon-bot.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;憨狗bot</text>
+            <button>></button>
+        </view>
+    </view>
 </block>

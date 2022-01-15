@@ -1,8 +1,8 @@
 {
     "pages": [
         "Pages/homepage/homepage",
-        "Pages/preparation/home/home",
-        "Pages/menu/menu"
+        "Pages/menu/menu",
+        "Pages/preparation/home/home"
     ],
     "window": {
         "backgroundTextStyle": "light",
