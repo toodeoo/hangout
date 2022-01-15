@@ -5,8 +5,8 @@
     padding: 0;
     background-color: #7B8B6F;
     position: relative;
-    height: 100px;
-    width: 90%;
+    height: 73px;
+    width: 88%;
 }
 
 .title{
@@ -16,5 +16,109 @@
     top: 20px;
     font-weight: bold;
     font-size: 36px;
-    color:white;
+    color:#F0EBE5;
+}
+
+.margin{
+    margin: 0;
+    padding: 2px;
+    background-color: #F0EBE5;
+    position: relative;
+    height: 1.2px;
+    width: 88%;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: #7B8B6F;
+    position: relative;
+    height: 1000px;
+    width: 88%;
+}
+
+button {
+    margin: 0;
+    padding-right: 10%;
+    background-color: inherit;
+    position: static;
+    color:#F0EBE5;
+    font-weight: bolder;
+    float: right;
+}
+ 
+button:after {
+    content: none;
+}
+ 
+button::after {
+    border: none;
+}
+
+.id{
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color:#F0EBE5;
+    text-align: center;
+}
+
+.id image{
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    left: 13%;
+    color:#F0EBE5;
+}
+
+.travel{
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color:#F0EBE5;
+    text-align: center;
+}
+
+.travel image{
+    width: 28px;
+    height: 34px;
+    color:#F0EBE5;
+    position: absolute;
+    left: 13%;
+}
+
+.share{
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color:#F0EBE5;
+    text-align: center;
+}
+
+.share image{
+    width: 30px;
+    height: 30px;
+    color:#F0EBE5;
+    position: absolute;
+    left: 13%;
+}
+
+.bot{
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color:#F0EBE5;
+    text-align: center;
+}
+
+.bot image{
+    width: 34px;
+    height: 30px;
+    color:#F0EBE5;
+    position: absolute;
+    left: 13%;
 }
