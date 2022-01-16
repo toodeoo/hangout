@@ -1,11 +1,11 @@
 {
     "pages": [
-        "Pages/HGBot/Rd/Rd",
-        "Pages/HGBot/Home/Home",
+        "Pages/homepage/homepage",
         "Pages/HGBot/Vote/Vote",
+        "Pages/HGBot/Home/Home",
+        "Pages/HGBot/Rd/Rd",
         "Pages/HGBot/Whisper/Whisper",
         "Pages/menu/menu",
-        "Pages/homepage/homepage",
         "Pages/preparation/home/home"
 
     ],

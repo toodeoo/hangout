@@ -1,5 +1,76 @@
 /* Pages/HGBot/Rd/Rd.wxss */
 
+.ques{
+    position: absolute; 
+    margin: 10px;
+    padding: 10px;
+    left: 11px;
+    top: 90px; 
+    font-size: 22px; 
+    text-align: center;
+    color: #000;
+    font-size: 22px; 
+}
+
+.choose{
+    position: absolute; 
+    padding: 15px;
+    margin: 5px;
+    left: 31px; 
+    top: 217px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    display: flex;
+}
+
+.result{
+    position: absolute; 
+    padding:15px;
+    margin:10px;
+    left: 30%;
+    top: 276px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+.button1{
+    width: 102px; 
+    height: 42px; 
+    position: absolute; 
+    left: 49px; 
+    top: 350px; 
+    background: #d8caaf;
+}
+
+.OK{
+    position: absolute; 
+    left: 79px; 
+    top: 357px; 
+    font-size: 20px; 
+    text-align: center; 
+    color: #000;
+}
+
+.button2{
+    width: 102px; 
+    height: 42px; 
+    position: absolute; 
+    left: 222px; 
+    top: 350px; 
+    background: #d8caaf;
+}
+
+.change{
+    position: absolute; 
+    left: 248px; 
+    top: 357px; 
+    font-size: 20px; 
+    text-align: center; 
+    color: #000;
+}
+
 .hg{
     position:absolute;
     left: 100px;

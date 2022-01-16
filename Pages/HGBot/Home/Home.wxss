@@ -10,6 +10,36 @@
     margin-top: 50px;
 }
 
+.rd{
+    position: absolute; 
+    left: 185px; 
+    top: 176px; 
+    font-size: 36px; 
+    font-weight: 900; 
+    text-align: center; 
+    color: #7b8b6f;
+}
+
+.vote{
+    position: absolute; 
+    left: 185px; 
+    top: 251px; 
+    font-size: 36px; 
+    font-weight: 900; 
+    text-align: center; 
+    color: #7b8b6f;
+}
+
+.whisper{
+    position: absolute; 
+    left: 167px; 
+    top: 327px; 
+    font-size: 36px; 
+    font-weight: 900; 
+    text-align: center; 
+    color: #7b8b6f;
+}
+
 .icon{
     height: 42px;
     width: 42px;

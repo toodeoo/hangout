@@ -5,6 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
+        array:[1,2]
+    },
+
+    onOK: function(){
+        //sumbit到后台保存
+    },
+
+    onAdd: function(){
 
     },
 
