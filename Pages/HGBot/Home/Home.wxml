@@ -1,0 +1,26 @@
+<view>
+    <view class="title">
+            憨狗Bot
+    </view>
+    <view>
+        <image src="../../../asset/img/icon-rd.png" class="icon" style="top:180px;"></image>
+        <text style="position: absolute; left: 185px; top: 126px; font-size: 36px; font-weight: 900; text-align: center; color: #7b8b6f;" bindtap="onRd">
+            抽签
+        </text>
+    </view>
+    <view>
+        <image src="../../../asset/img/icon-vote.png" class="icon" style="top: 255px;"></image>
+        <text style="position: absolute; left: 167px; top: 278px; font-size: 36px; font-weight: 900; text-align: center; color: #7b8b6f;" bindtap="onVote">
+            悄悄话
+        </text>
+    </view>
+    <view>
+        <image src="../../../asset/img/icon-whisper.png" class="icon" style="top: 330px;"></image>
+        <text style="position: absolute; left: 185px; top: 202px; font-size: 36px; font-weight: 900; text-align: center; color: #7b8b6f;" bindtap="onWhisper">
+            投票
+        </text>
+    </view>
+    <view>
+        <image src="../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+    </view>
+</view>

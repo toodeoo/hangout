@@ -1,4 +1,4 @@
-// Pages/menu/menu.js
+// Pages/HGBot/Home.js
 Page({
 
     /**
@@ -8,42 +8,34 @@ Page({
 
     },
 
+
     /**
-     * button 点击事件
-     * 顺序为：我的账号->我的行程->社区分享->憨狗bot
-     * 此跳转可返回
-     * 返回的按键自定义问题未解决
+     * 抽签->投票->悄悄话
      */
-    onLogIn:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
 
-    onTrval:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
+     onRd:function(){
+         wx.navigateTo({
+           url: '/Pages/HGBot/Rd/Rd',
+         })
+     },
 
-    onCommunity:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
+     onVote:function(){
+        wx.navigateTo({
+          url: '/Pages/HGBot/Vote/Vote',
+        })
+     },
 
-    onHGBot:function(){
-      wx.navigateTo({
-        url: '/Pages/HGBot/Home/Home',
-      })
-    },
-
-    
+     onWhisper:function(){
+        wx.navigateTo({
+          url: '/Pages/HGBot/Whisper/Whisper',
+        })
+     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
     },
 
     /**

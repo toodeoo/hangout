@@ -1,0 +1,7 @@
+/* Pages/HGBot/Rd/Rd.wxss */
+
+.hg{
+    position:absolute;
+    left: 100px;
+    top: 430px;
+}

@@ -1,56 +1,68 @@
-// Pages/menu/menu.js
+// Pages/HGBot/Rd/Rd.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        id:"?",
+        a:0,
+        b:0,
+        rd:0
+    },
+
+    onOK: function(){
 
     },
 
-    /**
-     * button 点击事件
-     * 顺序为：我的账号->我的行程->社区分享->憨狗bot
-     * 此跳转可返回
-     * 返回的按键自定义问题未解决
-     */
-    onLogIn:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
+    onChange: function(){
+        if(this.data.cnt.size!=this.data.b-this.data.a+1){
+            this.getRd()
+        }
+        else {
+            console.log("范围太小")
+        }
     },
 
-    onTrval:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
+    getStart:function(e){
+        this.setData({
+            a:e.detail.value
+        })
     },
 
-    onCommunity:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
+    getEnd:function(e){
+        this.setData({
+            b:e.detail.value
+        })
     },
 
-    onHGBot:function(){
-      wx.navigateTo({
-        url: '/Pages/HGBot/Home/Home',
-      })
+    getRd:function(){
+        var t = Math.floor(Math.random()*(this.data.b-this.data.a+1)) + 1
+        while(this.data.cnt.has(t)){
+            t = Math.floor(Math.random()*(this.data.b-this.data.a+1)) + 1
+        }
+        this.setData({
+            rd: t
+        })
+        this.data.cnt.add(t)
     },
 
-    
+
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        this.setData({
+            cnt:new Set()
+        })
     },
 
     /**

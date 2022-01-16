@@ -1,0 +1,25 @@
+/* Pages/HGBot/Home.wxss */
+@import "/Pages/homepage/homepage.wxss";
+
+.title{ 
+    color: #7b8b6f;
+    font-size: 60px; 
+    font-weight: 900; 
+    font-family: Sniglet;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.icon{
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    left:100px;
+}
+
+
+.hg{
+    position:absolute;
+    left: 100px;
+    top: 400px;
+}
