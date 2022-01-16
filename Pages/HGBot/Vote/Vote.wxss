@@ -1,1 +1,80 @@
 /* Pages/HGBot/Vote/Vote.wxss */
+@import "/Pages/HGBot/Home/Home.wxss";
+
+.ques{
+    position: absolute; 
+    left: 78px; 
+    top: 93px;
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+.sent{
+    position: absolute; 
+    padding: 10px;
+    margin-top: 20px;
+    left: 45px; 
+    top: 168px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+.choice{
+    position: absolute; 
+    padding: 10px;
+    left: 65px; 
+    top: 240px;
+    font-size: 23px; 
+    text-align: center; 
+    color: #000;
+}
+
+.add{
+    position: fixed;
+    top:340px;
+    left:75px;
+}
+
+.add button{
+    color: #d8caaf;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+}
+.add button:after{
+    content: 0;
+}
+
+.add button::after{
+    border: 0;
+}
+
+.add image{
+    width: 23.25px;
+    height:23.25px;
+}
+
+.button{
+    width: 102px; 
+    height: 42px; 
+    position: absolute; 
+    left: 136px;
+    top: 394px; 
+    background: #d8caaf;
+}
+
+.OK{
+    position: absolute; 
+    left: 166px; 
+    top: 401px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+
+.hg{
+    top:450px
+}

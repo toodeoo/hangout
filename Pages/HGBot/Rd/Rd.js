@@ -5,10 +5,11 @@ Page({
      * 页面的初始数据
      */
     data: {
-        id:"?",
+        id:"洗后提",
         a:0,
         b:0,
-        rd:0
+        rd:0,
+        display:'none'
     },
 
     onOK: function(){
@@ -16,7 +17,7 @@ Page({
     },
 
     onChange: function(){
-        if(this.data.cnt.size!=this.data.b-this.data.a+1){
+        if(this.data.cnt.size != this.data.b - this.data.a + 1){
             this.getRd()
         }
         else {
@@ -25,26 +26,33 @@ Page({
     },
 
     getStart:function(e){
+        this.data.cnt.clear()
         this.setData({
             a:e.detail.value
         })
     },
 
     getEnd:function(e){
+        this.data.cnt.clear()
         this.setData({
             b:e.detail.value
         })
     },
 
     getRd:function(){
-        var t = Math.floor(Math.random()*(this.data.b-this.data.a+1)) + 1
-        while(this.data.cnt.has(t)){
-            t = Math.floor(Math.random()*(this.data.b-this.data.a+1)) + 1
+        const min = parseInt(this.data.a), max = parseInt(this.data.b)
+        var t = function(min, max){
+            return Number(Math.floor(Math.random()*(max - min + 1)))
+        }
+        var r = parseInt(t(min,max)) + parseInt(min)
+        while(this.data.cnt.has(r)){
+            r = parseInt(t(min,max))+parseInt(min)
         }
         this.setData({
-            rd: t
+            rd: r,
+            display: 'block'
         })
-        this.data.cnt.add(t)
+        this.data.cnt.add(r)
     },
 
 
