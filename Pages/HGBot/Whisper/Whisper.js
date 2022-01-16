@@ -1,4 +1,4 @@
-// Pages/menu/menu.js
+// Pages/HGBot/Whisper/Whisper.js
 Page({
 
     /**
@@ -9,41 +9,10 @@ Page({
     },
 
     /**
-     * button 点击事件
-     * 顺序为：我的账号->我的行程->社区分享->憨狗bot
-     * 此跳转可返回
-     * 返回的按键自定义问题未解决
-     */
-    onLogIn:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
-
-    onTrval:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
-
-    onCommunity:function(){
-      wx.navigateTo({
-        url: '/Pages/preparation/home/home',
-      })
-    },
-
-    onHGBot:function(){
-      wx.navigateTo({
-        url: '/Pages/HGBot/Home/Home',
-      })
-    },
-
-    
-
-    /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
     },
 
     /**

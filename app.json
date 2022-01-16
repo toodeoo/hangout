@@ -1,8 +1,13 @@
 {
     "pages": [
-        "Pages/homepage/homepage",
+        "Pages/HGBot/Rd/Rd",
+        "Pages/HGBot/Home/Home",
+        "Pages/HGBot/Vote/Vote",
+        "Pages/HGBot/Whisper/Whisper",
         "Pages/menu/menu",
+        "Pages/homepage/homepage",
         "Pages/preparation/home/home"
+
     ],
     "window": {
         "backgroundTextStyle": "light",
