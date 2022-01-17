@@ -1,7 +1,8 @@
 <!--Pages/HGBot/Vote/Vote.wxml-->
+<!--TODO: 添加input后，下方元素向下平移-->
 <view>
     <view class="ques">
-        <view>（用户名）想要我帮忙</view>
+        <view>  {{userName}}想要我帮忙</view>
         <view style="padding: 0;margin: 0;height: 25px;"></view>
         <view>统计投票结果吗？</view>
     </view>
@@ -27,12 +28,12 @@
 
     <view class="add">
         <button bindtap="onAdd" >
-            <image src="../../../asset/img/icon-add.jpg" style="align-items: center;"></image>
+            <image src="../../../../asset/img/icon-add.jpg" style="align-items: center;"></image>
         </button>
     </view>
 
     <view>
-        <image src="../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+        <image src="../../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
     </view>
 </view>
 

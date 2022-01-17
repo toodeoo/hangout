@@ -1,0 +1,17 @@
+<!--Pages/HGBot/Whisper/get/get.wxml-->
+<!--TODO: css样式 与 navToNext函数-->
+<view style="width: 750rpx; height: 96rpx; display: block; box-sizing: border-box; text-align: center">
+    <text style="font-size: 30px; text-align: center; width: 750rpx; height: 0rpx; display: inline; box-sizing: content-box">哦呀，有秘密要告诉我吗？</text>
+</view>
+<view>
+    <textarea id="whisper">
+        点击输入悄悄话
+    </textarea>
+</view>
+<view style="text-align: center">
+    <text bindtap="navToNext">好了</text>
+</view>
+<image mode="heightFix"  src="../../../../asset/img/hangou1.png"  style="position: relative; left: 200rpx"/>
+
+
+

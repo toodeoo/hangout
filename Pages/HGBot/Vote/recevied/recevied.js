@@ -1,11 +1,12 @@
-// Pages/HGBot/Whisper/Whisper.js
+// Pages/HGBot/Vote/recevied/recevied.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        userName:"洗后提",
+        array:[1,2]
     },
 
     /**

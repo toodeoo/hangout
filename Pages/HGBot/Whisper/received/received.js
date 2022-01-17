@@ -1,4 +1,4 @@
-// Pages/HGBot/Home.js
+// Pages/HGBot/Whisper/received/received.js
 Page({
 
     /**
@@ -7,29 +7,6 @@ Page({
     data: {
 
     },
-
-
-    /**
-     * 抽签->投票->悄悄话
-     */
-
-     onRd:function(){
-         wx.navigateTo({
-           url: '/Pages/HGBot/Rd/Rd',
-         })
-     },
-
-     onVote:function(){
-        wx.navigateTo({
-          url: '/Pages/HGBot/Vote/Vote',
-        })
-     },
-
-     onWhisper:function(){
-        wx.navigateTo({
-          url: '/Pages/HGBot/Whisper/get/get.wxml',
-        })
-     },
 
     /**
      * 生命周期函数--监听页面加载
