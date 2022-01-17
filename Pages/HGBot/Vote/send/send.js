@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        userName:"洗后提",
         array:[1,2]
     },
 
@@ -13,7 +14,11 @@ Page({
     },
 
     onAdd: function(){
-
+        const length = this.data.array.length
+        this.data.array = this.data.array.concat([length + 1])
+        this.setData({
+            array:this.data.array
+        })
     },
 
     /**

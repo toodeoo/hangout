@@ -1,13 +1,17 @@
 {
+    "entryPagePath": "Pages/homepage/homepage",
     "pages": [
+        "Pages/HGBot/Whisper/received/total",
+        "Pages/HGBot/Whisper/received/received",
+        "Pages/HGBot/Whisper/send/send",
+        "Pages/HGBot/Whisper/send/getMsg",
+        "Pages/HGBot/Vote/recevied/recevied",
+        "Pages/HGBot/Vote/send/send",
         "Pages/homepage/homepage",
-        "Pages/HGBot/Vote/Vote",
         "Pages/HGBot/Home/Home",
         "Pages/HGBot/Rd/Rd",
-        "Pages/HGBot/Whisper/Whisper",
         "Pages/menu/menu",
         "Pages/preparation/home/home"
-
     ],
     "window": {
         "backgroundTextStyle": "light",

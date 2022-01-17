@@ -1,9 +1,9 @@
-/* Pages/HGBot/Vote/Vote.wxss */
+/* Pages/HGBot/Vote/recevied/recevied.wxss */
 @import "/Pages/HGBot/Home/Home.wxss";
 
 .ques{
     position: absolute; 
-    left: 78px; 
+    left: 27%; 
     top: 93px;
     font-size: 22px; 
     text-align: center; 
@@ -59,14 +59,14 @@
 .button{
     width: 102px; 
     height: 42px; 
-    position: absolute; 
+    position: fixed; 
     left: 136px;
     top: 394px; 
     background: #d8caaf;
 }
 
 .OK{
-    position: absolute; 
+    position: fixed; 
     left: 166px; 
     top: 401px; 
     font-size: 22px; 

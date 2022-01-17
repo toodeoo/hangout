@@ -1,0 +1,7 @@
+<!--Pages/HGBot/Whisper/received/total.wxml-->
+<!--TODO: 从服务器中读取用户历史的悄悄话 css样式-->
+<view>
+<!--渲染可以使用wx:for-->
+<!--Time-->2022.01.12
+<textarea style="background-color: #D8CAAF;"></textarea>
+</view>

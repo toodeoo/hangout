@@ -1,0 +1,13 @@
+<!--Pages/HGBot/Whisper/received/received.wxml-->
+<!--TODO: css样式 navToNext函数 textarea中收到其他用户的内容-->
+<view style="width: 750rpx; height: 96rpx; display: block; box-sizing: border-box; text-align: center">
+    <text style="font-size: 30px; text-align: center; width: 750rpx; height: 0rpx; display: inline; box-sizing: content-box">收到一条新的悄悄话</text>
+</view>
+<view>
+    <textarea style="background-color: #D8CAAF;"></textarea>
+</view>
+<view style="text-align: center">
+        <text>之前的悄悄话都收在这里哦</text>
+        <button style="float: right;" bindtap="navToNext"> ></button>
+</view>
+<image mode="heightFix"  src="../../../../asset/img/hangou1.png"  style="position: relative; left: 200rpx"/>
