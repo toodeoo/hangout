@@ -14,7 +14,7 @@
     position: absolute; 
     padding: 10px;
     margin-top: 20px;
-    left: 45px; 
+    left: 55px; 
     top: 168px; 
     font-size: 22px; 
     text-align: center; 

@@ -1,13 +1,13 @@
 {
     "entryPagePath": "Pages/homepage/homepage",
     "pages": [
+        "Pages/homepage/homepage",
         "Pages/HGBot/Whisper/received/total",
         "Pages/HGBot/Whisper/received/received",
         "Pages/HGBot/Whisper/send/send",
         "Pages/HGBot/Whisper/send/getMsg",
         "Pages/HGBot/Vote/recevied/recevied",
         "Pages/HGBot/Vote/send/send",
-        "Pages/homepage/homepage",
         "Pages/HGBot/Home/Home",
         "Pages/HGBot/Rd/Rd",
         "Pages/menu/menu",

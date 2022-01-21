@@ -1,16 +1,19 @@
 <!--Pages/HGBot/Whisper/send/send.wxml-->
 <!--TODO: css样式 send函数 picker选择器中的内容-->
-<view style="width: 750rpx; height: 96rpx; display: block; box-sizing: border-box; text-align: center">
-    <text style="font-size: 30px; text-align: center; width: 750rpx; height: 0rpx; display: inline; box-sizing: content-box">悄悄话要讲给谁听</text>
+<view class="ask">
+    <text>悄悄话要讲给谁听?</text>
 </view>
-<view>
-    <picker style="width: 750rpx; height: 86rpx; display: block; box-sizing: border-box">
-    未选择
+<view class="choice">
+    <picker style="width: 420rpx; height: 70rpx; display: block; box-sizing: border-box; background-color: #D8CAAF;">
+    <text decode="ture">未选择&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</text>
     </picker>
 </view>
-<view class="button" bindtap="send">
-    <view style="text-align: center">
+<view class="OK" bindtap="send">
+    <view>
         <text>好了</text>
     </view>
 </view>
-<image mode="heightFix"  src="../../../../asset/img/hangou1.png"  style="position: relative; left: 200rpx"/>
+
+<view>
+    <image class="hg" mode="heightFix"  src="../../../../asset/img/hangou1.png"></image>
+</view>

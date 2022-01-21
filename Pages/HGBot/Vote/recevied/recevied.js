@@ -9,6 +9,27 @@ Page({
         array:[1,2]
     },
 
+    checkboxChange(e) {
+        console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    
+        const items = this.data.items
+        const values = e.detail.value
+        for (let i = 0, lenI = items.length; i < lenI; ++i) {
+          items[i].checked = false
+    
+          for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
+            if (items[i].value === values[j]) {
+              items[i].checked = true
+              break
+            }
+          }
+        }
+    
+        this.setData({
+          items
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

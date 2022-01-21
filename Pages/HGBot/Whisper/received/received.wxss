@@ -1,1 +1,66 @@
 /* Pages/HGBot/Whisper/received/received.wxss */
+/* Pages/HGBot/Whisper/get/get.wxss */
+.ask{
+    position: absolute; 
+    left: 50px; 
+    top: 60px; 
+    padding: 10px;
+    margin: 20px;
+    font-size: 23px; 
+    text-align: center; 
+    color: #000;
+}
+
+.whisper{
+    position: absolute; 
+    left: 45px; 
+    top: 150px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    background-color: #D8CAAF;
+}
+
+.OK{
+    position: absolute; 
+    left: 145px; 
+    top: 320px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    width: 102px; 
+    height: 30px; 
+    background: #d8caaf;
+}
+
+.list{
+    position: absolute; 
+    left: 25px; 
+    top: 360px; 
+    padding-top: 10px;
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+button {
+    margin-left: 10px;
+    padding-left: 10px;
+    position: inherit;
+    background: inherit;
+    font-weight: bolder;
+}
+ 
+button:after {
+    content: none;
+}
+ 
+button::after {
+    border: none;
+}
+
+.hg{
+    position:absolute;
+    left: 100px;
+    top: 430px;
+}

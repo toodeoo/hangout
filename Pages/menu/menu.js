@@ -16,7 +16,7 @@ Page({
      */
     onLogIn:function(){
       wx.navigateTo({
-        url: '/Pages/preparation/home/home',
+        url: '',
       })
     },
 
@@ -28,7 +28,7 @@ Page({
 
     onCommunity:function(){
       wx.navigateTo({
-        url: '/Pages/preparation/home/home',
+        url: '',
       })
     },
 

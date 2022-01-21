@@ -8,6 +8,17 @@ Page({
 
     },
 
+    navToNext:function(){
+        wx.navigateTo({
+          url: '/Pages/HGBot/Whisper/send/send',
+        })
+    },
+
+    onNext:function(){
+        wx.navigateTo({
+          url: '/Pages/HGBot/Whisper/received/total',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

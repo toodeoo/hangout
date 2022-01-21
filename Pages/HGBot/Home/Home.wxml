@@ -16,7 +16,6 @@
         <image src="../../../asset/img/icon-whisper.png" class="icon" style="top: 330px;"></image>
         <text class="whisper" bindtap="onWhisper">悄悄话
         </text>
-        
     </view>
     <view>
         <image src="../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>

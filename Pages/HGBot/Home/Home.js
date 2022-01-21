@@ -21,13 +21,13 @@ Page({
 
      onVote:function(){
         wx.navigateTo({
-          url: '/Pages/HGBot/Vote/Vote',
+          url: '/Pages/HGBot/Vote/send/send',
         })
      },
 
      onWhisper:function(){
         wx.navigateTo({
-          url: '/Pages/HGBot/Whisper/get/get.wxml',
+          url: '/Pages/HGBot/Whisper/send/getMsg',
         })
      },
 

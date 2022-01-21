@@ -1,8 +1,40 @@
-.button{
+.ask{
+    width: 282px; 
+    height: 58px; 
+    position: absolute; 
+    left: 40px; 
+    top: 129px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+.choice{
+    position: absolute; 
+    left: 80px; 
+    top: 193px; 
+    font-size: 24px; 
+    font-weight: 700; 
+    text-align: center; 
+    color: rgba(0,0,0,0.5);
+}
+
+.OK{
+    position: absolute; 
+    left: 135px; 
+    top: 363px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    background-color: #d8caaf;
     width: 102px; 
-    height: 42px; 
-    background: #d8caaf;
+    height: 38px; 
     justify-items: center;
     align-items: center;
-    text-align: center;
+}
+
+.hg{
+    position:absolute;
+    left: 100px;
+    top: 430px;
 }
