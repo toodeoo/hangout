@@ -13,7 +13,9 @@ Page({
     },
 
     onOK: function(){
-
+        wx.redirectTo({
+          url: '/Pages/HGBot/Home/Home',
+        })
     },
 
     onChange: function(){

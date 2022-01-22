@@ -12,12 +12,10 @@
     </view>
 
     <view class="button" bindtap="onOK">
-    </view>
-
-    <view class="OK">
+        <view class="OK">
         好了
+        </view>
     </view>
-
     <view class="choice">
         <view style="display: flex; margin-bottom: 15px;"
          wx:for="{{array}}" wx:key="*this">

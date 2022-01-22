@@ -1,1 +1,22 @@
 /* Pages/HGBot/Whisper/received/total.wxss */
+
+.list{
+    position: relative; 
+    font-size: 22px; 
+    left: 45px;
+    color: #000;
+}
+
+.whisper{
+    position: relative; 
+    font-size: 22px; 
+    color: #000;
+    align-items: center;
+    background-color: #D8CAAF;
+}
+
+.hg{
+    position:relative;
+    left: 100px;
+    top:0px;
+}

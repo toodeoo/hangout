@@ -10,6 +10,9 @@ Page({
     },
 
     onOK: function(){
+        wx.redirectTo({
+          url: '/Pages/HGBot/Home/Home',
+        })
         //sumbit到后台保存
     },
 

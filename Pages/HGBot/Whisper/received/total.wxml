@@ -1,7 +1,15 @@
 <!--Pages/HGBot/Whisper/received/total.wxml-->
 <!--TODO: 从服务器中读取用户历史的悄悄话 css样式-->
+<view class="list" style="display: block;"
+    wx:for="{{array}}" wx:key="*this">
+    <view style="padding: 0;margin: 0;height: 25px;"></view>
+    {{time}}
+    <view>
+    <textarea class="whisper">{{whisper}}</textarea>
+    <view style="padding: 0;margin: 0;height: 25px;"></view>
+    </view>
+</view>
+
 <view>
-<!--渲染可以使用wx:for-->
-<!--Time-->2022.01.12
-<textarea style="background-color: #D8CAAF;"></textarea>
+    <image mode="heightFix"  src="../../../../asset/img/hangou1.png" class="hg"></image>
 </view>
