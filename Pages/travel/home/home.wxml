@@ -1,2 +1,40 @@
 <!--Pages/travel/home/home.wxml-->
-<text>Pages/travel/home/home.wxml</text>
+<block>
+    <view class="bg">    
+        <view class="title">
+            憨狗糖HanGouT
+        </view>
+    </view>
+    <view class="margin">
+    </view>
+</block>
+
+<block>
+    <view class="body">
+        <view style="padding: 0;margin: 0;height: 10px;"></view>
+        <view class="id">
+            <image src="../../../asset/img/icon-id.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行前准备</text>
+            <button bindtap="onPre">></button>
+        </view>
+
+        <view class="travel">
+            <image src="../../../asset/img/icon-travel.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程安排</text>
+            <button bindtap="onMyTrval">></button>
+        </view>
+
+        <view class="share">
+            <image src="../../../asset/img/icon-share.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程跟进</text>
+            <button bindtap="onFollow">></button>
+        </view>
+
+        <view class="travel">
+            <image src="../../../asset/img/icon-bot.png"></image>
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程测评</text>
+            <button bindtap="onEval">></button>
+        </view>
+    </view>
+</block>
+

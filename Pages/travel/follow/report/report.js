@@ -1,18 +1,28 @@
 // Pages/travel/follow/report/report.js
-Page({
+const app = getApp()
+var template = require('../template/template.js');
 
-    /**
-     * 页面的初始数据
-     */
+Page({
     data: {
 
+    },
+
+
+    onRet:function(){
+        wx.redirectTo({
+          url: '/Pages/travel/home/home',
+        })
+    },
+
+    onSend:function(){
+      //向发起人发送消息
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-
+    onLoad: function () {
+      template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     },
 
     /**

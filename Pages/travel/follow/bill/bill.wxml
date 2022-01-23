@@ -1,2 +1,2 @@
-<!--Pages/travel/follow/bill/bill.wxml-->
-<text>Pages/travel/follow/bill/bill.wxml</text>
+<import src="../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

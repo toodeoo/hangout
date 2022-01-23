@@ -21,7 +21,7 @@
         <view class="travel">
             <image src="../../asset/img/icon-travel.png"></image>
             <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的行程</text>
-            <button bindtap="onMyTrval">></button>
+            <button bindtap="onTrval">></button>
         </view>
 
         <view class="share">

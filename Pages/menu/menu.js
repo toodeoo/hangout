@@ -22,7 +22,7 @@ Page({
 
     onTrval:function(){
       wx.navigateTo({
-        url: '/Pages/preparation/home/home',
+        url: '/Pages/travel/home/home',
       })
     },
 

@@ -1,4 +1,8 @@
 // Pages/travel/follow/bill/bill.js
+
+const app = getApp()
+var template = require('../template/template.js');
+
 Page({
 
     /**
@@ -12,7 +16,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        template.tabbar("tabBar", 1, this)
     },
 
     /**

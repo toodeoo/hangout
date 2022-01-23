@@ -1,4 +1,4 @@
-// Pages/travel/home/home.js
+// Pages/travel/plan/plan.js
 Page({
 
     /**
@@ -6,30 +6,6 @@ Page({
      */
     data: {
 
-    },
-
-    onPre:function(){
-        wx.navigateTo({
-          url: '/Pages/travel/preparation/list/list',
-        })
-    },
-
-    onMyTrval:function(){
-        wx.navigateTo({
-          url: '/Pages/travel/plan/plan',
-        })
-    },
-
-    onFollow:function(){
-        wx.navigateTo({
-          url: '/Pages/travel/follow/report/report',
-        })
-    },
-
-    onEval:function(){
-        wx.navigateTo({
-          url: '/Pages/travel/evaluation/evaluation',
-        })
     },
 
     /**

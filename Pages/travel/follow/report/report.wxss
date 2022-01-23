@@ -1,1 +1,50 @@
 /* Pages/travel/follow/report/report.wxss */
+@import "../template/template.wxss";
+
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+.title{
+    position: relative; 
+    top: 20px; 
+    left: 15px;
+    font-size: 22px; 
+    font-weight: 900; 
+    color: #000;
+}
+
+.re1{
+    position: relative;
+    margin: 20px;
+    top:50px;
+    width: 30px;
+    height:30px;
+}
+
+.report1{
+    position: relative;
+    font-size: 22px;
+    left: 70px;
+}
+
+.sent1{
+    position: relative; 
+    font-size: 22px; 
+    color: #000;
+    left:40px;
+    top:20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.re2{
+    position: relative;
+    margin: 20px;
+    top:50px;
+    width: 35px;
+    height:30px;
+}

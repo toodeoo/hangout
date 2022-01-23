@@ -1,2 +1,2 @@
-<!--Pages/travel/follow/checked/checked.wxml-->
-<text>Pages/travel/follow/checked/checked.wxml</text>
+<import src="../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

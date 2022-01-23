@@ -2,6 +2,8 @@
     "entryPagePath": "Pages/travel/follow/report/report",
     "pages": [
         "Pages/homepage/homepage",
+        "Pages/menu/menu",
+
         "Pages/HGBot/Whisper/received/total",
         "Pages/HGBot/Whisper/received/received",
         "Pages/HGBot/Whisper/send/send",
@@ -10,13 +12,16 @@
         "Pages/HGBot/Vote/send/send",
         "Pages/HGBot/Home/Home",
         "Pages/HGBot/Rd/Rd",
-        "Pages/menu/menu",
+
         "Pages/travel/preparation/list/list",
         "Pages/travel/evaluation/evaluation",
         "Pages/travel/follow/report/report",
+        "Pages/travel/follow/template/template",
         "Pages/travel/follow/bill/bill",
         "Pages/travel/follow/checked/checked",
-        "Pages/travel/home/home"
+        "Pages/travel/home/home",
+        "Pages/travel/plan/plan"
+
     ],
     "window": {
         "backgroundTextStyle": "light",
