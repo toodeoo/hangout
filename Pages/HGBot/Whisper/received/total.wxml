@@ -1,9 +1,9 @@
 <!--Pages/HGBot/Whisper/received/total.wxml-->
 <!--TODO: 从服务器中读取用户历史的悄悄话 css样式-->
 <view class="list" style="display: block;"
-    wx:for="{{array}}" wx:key="*this">
+    wx:for="{{time.length}}">
     <view style="padding: 0;margin: 0;height: 25px;"></view>
-    {{time}}
+    {{time[item]}}
     <view>
     <textarea class="whisper">{{whisper}}</textarea>
     <view style="padding: 0;margin: 0;height: 25px;"></view>

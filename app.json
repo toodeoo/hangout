@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "Pages/HGBot/Whisper/received/total",
+    "entryPagePath": "Pages/travel/follow/report/report",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/HGBot/Whisper/received/total",
@@ -11,7 +11,12 @@
         "Pages/HGBot/Home/Home",
         "Pages/HGBot/Rd/Rd",
         "Pages/menu/menu",
-        "Pages/preparation/home/home"
+        "Pages/travel/preparation/list/list",
+        "Pages/travel/evaluation/evaluation",
+        "Pages/travel/follow/report/report",
+        "Pages/travel/follow/bill/bill",
+        "Pages/travel/follow/checked/checked",
+        "Pages/travel/home/home"
     ],
     "window": {
         "backgroundTextStyle": "light",

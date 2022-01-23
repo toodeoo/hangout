@@ -1,11 +1,11 @@
-// Pages/HGBot/Whisper/received/total.js
+// Pages/travel/evaluation/evaluation.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        time:["2022.01.12","2022.01.10"],
+
     },
 
     /**

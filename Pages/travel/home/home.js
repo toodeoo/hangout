@@ -1,4 +1,4 @@
-// Pages/Preparation/home.js
+// Pages/travel/home/home.js
 Page({
 
     /**
