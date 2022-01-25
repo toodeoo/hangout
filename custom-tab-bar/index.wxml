@@ -1,7 +1,0 @@
-<view class="tab-bar">
-  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
-    <view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
-  </view>
-  <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
-</view>

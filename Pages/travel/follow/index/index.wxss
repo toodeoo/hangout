@@ -1,3 +1,4 @@
+/* Pages/travel/follow/index/index.wxss */
 .tab-bar{
     width:100%;
     position: fixed;
@@ -20,12 +21,16 @@
     height: 30%;
 }
 
+.default{
+    color: #7B8B6F;
+}
+
 .tab-bar-item cover-image {
     width: 30px;
     height: 30px;
 }
 
-.tab-bar-item view {
+.tab-bar-item text {
     font-size: 13px;
 }
 

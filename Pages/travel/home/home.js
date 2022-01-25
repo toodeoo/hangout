@@ -21,7 +21,7 @@ Page({
     },
 
     onFollow:function(){
-        wx.switchTab({
+        wx.navigateTo({
           url: '/Pages/travel/follow/report/report',
         })
     },
