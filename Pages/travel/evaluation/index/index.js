@@ -1,12 +1,40 @@
-// Pages/travel/evaluation/evaluation.js
+// Pages/travel/evaluation/index/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
-    },
+        currentTab: 0,
+        list: [
+          {
+            iconPath: "/asset/img/icon-eval.png",
+            selectedIconPath: "/asset/img/icon-eval0.png",
+            text: "行程评测",
+          },
+          {
+            iconPath: "/asset/img/icon-bill.png",
+            selectedIconPath: "/asset/img/icon-bill0.png",
+            text: "旅行手札",
+          },
+          {
+            iconPath: "/asset/img/icon-comshare.png",
+            selectedIconPath: "/asset/img/icon-comshare0.png",
+            text: "计划分享",
+          },
+        ],
+      },
+    
+      switchTab: function (e) {
+        let that = this;
+        if (this.data.currentTab === e.target.dataset.current) {
+          return false;
+        } else {
+          that.setData({
+            currentTab: e.target.dataset.current,
+          });
+        }
+      },
 
     /**
      * 生命周期函数--监听页面加载

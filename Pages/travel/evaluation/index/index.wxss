@@ -1,4 +1,4 @@
-/* Pages/travel/follow/index/index.wxss */
+/* Pages/travel/evaluation/index/index.wxss */
 .tab-bar{
     width:100%;
     position: fixed;

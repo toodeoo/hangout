@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "eval":"/components/eval/eval",
+    "note":"/components/note/note",
+    "share":"/components/share/share"
+  }
+}

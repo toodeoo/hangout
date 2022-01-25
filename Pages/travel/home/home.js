@@ -22,7 +22,7 @@ Page({
 
     onFollow:function(){
         wx.navigateTo({
-          url: '/Pages/travel/follow/report/report',
+          url: '/Pages/travel/follow/index/index',
         })
     },
 

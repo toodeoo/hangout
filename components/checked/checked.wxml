@@ -1,2 +1,10 @@
 <!--components/checked/checked.wxml-->
-<text>components/checked/checked.wxml</text>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view class="checked" style="display: block;">
+        <view class="title">计划打卡</view>
+    </view>
+</view>

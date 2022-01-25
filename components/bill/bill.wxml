@@ -1,2 +1,48 @@
 <!--components/bill/bill.wxml-->
-<text>components/bill/bill.wxml</text>
+<!--TODO:解决添加时底部组件位置问题-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet" ></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view class="bill" style="display: block">
+        <view class="title">记账单</view>
+
+        <view class="share" style="display:flex;">
+            <image class="display" src="{{icon[flag1]}}" bindtap="hit"></image>
+            <text decode="true">&nbsp;&nbsp;共享账单</text>
+        </view>
+
+        <view style="display: {{display1}};">
+            <view class="content" style="display: flex;" wx:for="{{pubBillNum}}">
+                <view wx:for="{{list}}" style="display:block;">
+                {{item}}
+                <view style="padding: 0;margin: 0;height: 10px;"></view>
+                <input placeholder="___________"/>
+                </view>
+            </view>
+
+            <button class="add" bindtap="addPub">+</button>
+        </view>
+
+        <view class="share" style="display:flex;">
+            <image class="display" src="{{icon[flag2]}}" bindtap="hit2"></image>
+            <text decode="true">&nbsp;&nbsp;私有账单</text>
+        </view>
+
+        <view style="display: {{display2}};" >
+            <view class="content" style="display: flex;" wx:for="{{priBillNum}}">
+                <view wx:for="{{list}}" style="display:block;">
+                {{item}}
+                <view style="padding: 0;margin: 0;height: 10px;"></view>
+                <input placeholder="___________"/>
+                </view>
+            </view>
+
+            <button class="add" bindtap="addPrivate">+</button>
+        </view>
+
+
+
+    </view>
+</view>
