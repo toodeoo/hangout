@@ -1,6 +1,5 @@
+/* components/report/report.wxss */
 /* Pages/travel/follow/report/report.wxss */
-@import "../template/template.wxss";
-
 .navi{
     width: 40px;
     height: 30px;

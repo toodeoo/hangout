@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "Pages/travel/follow/report/report",
+    "entryPagePath": "Pages/travel/follow/index/index",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/menu/menu",
@@ -15,10 +15,7 @@
 
         "Pages/travel/preparation/list/list",
         "Pages/travel/evaluation/evaluation",
-        "Pages/travel/follow/report/report",
-        "Pages/travel/follow/template/template",
-        "Pages/travel/follow/bill/bill",
-        "Pages/travel/follow/checked/checked",
+        "Pages/travel/follow/index/index",
         "Pages/travel/home/home",
         "Pages/travel/plan/plan"
 
