@@ -56,9 +56,9 @@ Component({
         },
 
         onRet: function () {
-            wx.redirectTo({
-                url: '/Pages/travel/home/home',
-            })
-        }
+            wx.reLaunch({
+              url: "/Pages/travel/home/home",
+            });
+          },
     }
 })

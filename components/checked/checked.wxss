@@ -14,3 +14,11 @@
     font-weight: 900; 
     color: #000;
 }
+
+.checked {
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -5px;
+  }

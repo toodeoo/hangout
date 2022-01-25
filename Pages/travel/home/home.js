@@ -28,7 +28,7 @@ Page({
 
     onEval:function(){
         wx.navigateTo({
-          url: '/Pages/travel/evaluation/evaluation',
+          url: '/Pages/travel/evaluation/index/index',
         })
     },
 
