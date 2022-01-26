@@ -18,10 +18,10 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        onRet:function(){
-            wx.redirectTo({
-              url: '/Pages/travel/home/home',
-            })
-        }
+        onRet: function () {
+            wx.reLaunch({
+              url: "/Pages/travel/home/home",
+            });
+          },
     }
 })

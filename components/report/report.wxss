@@ -15,6 +15,14 @@
     color: #000;
 }
 
+.report {
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -5px;
+  }
+
 .re1{
     position: relative;
     margin: 20px;

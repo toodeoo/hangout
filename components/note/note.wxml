@@ -1,2 +1,25 @@
 <!--components/note/note.wxml-->
-<text>components/note/note.wxml</text>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+    <view>
+        <view class="note">
+            <view class="title">旅行手札</view>
+        </view>
+        <view wx:for="{{pages}}"  wx:key="*this" wx:for-item="item">
+            <editor class="note-edit" id="editor{{item}}"></editor>
+        </view>
+        <view style="display: flex;">
+            <view bindtap="insertPic">
+                <image src="/asset/img/icon-insimg.png" class="note-img" style="padding-right: 60px; padding-left: 20px;"></image>
+                <view class="note-img-txt" style="left: 30px;">插入图片</view>
+            </view>
+
+            <view bindtap="insertPage">
+                <image src="/asset/img/icon-add.png" class="note-img" style="padding-left: 60px;padding-right: 20px;"></image>
+                <view class="note-img-txt" style="left: 68px;">插入下一页</view>
+            </view>
+        </view>
+    </view>
+</view>
