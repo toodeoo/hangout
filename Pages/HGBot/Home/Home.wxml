@@ -1,5 +1,6 @@
 <view>
     <view class="title">
+        <image src="/asset/img/home_active.png" bindtap="home"></image>
             憨狗Bot
     </view>
     <view>

@@ -1,0 +1,49 @@
+<!--components/list/list.wxml-->
+<!--TODO:解决添加时底部组件位置问题-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet" ></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view class="list" style="display: block">
+        <view class="title">物品准备清单</view>
+
+        <view class="share" style="display:flex;">
+            <image class="display" src="{{icon[flag1]}}" bindtap="hit"></image>
+            <text decode="true">&nbsp;&nbsp;共享清单</text>
+        </view>
+
+        <view style="display: {{display1}};">
+
+            <view class="card" style="display:block;">
+                <view style="display:flex;">
+                    <image class="display" src="{{icon[flag3]}}" bindtap="hitc"></image>
+                    <text decode="true">&nbsp;&nbsp;证件类</text>
+                </view>
+
+                <view class="content" style="display: {{display3}};">
+                    <view style="display: flex;padding-bottom:10px;">
+                    <image class="li" src="/asset/img/icon-li.png"></image>
+                     身份证 
+                    <switch style="padding-left: 60px;height: 15px;" color="#D8CAAF" ></switch>
+                    <image src="{{star[st]}}" class="star" bindtap="emphasize"></image>
+                    </view>
+
+                    <button class="add" bindtap="addPub">+</button>
+
+                </view>
+            </view>
+
+            
+        </view>
+
+        <view class="share" style="display:flex;">
+            <image class="display" src="{{icon[flag2]}}" bindtap="hit2"></image>
+            <text decode="true">&nbsp;&nbsp;私有清单</text>
+        </view>
+
+        <view style="display: {{display2}};" >
+            <button class="add" bindtap="addPrivate">+</button>
+        </view>
+    </view>
+</view>

@@ -2,6 +2,7 @@
 <block>
     <view class="bg">    
         <view class="title">
+            <image src="/asset/img/home_active.png" bindtap="home"></image>
             憨狗糖HanGouT
         </view>
     </view>

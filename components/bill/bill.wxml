@@ -18,7 +18,7 @@
                 <view wx:for="{{list}}" style="display:block;">
                 {{item}}
                 <view style="padding: 0;margin: 0;height: 10px;"></view>
-                <input placeholder="___________"/>
+                <input placeholder="___________" confirm-type="next" />
                 </view>
             </view>
 
@@ -35,7 +35,7 @@
                 <view wx:for="{{list}}" style="display:block;">
                 {{item}}
                 <view style="padding: 0;margin: 0;height: 10px;"></view>
-                <input placeholder="___________"/>
+                <input placeholder="___________" confirm-type="next"/>
                 </view>
             </view>
 

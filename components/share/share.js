@@ -13,7 +13,7 @@ Component({
      */
     data: {
       list:[{
-        path:"/asset/img/subicon-save.png",
+        path:"/asset/img/icon-download.png",
         text:"下载图片" 
     },{
         path:"/asset/img/subicon-share.png",

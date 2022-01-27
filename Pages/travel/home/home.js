@@ -10,7 +10,7 @@ Page({
 
     onPre:function(){
         wx.navigateTo({
-          url: '/Pages/travel/preparation/list/list',
+          url: '/Pages/travel/preparation/index/index',
         })
     },
 
@@ -30,6 +30,12 @@ Page({
         wx.navigateTo({
           url: '/Pages/travel/evaluation/index/index',
         })
+    },
+
+    home:function(){
+      wx.redirectTo({
+        url: '/Pages/menu/menu',
+      })
     },
 
     /**

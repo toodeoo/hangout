@@ -31,6 +31,12 @@ Page({
         })
      },
 
+     home:function(){
+       wx.redirectTo({
+         url: '/Pages/menu/menu',
+       })
+     },
+
     /**
      * 生命周期函数--监听页面加载
      */

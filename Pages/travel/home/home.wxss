@@ -11,12 +11,17 @@
 
 .title{
     margin: 0px;
-    position: absolute;
-    left: 20px;
+    position: relative;
+    left: 0px;
     top: 20px;
     font-weight: bold;
     font-size: 36px;
     color:#F0EBE5;
+}
+
+.title image{
+    width: 30px;
+    height: 30px;
 }
 
 .margin{
