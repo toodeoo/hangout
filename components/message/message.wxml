@@ -1,2 +1,19 @@
 <!--components/message/message.wxml-->
-<text>components/message/message.wxml</text>
+<!--下面就是button的跳转了，不知道跳到哪里去呢，函数写了一个笨笨的switch，应该写一个跳转语句就可以？-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view style="display: block">
+        <view class="title">当地信息</view>
+
+        <view wx:for="{{list}}" wx:for-item="item" style="display: flex;" wx:for-index="idx">
+            <view class="icon">
+                <image src="{{item.iconPath}}" class="icon-image"  mode="heightFix"></image>
+                <text class="icon-text">{{item.text}}</text>
+                <button class="icon-button" bindtap="switchPage" id="{{idx}}">></button>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,43 +1,36 @@
 <!--Pages/HGBot/Vote/recevied/recevied.wxml-->
 <!--TODO: 更改文字，后期实现从服务器获得其他用户设定的投票选项-->
-<view>
-    <view class="ques">
-        <view>  憨憨，这是{{userName}}</view>
-        <view style="padding: 0;margin: 0;height: 25px;"></view>
-        <view>发起的投票喔</view>
-    </view>
-
-    <view class="sent">
-        选项是这些，请选择吧！
-    </view>
-
-    <view class="button" bindtap="onOK">
-    </view>
-
-    <view class="OK">
-        好了
-    </view>
-
-    <view class="choice">
-        <view style="display: flex; margin-bottom: 15px;"
-         wx:for="{{array}}" wx:key="*this">
-            {{item}} 、
-            <text id="{{item}}" style="height: 28px;width: 180px;"></text> 
-            <label class="check">
-                <checkbox value="cb"></checkbox>
-            </label>
-        </view>
-        
-        
-    </view>
-
-    <view class="add">
-        <button bindtap="onAdd" >
-        </button>
-    </view>
-
-    <view>
-        <image src="../../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
-    </view>
+<view class="ques">
+    <view> 憨憨，这是 {{userName}}</view>
+    <view style="padding: 0;margin: 0;height: 25px;"></view>
+    <view>发起的投票喔</view>
 </view>
 
+<view class="sent">
+    选项是这些，请选择吧！
+</view>
+
+<view class="choice">
+    <view style="display: flex; margin-bottom: 15px;" wx:for="{{array}}" wx:key="*this">
+        {{item}} 、
+        <text id="{{item}}" style="height: 28px;width: 180px;"></text>
+        <label class="check">
+            <checkbox value="cb" bindtap="checkboxChange"></checkbox>
+        </label>
+    </view>
+</view>
+<view class="add">
+    <button bindtap="onAdd">
+        <image src="../../../../asset/img/icon-add.png" style="align-items: center;"></image>
+    </button>
+</view>
+
+<view>
+    <button class="button" bindtap="onOK">好了</button>
+</view>
+
+
+
+<view>
+    <image src="../../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+</view>

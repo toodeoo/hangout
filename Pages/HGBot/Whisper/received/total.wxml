@@ -10,6 +10,6 @@
     </view>
 </view>
 
-<view>
-    <image mode="heightFix"  src="../../../../asset/img/hangou1.png" class="hg"></image>
+<view class="hg">
+    <image mode="heightFix"  src="../../../../asset/img/hangou1.png"></image>
 </view>

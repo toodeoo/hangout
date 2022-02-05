@@ -16,7 +16,9 @@
 }
 
 .hg{
-    position:relative;
-    left: 100px;
-    top:0px;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
 }

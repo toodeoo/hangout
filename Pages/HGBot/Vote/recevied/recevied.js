@@ -12,7 +12,7 @@ Page({
     checkboxChange(e) {
         console.log('checkbox发生change事件，携带value值为：', e.detail.value)
     
-        const items = this.data.items
+        const items = this.data.array
         const values = e.detail.value
         for (let i = 0, lenI = items.length; i < lenI; ++i) {
           items[i].checked = false
@@ -24,11 +24,15 @@ Page({
             }
           }
         }
-    
-        this.setData({
-          items
-        })
     },
+
+    onAdd: function(){
+      const length = this.data.array.length
+      this.data.array = this.data.array.concat([length + 1])
+      this.setData({
+          array:this.data.array
+      })
+  },
 
     /**
      * 生命周期函数--监听页面加载
