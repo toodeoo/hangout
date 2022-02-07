@@ -1,4 +1,5 @@
 <!--components/note/note.wxml-->
+<!--TODO: 插入下一页后，导航栏没有固定在底部-->
 <view style="display: flex;">
     <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
 

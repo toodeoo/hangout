@@ -2,39 +2,36 @@
 @import "/Pages/HGBot/Home/Home.wxss";
 
 .ques{
-    position: absolute; 
-    left: 27%; 
-    top: 93px;
+    margin-top: 15%;
     font-size: 22px; 
     text-align: center; 
+    justify-self: center;
+    align-items: center;
     color: #000;
 }
 
 .sent{
-    position: absolute; 
     padding: 10px;
     margin-top: 20px;
-    left: 45px; 
-    top: 168px; 
+    margin-left: 5%;
     font-size: 22px; 
     text-align: center; 
     color: #000;
 }
 
 .choice{
-    position: absolute; 
     padding: 10px;
-    left: 65px; 
-    top: 240px;
     font-size: 23px; 
-    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
     color: #000;
 }
 
 .add{
-    position: fixed;
-    top:340px;
-    left:75px;
+    display: flex;
+    padding-left: 20%;
+    margin-left: 5px;
 }
 
 .add button{
@@ -57,18 +54,12 @@
 }
 
 .button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
     width: 102px; 
     height: 42px; 
-    position: fixed; 
-    left: 136px;
-    top: 394px; 
     background: #d8caaf;
-}
-
-.OK{
-    position: fixed; 
-    left: 166px; 
-    top: 401px; 
     font-size: 22px; 
     text-align: center; 
     color: #000;
@@ -76,5 +67,9 @@
 
 
 .hg{
-    top:450px
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
 }

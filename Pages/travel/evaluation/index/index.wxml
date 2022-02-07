@@ -4,17 +4,21 @@
 </view>
 
 <view hidden="{{currentTab == 1? false: true}}">
-    <note />
+    <note></note>
 </view>
 
 <view hidden="{{currentTab == 2? false: true}}">
     <share />
 </view>
 
-<view class="tab-bar">
-    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="prototype" class="tab-bar-item {{currentTab == idx ? 'active' : 'default'}}" data-current="{{idx}}" bindtap="switchTab">
-        <cover-image src="{{currentTab === idx ? item.selectedIconPath : item.iconPath}}"></cover-image>
-        <text wx:for-index="idx" data-current="{{idx}}" src="{{currentTab == idx ? item.selectedIconPath : item.iconPath }}">{{item.text}}</text>
+<view style="position: absolute;bottom: 0;width: 100vw;">
+    <view class="tab-bar">
+        <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="prototype" class="tab-bar-item {{currentTab == idx ? 'active' : 'default'}}" data-current="{{idx}}" bindtap="switchTab">
+            <cover-image src="{{currentTab === idx ? item.selectedIconPath : item.iconPath}}"></cover-image>
+            <text wx:for-index="idx" data-current="{{idx}}" src="{{currentTab == idx ? item.selectedIconPath : item.iconPath }}">{{item.text}}</text>
+        </view>
+        <view>
+            <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+        </view>
     </view>
-    <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
 </view>

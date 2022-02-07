@@ -1,1 +1,54 @@
 /* components/message/message.wxss */
+.navi {
+  width: 40px;
+  height: 30px;
+  margin: 5px;
+  padding-top: 10px;
+}
+
+.title {
+  position: relative;
+  top: 20px;
+  left: 15px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #000;
+}
+
+.icon {
+  position: relative;
+  top: 10vh;
+  padding: 5vw;
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+.icon-image {
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+
+.icon-text {
+  padding: 0;
+  margin-inline: 10vw;
+  position: relative;
+  top: 2vh;
+  font-weight: 600;
+  font-size: 18px;
+}
+.icon-button {
+  float: right;
+  font-size: large;
+  font-weight: 600;
+  color: #7b8b6f;
+  margin-left: 20vw;
+  width: 10px;
+  height: 40px;
+  text-align: center;
+}
