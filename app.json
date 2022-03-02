@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "Pages/travel/preparation/index/index",
+    "entryPagePath": "Pages/homepage/homepage",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/menu/menu",
@@ -14,6 +14,12 @@
         "Pages/HGBot/Rd/Rd",
 
         "Pages/travel/preparation/index/index",
+        "Pages/travel/preparation/message/eat/eat",
+        "Pages/travel/preparation/message/play/play",
+        "Pages/travel/preparation/message/travel/travel",
+        "Pages/travel/preparation/message/weather/weather",
+        "Pages/travel/preparation/message/epidemic/epidemic",
+
         "Pages/travel/evaluation/index/index",
         "Pages/travel/follow/index/index",
         "Pages/travel/home/home",

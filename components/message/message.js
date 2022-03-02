@@ -34,17 +34,38 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        onRet: function () {
+            wx.reLaunch({
+              url: "/Pages/travel/home/home",
+            });
+          },
+
         switchPage : function(e){
             switch (e.currentTarget.id) {
                 case '0':
+                    wx.redirectTo({
+                      url: '/Pages/travel/preparation/message/eat/eat',
+                    })
                     break;
                 case '1':
+                    wx.redirectTo({
+                        url: '/Pages/travel/preparation/message/play/play',
+                      })
                     break
                 case '2':
+                    wx.redirectTo({
+                        url: '/Pages/travel/preparation/message/travel/travel',
+                      })
                     break
                 case '3':
+                    wx.redirectTo({
+                        url: '/Pages/travel/preparation/message/weather/weather',
+                      })
                     break
                 case '4':
+                    wx.redirectTo({
+                        url: '/Pages/travel/preparation/message/epidemic/epidemic',
+                      })
                     break
                 default:
                     break;

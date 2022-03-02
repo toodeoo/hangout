@@ -38,22 +38,23 @@ Component({
           hit: function () {
             this.setData({
                 display1: this.data.flag1 == 1 ? 'none' : 'block',
+                flag1: this.data.flag1 == 0 ? 1 : 0
             })
-            this.data.flag1 = this.data.flag1 == 0 ? 1 : 0
+            
         },
 
         hit2: function () {
             this.setData({
                 display2: this.data.flag2 == 1 ? 'none' : 'block',
+                flag2: this.data.flag2 == 0 ? 1 : 0
             })
-            this.data.flag2 = this.data.flag2 == 0 ? 1 : 0
         },
 
         hitc: function () {
             this.setData({
                 display3: this.data.flag3 == 1 ? 'none' : 'block',
+                flag3: this.data.flag3 == 0 ? 1 : 0
             })
-            this.data.flag3 = this.data.flag3 == 0 ? 1 : 0
         },
 
         addPub: function(){

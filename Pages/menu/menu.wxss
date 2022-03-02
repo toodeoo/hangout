@@ -38,10 +38,8 @@
 }
 
 button {
-    margin: 0;
-    padding-right: 10%;
+    margin-right: 10%;
     background-color: inherit;
-    position: static;
     color:#F0EBE5;
     font-weight: bolder;
     float: right;
@@ -56,8 +54,9 @@ button::after {
 }
 
 .id{
-    margin: 5px;
-    padding: 10px;
+    display: flex;
+    margin-left: 10vw;
+    padding: 2vh;
     font-weight: bold;
     font-size: 26px;
     color:#F0EBE5;
@@ -67,14 +66,15 @@ button::after {
 .id image{
     width: 28px;
     height: 32px;
-    position: absolute;
-    left: 13%;
     color:#F0EBE5;
+    justify-content: center;
+    align-items: center;
 }
 
 .travel{
-    margin: 5px;
-    padding: 10px;
+    display: flex;
+    margin-left: 10vw;
+    padding: 2vh;
     font-weight: bold;
     font-size: 26px;
     color:#F0EBE5;
@@ -85,13 +85,12 @@ button::after {
     width: 28px;
     height: 34px;
     color:#F0EBE5;
-    position: absolute;
-    left: 13%;
 }
 
 .share{
-    margin: 5px;
-    padding: 10px;
+    display: flex;
+    margin-left: 10vw;
+    padding: 2vh;
     font-weight: bold;
     font-size: 26px;
     color:#F0EBE5;
@@ -102,13 +101,12 @@ button::after {
     width: 30px;
     height: 30px;
     color:#F0EBE5;
-    position: absolute;
-    left: 13%;
 }
 
 .bot{
-    margin: 5px;
-    padding: 10px;
+    display: flex;
+    margin-left: 10vw;
+    padding: 2vh;
     font-weight: bold;
     font-size: 26px;
     color:#F0EBE5;
@@ -119,6 +117,4 @@ button::after {
     width: 34px;
     height: 30px;
     color:#F0EBE5;
-    position: absolute;
-    left: 13%;
 }

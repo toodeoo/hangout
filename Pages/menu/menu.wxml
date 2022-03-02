@@ -14,25 +14,25 @@
         <view style="padding: 0;margin: 0;height: 10px;"></view>
         <view class="id">
             <image src="../../asset/img/icon-id.png"></image>
-            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的账号</text>
+            <text decode="true" bindtap="onLogIn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的账号</text>
             <button bindtap="onLogIn">></button>
         </view>
 
         <view class="travel">
             <image src="../../asset/img/icon-travel.png"></image>
-            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的行程</text>
+            <text bindtap="onTrval" decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的行程</text>
             <button bindtap="onTrval">></button>
         </view>
 
         <view class="share">
             <image src="../../asset/img/icon-share.png"></image>
-            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社区分享</text>
+            <text decode="true" bindtap="onCommunity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社区分享</text>
             <button bindtap="onCommunity">></button>
         </view>
 
         <view class="travel">
             <image src="../../asset/img/icon-bot.png"></image>
-            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;憨狗bot</text>
+            <text decode="true" bindtap="onHGBot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;憨狗bot</text>
             <button bindtap="onHGBot">></button>
         </view>
     </view>

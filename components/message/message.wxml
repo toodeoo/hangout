@@ -11,7 +11,7 @@
         <view wx:for="{{list}}" wx:for-item="item" style="display: flex;" wx:for-index="idx">
             <view class="icon">
                 <image src="{{item.iconPath}}" class="icon-image"  mode="heightFix"></image>
-                <text class="icon-text">{{item.text}}</text>
+                <text class="icon-text" bindtap="switchPage" id="{{idx}}">{{item.text}}</text>
                 <button class="icon-button" bindtap="switchPage" id="{{idx}}">></button>
             </view>
         </view>
