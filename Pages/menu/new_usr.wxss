@@ -1,0 +1,40 @@
+/* Pages/menu/new_usr.wxss */
+
+.header{
+    background-color: #7B8B6F;
+    height: 3vh;
+}
+
+.skip{
+    float: right;
+    background-color: #D8CAAF;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.skip text{
+    padding: 10px;
+}
+
+.guide{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.list{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 6vh;
+}
+
+.selected{
+    background-color: #D8CAAF;
+    height: 5vh;
+    width: 50vw;
+    margin-left: 100px;
+    color: rgba(0, 0, 0, 0.5);
+}
