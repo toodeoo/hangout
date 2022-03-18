@@ -1,37 +1,22 @@
-// Pages/menu/new_usr.js
+// Pages/menu/pre.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        sex: ["未选择", "男", "女"],
-        sex_index: 0,
-        identity: ["未选择", "学生", "家长"],
-        id_index: 0
+
     },
 
-    sexSelect:function(e){
-        this.setData({
-            sex_index: e.detail.value
-          })
-    },
-
-    idSelect:function(e){
-        this.setData({
-            id_index: e.detail.value
-          })
+    start:function(){
+        wx.redirectTo({
+          url: '',
+        })
     },
 
     skip:function(){
         wx.redirectTo({
-          url: '/Pages/menu/pre',
-        })
-    },
-
-    OK:function(){
-        wx.redirectTo({
-          url: '/Pages/menu/pre',
+          url: '/Pages/menu/menu',
         })
     },
 
