@@ -1,0 +1,17 @@
+<!--Pages/menu/new_usr.wxml-->
+<view style="width: 100%;">
+    <view class="header"></view>
+    <view class="skip" onbindtap="skip"><text>跳过</text></view>
+    <view style="position: relative; top: 16vh;text-align: center; align-items: center; justify-content: center;left: 15vw;">
+        <view class="guide">
+            <view>你好！</view>
+            <view>请完善你的个人信息</view>
+        </view>
+        <view class="list">
+            <view style="float: left;">性别</view>
+            <picker mode="selector" range="{{sex}}" class="selected" bindchange="sexSelect" value="{{sex_index}}"><view>{{sex[sex_index]}}</view></picker>
+            <view style="float: left;">年龄</view>
+            <input type="text" class="selected"/>
+        </view>
+    </view>
+</view>
