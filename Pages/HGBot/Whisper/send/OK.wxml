@@ -1,0 +1,9 @@
+<!--Pages/HGBot/Whisper/send/OK.wxml-->
+<view class="OK">
+    <view>憨憨</view>
+    <view>帮你传达了哟！</view>
+</view>
+
+<image class="hg" src="/asset/img/hangou1.png"></image>
+
+<view class="ret" bindtap="ret">◀</view>

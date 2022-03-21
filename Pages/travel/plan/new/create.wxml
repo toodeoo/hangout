@@ -1,0 +1,33 @@
+<!--Pages/travel/plan/new/create.wxml-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view style="display: block">
+
+    <view style="display: flex" class="title">
+        <view class="ret" bindtap="ret"> ＜ </view>
+        <view style="text-align: center;"> 新行程 </view>   
+    </view>
+
+    <view class="go">
+        <view>要从哪里出发呢？</view>
+        <picker mode="selector" range="{{go}}" class="selected" bindchange="goSelect" value="{{go_index}}"><view>{{go[go_index]}}</view></picker>
+    </view>
+
+    <view class="arrive">
+        <view>想去哪里玩？</view>
+        <picker mode="selector" range="{{arrive}}" class="selected" bindchange="arriveSelect" value="{{arrive_index}}"><view>{{arrive[arrive_index]}}</view></picker>
+        
+    </view>
+
+    <view class="OK" bindtap="OK">
+            <text>定好了！</text>
+    </view>
+
+    <view class="hg">
+        <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+    </view>
+    </view>
+</view>

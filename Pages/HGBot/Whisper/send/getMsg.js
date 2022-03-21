@@ -8,6 +8,12 @@ Page({
 
     },
 
+    ret:function(){
+      wx.reLaunch({
+        url: '/Pages/HGBot/Home/Home',
+      })
+  },
+
     navToNext:function(){
         wx.navigateTo({
           url: '/Pages/HGBot/Whisper/send/send',

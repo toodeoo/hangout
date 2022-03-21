@@ -8,6 +8,12 @@ Page({
         time:["2022.01.12","2022.01.10"],
     },
 
+    ret:function(){
+        wx.reLaunch({
+          url: '/Pages/HGBot/Home/Home',
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

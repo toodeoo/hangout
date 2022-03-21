@@ -16,9 +16,15 @@
 }
 
 .hg{
-    position: sticky;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 20px;
+}
+
+.ret{
+    color:#7B8B6F;
+    font-size: 45px;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 20px;
 }

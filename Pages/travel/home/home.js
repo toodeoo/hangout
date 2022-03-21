@@ -16,7 +16,7 @@ Page({
 
     onMyTrval:function(){
         wx.navigateTo({
-          url: '/Pages/travel/plan/plan',
+          url: '/Pages/travel/plan/main/menu',
         })
     },
 

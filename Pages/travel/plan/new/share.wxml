@@ -1,0 +1,45 @@
+<!--Pages/travel/plan/new/share.wxml-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view style="display: block">
+
+    <view style="display: flex" class="title">
+        <view class="ret" bindtap="ret"> ＜ </view>
+        <view style="text-align: center;"> 新行程 </view>  
+        <button style="width: 50px;margin-left: 100px;" open-type="share"><image class="icon-share" src="/asset/img/share.png"></image></button> 
+        
+        
+    </view>
+
+<!--TODO:分享码的生成与使用：行程存储在服务器里，将分享码视为密码，在后端可以利用map去实现分享码->行程的映射，只需要通过行程来获取这个分享码然后从后端传过来，可以用java生成随机的session和id，然后从后端传入-->
+    <view class="go">
+        <view>本次行程的分享码为:</view>
+        <textarea style="height: 50px;background-color: #D8CAAF;"></textarea>
+    </view>
+
+    <view class="share">
+        <view>也可通过以下方式邀请成员加入行程：</view>
+        
+        <view style="display: flex;padding:20px;margin-top: 20px;">
+            <image class="code" src="/asset/img/erweima.png"></image>
+            <view> 生成二维码</view>
+        </view>
+        <view style="display: flex;padding-left:20px;">
+            <image class="wechat" src="/asset/img/wechat.png"></image>
+            <view> 微信分享</view>
+        </view>
+        <view style="display: flex;padding-left:20px;margin-top: 20px;">
+            <image class="link" src="/asset/img/link.png"></image>
+            <view> 复制链接</view>
+        </view>
+    </view>
+
+    <view class="hg">
+        <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+    </view>
+    </view>
+</view>
+

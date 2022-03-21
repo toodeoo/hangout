@@ -1,11 +1,23 @@
-// Pages/travel/plan/plan.js
+// Pages/travel/plan/new/new.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        id: "silhouette",
+    },
 
+    onRet:function(){
+        wx.redirectTo({
+          url: '/Pages/travel/home/home',
+        })
+    },
+
+    add:function(){
+        wx.redirectTo({
+          url: '/Pages/travel/plan/new/create',
+        })
     },
 
     /**

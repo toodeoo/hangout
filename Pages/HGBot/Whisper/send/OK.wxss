@@ -1,0 +1,19 @@
+/* Pages/HGBot/Whisper/send/OK.wxss */
+.OK{
+    font-size: 48px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hg{
+    height: 350px;
+    width: 250px;
+    margin: 20px;
+    padding-left: 30px;
+}
+
+.ret{
+    color:#7B8B6F;
+    font-size: 45px;
+    margin-left: 30px;
+}

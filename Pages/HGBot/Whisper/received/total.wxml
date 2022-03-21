@@ -13,3 +13,5 @@
 <view class="hg">
     <image mode="heightFix"  src="../../../../asset/img/hangou1.png"></image>
 </view>
+
+<view class="ret" bindtap="ret">◀</view>
