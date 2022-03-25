@@ -1,2 +1,25 @@
 <!--Pages/travel/plan/main/index/index.wxml-->
-<text>Pages/travel/plan/main/index/index.wxml</text>
+<view hidden="{{currentTab == 0? false: true}}">
+<main />
+</view>
+
+<view hidden="{{currentTab == 1? false: true}}">
+<wish />
+</view>
+
+<view hidden="{{currentTab == 2? false: true}}">
+<assistant />
+</view>
+
+<view hidden="{{currentTab == 3? false: true}}">
+<member />
+</view>
+
+<view class="tab-bar">
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="prototype" class="tab-bar-item {{currentTab == idx ? 'active' : 'default'}}" data-current="{{idx}}" bindtap="switchTab">
+        <cover-image src="{{currentTab === idx ? item.selectedIconPath : item.iconPath}}"></cover-image>
+        <text wx:for-index="idx" data-current="{{idx}}" src="{{currentTab == idx ? item.selectedIconPath : item.iconPath }}">{{item.text}}</text>
+    </view>
+    <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+</view>
+

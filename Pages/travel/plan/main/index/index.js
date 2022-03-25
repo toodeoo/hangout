@@ -5,9 +5,36 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        currentTab : 0,
+        list : [{
+                iconPath: "/asset/img/icon-main.png",
+                selectedIconPath: "/asset/img/icon-main0.png",
+                text: "主日程"},{
+                iconPath: "/asset/img/icon-wish.png",
+                selectedIconPath: "/asset/img/icon-wish0.png",
+                text: "愿望清单"
+            },{
+                iconPath: "/asset/img/icon-ass.png",
+                selectedIconPath: "/asset/img/icon-ass0.png",
+                text: "副日程"
+            },{
+                iconPath: "/asset/img/icon-member.png",
+                selectedIconPath: "/asset/img/icon-member0.png",
+                text: "成员"
+            }]
     },
 
+    switchTab: function (e) {
+        let that = this;
+        if (this.data.currentTab === e.target.dataset.current) {
+          return false;
+        } else {
+          that.setData({
+            currentTab: e.target.dataset.current,
+          });
+        }
+      },
+      
     /**
      * 生命周期函数--监听页面加载
      */

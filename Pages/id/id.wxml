@@ -1,2 +1,36 @@
 <!--Pages/id/id.wxml-->
-<text>Pages/id/id.wxml</text>
+<view style="display: flex;">
+  <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+  <view style="padding: 0;margin: 0;width: 1.5px;height:700px;background-color:  #7B8B6F;"></view>
+  <view>
+    <view class="info">
+
+      <view style="display: flex;">
+        <view class="avatar">
+          头像
+        </view>
+        <view style="width: 20vw;background-color: #D8CAAF;height: 10vh;"></view>
+      </view>
+      <view style="padding: 0;margin: 0;width: 70vw;height:1.5px;background-color:  #7B8B6F;"></view>
+
+      <view style="display: flex;">
+        <view class="all">
+          昵称
+        </view>
+      </view>
+      <view style="padding: 0;margin: 0;width: 70vw;height:1.5px;background-color:  #7B8B6F;"></view>
+
+      <view style="display: flex;">
+        <view class="all">
+          生日
+        </view>
+        <view style="padding: 0;margin: 0;width: 70vw;height:1.5px;background-color:  #7B8B6F;"></view>
+      </view>
+
+    </view>
+    <view class="save">
+      保存
+    </view>
+    <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+  </view>
+</view>
