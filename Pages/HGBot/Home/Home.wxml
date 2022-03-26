@@ -1,24 +1,29 @@
-<view>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view style="display: block">
     <view class="title">
-        <image src="/asset/img/home_active.png" bindtap="home"></image>
             憨狗Bot
     </view>
     <view>
-        <image src="../../../asset/img/icon-rd.png" class="icon" style="top:180px;"></image>
+        <image src="/asset/img/icon-rd.png" class="icon" style="top:180px;"></image>
         <text class="rd" bindtap="onRd">抽签
         </text>
     </view>
     <view>
-        <image src="../../../asset/img/icon-vote.png" class="icon" style="top: 255px;"></image>
+        <image src="/asset/img/icon-vote.png" class="icon" style="top: 255px;"></image>
         <text class="vote" bindtap="onVote">投票
         </text>
     </view>
     <view>
-        <image src="../../../asset/img/icon-whisper.png" class="icon" style="top: 330px;"></image>
+        <image src="/asset/img/icon-whisper.png" class="icon" style="top: 330px;"></image>
         <text class="whisper" bindtap="onWhisper">悄悄话
         </text>
     </view>
     <view>
-        <image src="../../../asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+        <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+    </view>
     </view>
 </view>

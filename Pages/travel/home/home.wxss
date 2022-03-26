@@ -20,8 +20,8 @@
 }
 
 .title image{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 32px;
 }
 
 .margin{
@@ -70,7 +70,7 @@ button::after {
 }
 
 .id image{
-    width: 28px;
+    width: 34px;
     height: 32px;
     position: absolute;
     left: 13%;
@@ -87,7 +87,7 @@ button::after {
 }
 
 .travel image{
-    width: 28px;
+    width: 34px;
     height: 34px;
     color:#F0EBE5;
     position: absolute;
@@ -121,7 +121,7 @@ button::after {
 }
 
 .bot image{
-    width: 34px;
+    width: 30px;
     height: 30px;
     color:#F0EBE5;
     position: absolute;

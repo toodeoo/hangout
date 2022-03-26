@@ -1,4 +1,3 @@
-<!--Pages/travel/plan/new/new.wxml-->
 <view style="display: flex;">
     <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
 
@@ -9,6 +8,10 @@
     <view style="display: flex" class="title">
         <view> {{id}} 的行程</view>
         <view class="add" bindtap="add"> + </view>
+    </view>
+
+    <view>
+        <textarea>·</textarea>
     </view>
 
 

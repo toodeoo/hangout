@@ -7,7 +7,7 @@ Page({
     data: {
         currentTab : 0,
         list : [{
-          iconPath: "/asset/img/icon-share.png",
+          iconPath: "/asset/img/icon-share1.png",
           selectedIconPath: "/asset/img/icon-share0.png",
           text: "社区",
         },{
@@ -19,7 +19,7 @@ Page({
           selectedIconPath: "/asset/img/icon-fav0.png",
           text: "收藏",
         },{
-          iconPath: "/asset/img/icon-id.png",
+          iconPath: "/asset/img/icon-id1.png",
           selectedIconPath: "/asset/img/icon-id0.png",
           text: "个人主页",
         }]

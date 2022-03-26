@@ -14,25 +14,25 @@
     <view class="body">
         <view style="padding: 0;margin: 0;height: 10px;"></view>
         <view class="id">
-            <image src="../../../asset/img/icon-id.png"></image>
+            <image src="/asset/img/icon-pre.png"></image>
             <text decode="true" bindtap="onPre">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行前准备</text>
             <button bindtap="onPre">></button>
         </view>
 
         <view class="travel">
-            <image src="../../../asset/img/icon-travel.png"></image>
+            <image src="/asset/img/icon-plan.png"></image>
             <text decode="true" bindtap="onMyTrval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程安排</text>
             <button bindtap="onMyTrval">></button>
         </view>
 
         <view class="share">
-            <image src="../../../asset/img/icon-share.png"></image>
+            <image src="/asset/img/icon-follow.png"></image>
             <text decode="true" bindtap="onFollow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程跟进</text>
             <button bindtap="onFollow">></button>
         </view>
 
-        <view class="travel">
-            <image src="../../../asset/img/icon-bot.png"></image>
+        <view class="bot">
+            <image src="/asset/img/icon-recomment.png"></image>
             <text decode="true" bindtap="onEval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行程测评</text>
             <button bindtap="onEval">></button>
         </view>

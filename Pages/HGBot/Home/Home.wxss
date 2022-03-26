@@ -1,5 +1,11 @@
 /* Pages/HGBot/Home.wxss */
 @import "/Pages/homepage/homepage.wxss";
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
 
 .title{ 
     color: #7b8b6f;
@@ -7,12 +13,7 @@
     font-weight: 900; 
     font-family: Sniglet;
     text-align: center;
-    margin-top: 50px;
-}
-
-.title image{
-    width: 50px;
-    height: 50px;
+    margin: 50px;
 }
 
 .rd{
@@ -46,8 +47,8 @@
 }
 
 .icon{
-    height: 42px;
-    width: 42px;
+    height: 43px;
+    width: 45px;
     position: absolute;
     left:100px;
 }

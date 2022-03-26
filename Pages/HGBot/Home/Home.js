@@ -12,6 +12,11 @@ Page({
     /**
      * 抽签->投票->悄悄话
      */
+    onRet:function(){
+      wx.reLaunch({
+        url: '/Pages/menu/menu',
+      })
+    },
 
      onRd:function(){
          wx.navigateTo({

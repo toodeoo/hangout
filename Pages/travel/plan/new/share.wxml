@@ -24,7 +24,7 @@
         <view>也可通过以下方式邀请成员加入行程：</view>
         
         <view style="display: flex;padding:20px;margin-top: 20px;">
-            <image class="code" src="/asset/img/erweima.png"></image>
+            <image class="code" src="/asset/img/QRcode.png"></image>
             <view> 生成二维码</view>
         </view>
         <view style="display: flex;padding-left:20px;">
