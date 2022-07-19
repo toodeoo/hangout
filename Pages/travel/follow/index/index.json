@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "report":"/components/report/report",
-    "bill" : "/components/bill/bill",
-    "checked":"/components/checked/checked"
-  }
-}

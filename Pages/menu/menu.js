@@ -8,27 +8,21 @@ Page({
 
     },
 
-    /**
-     * button 点击事件
-     * 顺序为：我的账号->我的行程->社区分享->憨狗bot
-     * 此跳转可返回
-     * 返回的按键自定义问题未解决
-     */
     onLogIn:function(){
       wx.navigateTo({
-        url: '/Pages/id/id',
+        url: '/Pages/travel/plan/new/create',
       })
     },
 
     onTrval:function(){
       wx.navigateTo({
-        url: '/Pages/travel/home/home',
+        url: '/Pages/travel/plan/main/menu',
       })
     },
 
     onCommunity:function(){
       wx.navigateTo({
-        url: '/Pages/community/index/index',
+        url: '/Pages/menu/pre',
       })
     },
 

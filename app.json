@@ -1,12 +1,9 @@
 {
-    "entryPagePath": "Pages/travel/plan/main/index/index",
+    "entryPagePath": "Pages/homepage/homepage",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/menu/menu",
-        "Pages/menu/new_usr",
         "Pages/menu/pre",
-
-        "Pages/id/id",
 
         "Pages/HGBot/Whisper/received/total",
         "Pages/HGBot/Whisper/received/received",
@@ -18,16 +15,6 @@
         "Pages/HGBot/Home/Home",
         "Pages/HGBot/Rd/Rd",
 
-        "Pages/travel/preparation/index/index",
-        "Pages/travel/preparation/message/eat/eat",
-        "Pages/travel/preparation/message/play/play",
-        "Pages/travel/preparation/message/travel/travel",
-        "Pages/travel/preparation/message/weather/weather",
-        "Pages/travel/preparation/message/epidemic/epidemic",
-        "Pages/travel/evaluation/index/index",
-        "Pages/travel/follow/index/index",
-        "Pages/travel/home/home",
-        "Pages/travel/plan/new/new",
         "Pages/travel/plan/new/create",
         "Pages/travel/plan/new/share",
 
@@ -41,13 +28,7 @@
         "Pages/travel/plan/main/wish/wish/wish",
         "Pages/travel/plan/main/wish/wish/new",
         "Pages/travel/plan/main/member/leader",
-        "Pages/travel/plan/main/member/member",
-        "Pages/travel/plan/main/assistant/somewhere",
-
-        "Pages/community/index/index",
-        "Pages/community/plan/new",
-        "Pages/community/plan/view",
-        "Pages/community/plan/info"
+        "Pages/travel/plan/main/member/member"
         
     ],
     "window": {
