@@ -1,2 +1,33 @@
 <!--components/whole/whole.wxml-->
-<text>components/whole/whole.wxml</text>
+<!--components/eat/eat.wxml-->
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 2px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view class="wish" style="display: block;">
+        <view class="title">新增愿望
+          <view style="margin-top: 3%; width: 100%; height:2px;background-color:  #7B8B6F;"></view>
+        </view>
+        <view class="title" style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 18px;">
+          愿望列表-一日行程
+        </view>
+        <view id="wish-list" class="wish-list">
+            <view class="content" bindtap="onShow" wx:for="{{placeArr}}" wx:key="*this">
+              <cover-image src="/asset/img/wechat.png"></cover-image>
+                <input type="text" id="0" style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 14px; display: flex; align-items: center; " placeholder="{{example}}" placeholder-style="color: rgba(0, 0, 0, 0.6);" bindconfirm="sendWish"/>
+              <view style="width: 100%; height:1px;background-color:  #7B8B6F;"></view>
+            </view>
+        </view>
+        <view style="display: flex; float: right; position: relative;top: 5%; right: 10%;">
+          <view>点击结束投票</view>
+          <image src="/asset/img/icon-handin.png" style="height: 20px; width: 20px;" bindtap="endVote"></image>
+        </view>
+        <button class="addwish" bindtap="addWish">
+          新增愿望
+        </button>
+    </view>
+</view>
+
+
+

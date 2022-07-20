@@ -28,7 +28,9 @@
         "Pages/travel/plan/main/wish/wish/wish",
         "Pages/travel/plan/main/wish/wish/new",
         "Pages/travel/plan/main/member/leader",
-        "Pages/travel/plan/main/member/member"
+        "Pages/travel/plan/main/member/member",
+        
+        "Pages/wish/index"
         
     ],
     "window": {
