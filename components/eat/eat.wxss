@@ -1,1 +1,56 @@
 /* components/eat/eat.wxss */
+.navi{
+  width: 40px;
+  height: 30px;
+  margin: 5px;
+  padding-top: 10px;
+}
+
+.title{
+  font-size: 22px; 
+  font-weight: 900; 
+  color: #000;
+  text-align: center;
+}
+
+.wish {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative; 
+  top: 20px; 
+}
+
+.wish-list{
+  position: relative;
+  top: 5%;
+  text-align: center;
+  align-self: center;
+  left: 10%;
+}
+
+.content{
+  width: 80%;
+}
+
+.content cover-image{
+  float: right;
+  border-radius: 50%;
+  height: 30px; 
+  width: 30px; 
+  position: relative; 
+  top: 10px;
+}
+
+.addwish{
+  background-color: #D8CAAF;
+  opacity: 0.5;
+  color: #000;
+  font-size: 16px;
+  height: 40px;
+  width: 170px;
+  position: relative;
+  float: left;
+  top: 10%;
+}

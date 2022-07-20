@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "half": "/components/half/half",
+    "whole": "/components/whole/whole",
+    "eat": "/components/eat/eat"
+  }
+}

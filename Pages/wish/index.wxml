@@ -1,0 +1,19 @@
+<!--Pages/wish/index.wxml-->
+<view hidden="{{currentTab == 0? false: true}}">
+    <half />
+</view>
+
+<view hidden="{{currentTab == 1? false: true}}">
+    <whole />
+</view>
+
+<view hidden="{{currentTab == 2? false: true}}">
+    <eat />
+</view>
+
+<view class="tab-bar">
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="prototype" class="tab-bar-item {{currentTab == idx ? 'active' : 'default'}}" data-current="{{idx}}" bindtap="switchTab">
+        <cover-image src="{{currentTab === idx ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    </view>
+    <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+</view>
