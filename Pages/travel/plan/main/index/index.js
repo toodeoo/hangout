@@ -14,10 +14,6 @@ Page({
                 selectedIconPath: "/asset/img/icon-wish0.png",
                 text: "愿望清单"
             },{
-                iconPath: "/asset/img/icon-ass.png",
-                selectedIconPath: "/asset/img/icon-ass0.png",
-                text: "副日程"
-            },{
                 iconPath: "/asset/img/icon-member.png",
                 selectedIconPath: "/asset/img/icon-member0.png",
                 text: "成员"

@@ -5,15 +5,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        go: ["请选择","黑龙江","吉林","辽宁","河北","河南","湖北","湖南","广东","广西","山东","山西","陕西","内蒙","宁夏","甘肃","青海","新疆","西藏","四川","云南","海南","安徽","江苏","浙江","福建","台湾","北京","天津","上海","重庆","香港","澳门","其他"],
-        go_index: 0,
-        arrive: ["请选择","上海","杭州","南京","苏州","其他"],
-        arrive_index: 0
+      region:[]    //定义一个空数组用来存放选择地具体是哪一个省市区
+    },
+
+    getUserProvince:function(e)
+    {
+       this.setData({
+           region:e.detail.value     //将用户选择的省市区赋值给region
+       })
     },
 
     onRet:function(){
       wx.redirectTo({
-        url: '/Pages/travel/home/home',
+        url: '/Pages/menu/menu',
       })
   },
 

@@ -10,7 +10,7 @@ Page({
 
     onRet:function(){
         wx.redirectTo({
-          url: '/Pages/travel/home/home',
+          url: '/Pages/menu/menu',
         })
     },
 

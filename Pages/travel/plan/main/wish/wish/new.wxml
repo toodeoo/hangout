@@ -1,2 +1,47 @@
 <!--Pages/travel/plan/main/wish/wish/new.wxml-->
-<text>Pages/travel/plan/main/wish/wish/new.wxml</text>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view style="display: block;width: 330px;">
+
+    <view style="display: flex" class="title">
+        <view class="ret" bindtap="ret"> ＜ </view>
+        <view style="text-align: center;"> 新增愿望 </view> 
+    </view>
+
+    <view style="padding: 0;margin: 0;margin-top: 14px;width: 500px;height:0.5px;background-color:  #7B8B6F;"></view>
+
+    <view class="select">
+        选择分类
+    </view>
+    <view class="choice">
+        <picker mode="selector" range="{{arrive}}" class="selected" bindchange="arriveSelect" value="{{arrive_index}}"><view>{{arrive[arrive_index]}}</view></picker>
+    </view>
+
+    <view class="wish">
+        愿望列表
+    </view>
+    <view class="section {{arrive_index?'off':'on'}}">
+    <textarea class="other"type="text"></textarea>
+    </view>
+    <view class="section {{reply1?'on':'off'}}">
+    <textarea class="other" placeholder="半日行程" type="text"></textarea>
+    </view>
+    <view class="section {{reply2?'on':'off'}}">
+    <textarea class="other" placeholder="一日行程" type="text"></textarea>
+    </view>
+    <view class="section {{reply3?'on':'off'}}">
+    <textarea class="other" placeholder="干饭地点" type="text"></textarea>
+    </view>
+
+    <view style="display: flex;">
+        <button class="button" bindtap="onOK">好了</button>
+        <view class="hg">
+        <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
+        </view>
+    </view>
+    
+    </view>
+</view>

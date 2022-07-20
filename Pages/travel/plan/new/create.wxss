@@ -12,11 +12,10 @@
     font-weight: 900; 
     color: #000;
     top:15px;
-    left:10px;
-}
-
-.ret{
-    padding-right: 60px;
+    left:110px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .go{
@@ -34,7 +33,7 @@
 
 .selected{
     background-color: #D8CAAF;
-    height: 5vh;
+    height: 12vh;
     width: 70vw;
     color: rgba(0, 0, 0, 0.5);
     font-size: 23px;

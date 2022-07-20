@@ -13,8 +13,8 @@
     <view class="body">
         <view style="padding: 0;margin: 0;height: 10px;"></view>
         <view class="id">
-            <image src="/asset/img/icon-id.png"></image>
-            <text decode="true" bindtap="onLogIn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的账号</text>
+            <image src="/asset/img/icon-plan.png"></image>
+            <text decode="true" bindtap="onLogIn">&nbsp;&nbsp;&nbsp;&nbsp;创建行程</text>
             <button bindtap="onLogIn">></button>
         </view>
 
@@ -25,8 +25,8 @@
         </view>
 
         <view class="share">
-            <image src="/asset/img/icon-share.png"></image>
-            <text decode="true" bindtap="onCommunity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社区分享</text>
+            <image src="/asset/img/video.png"></image>
+            <text decode="true" bindtap="onCommunity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;教学演示</text>
             <button bindtap="onCommunity">></button>
         </view>
 

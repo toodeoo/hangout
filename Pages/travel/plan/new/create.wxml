@@ -7,19 +7,21 @@
     <view style="display: block">
 
     <view style="display: flex" class="title">
-        <view class="ret" bindtap="ret"> ＜ </view>
         <view style="text-align: center;"> 新行程 </view>   
     </view>
 
     <view class="go">
-        <view>要从哪里出发呢？</view>
-        <picker mode="selector" range="{{go}}" class="selected" bindchange="goSelect" value="{{go_index}}"><view>{{go[go_index]}}</view></picker>
+        <view>给行程取个炫酷的名字吧！</view>
+        <textarea style="height: 5vh;width: 70vw;background-color: #D8CAAF;"></textarea>
     </view>
 
     <view class="arrive">
         <view>想去哪里玩？</view>
-        <picker mode="selector" range="{{arrive}}" class="selected" bindchange="arriveSelect" value="{{arrive_index}}"><view>{{arrive[arrive_index]}}</view></picker>
-        
+        <picker mode="region" class="selected" bindchange="getUserProvince">
+            <view>
+        Go: <text wx:for="{{region}}"> {{item}} </text>
+      </view>
+        </picker>
     </view>
 
     <view class="OK" bindtap="OK">

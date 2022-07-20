@@ -10,16 +10,16 @@
 }
 
 .tab-bar-item{
-  width: 15%;
+  width: 20%;
   padding: 0;
   margin: 0px;
-  padding-left: 1.5vw;
+  padding-left: 2vw;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 30%;
+  height: 40%;
 }
 
 .default{
@@ -35,8 +35,8 @@
 }
 
 .tab-bar-item cover-image {
-  width: 25px;
-  height: 27px;
+  width: 28px;
+  height: 30px;
 }
 
 .hg{

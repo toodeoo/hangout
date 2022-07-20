@@ -2,7 +2,6 @@
   "usingComponents": {
     "main" : "/components/main/main",
     "wish" : "/components/wish/wish",
-    "assistant" : "/components/assistant/assistant",
     "member" : "/components/member/member"
   }
 }

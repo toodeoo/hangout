@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "list":"/components/list/list",
-    "memory":"/components/memory/memory",
-    "message":"/components/message/message"
-  }
-}

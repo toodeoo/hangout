@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "community" : "/components/community/community",
-    "history" : "/components/history/history",
-    "stat" : "/components/star/star",
-    "id" : "/components/id/id"
-  }
-}

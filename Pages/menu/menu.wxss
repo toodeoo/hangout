@@ -64,7 +64,7 @@ button::after {
 }
 
 .id image{
-    width: 28px;
+    width: 32px;
     height: 32px;
     color:#F0EBE5;
     justify-content: center;
@@ -98,8 +98,8 @@ button::after {
 }
 
 .share image{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     color:#F0EBE5;
 }
 
