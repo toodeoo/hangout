@@ -37,45 +37,15 @@ hangout
 │    │                  ├─ getMsg.wxml (悄悄话信息录入)
 │    │                  ...
 │    │                  └─ send.wxml (选择发送悄悄话)
-│    ├─ community (社区分享)
-│    │    ├─ index (社区主页面)
-│    │    │    ...
-│    │    │    └─ index.wxml
-│    │    └─ plan (动态)
-│    │           ├─ info.wxml (查看某人动态圈)
-│    │           ...
-│    │           ├─ new.wxml (发布新动态)
-│    │           ...
-│    │           └─ view.wxml (查看某动态)
 │    ├─ homepage (欢迎页面)
 │    │    ...
 │    │    └─ homepage.wxml
-│    ├─ id (我的账号页面)
-│    │    ...
-│    │    └─ id.wxml
 │    ├─ menu (菜单)
 │    │    ├─ menu.wxml (主菜单页面)
-│    │    ...
-│    │    ├─ new_usr.wxml (新用户完善个人信息)
-│    │    ...
 │    │    └─ pre.wxml (新手教程)
 │    └─ travel (行程安排)
-│           ├─ evaluation (行程评价)
-│           │    └─ index (主页面)
-│           │           ...
-│           │           └─ index.wxml
-│           ├─ follow (行程跟进)
-│           │    └─ index (主页面)
-│           │           ...
-│           │           └─ index.wxml
-│           ├─ home (我的行程页面菜单)
-│           │    ...
-│           │    └─ home.wxml
 │           ├─ plan (行程安排)
 │           │    ├─ main (主页面)
-│           │    │    ├─ assistant (攻略)
-│           │    │    │    ...
-│           │    │    │    └─ somewhere.wxml (附近某地点的详细展示)
 │           │    │    ├─ index (规划中行程主页面)
 │           │    │    │    ...
 │           │    │    │    └─ index.wxml
@@ -96,90 +66,25 @@ hangout
 │           │    │           │    │    └─ result.wxml (展示投票结果)
 │           │    └─ new (创建新行程)
 │           │           ├─ create.wxml (创建行程)
-│           │           ...
-│           │           ├─ new.wxml (无过往行程时的主页面)
-│           │           ... 
 │           │           └─ share.wxml (新行程分享邀请加入(分享之后跳转至愿望清单))
-│           └─ preparation (行前准备)
-│                  ├─ index (行前准备主页面)
-│                  │    ...
-│                  │    └─ index.wxml
-│                  └─ message (当地信息)
-│                         ├─ eat (当地饮食信息界面)
-│                         │    ...
-│                         │    └─ eat.wxml
-│                         ├─ epidemic (地方防疫政策相关信息)
-│                         │    ...
-│                         │    └─ epidemic.wxml
-│                         ├─ play (娱乐信息)
-│                         │    ...
-│                         │    └─ play.wxml
-│                         ├─ travel (交通信息)
-│                         │    ...
-│                         │    └─ travel.wxml
-│                         └─ weather (天气信息)
-│                                ...
-│                                └─ weather.wxml
 ├─ asset (媒体文件)
 │    └─ img (图像)
 │           ├─ erweima.png
 ...           ...
 │           └─ wechat.png
 ├─ components (组件库)
-│    ├─ assistant (副日程页面)
-│    │    ...
-│    │    └─ assistant.wxml
-│    ├─ bill (行程账单记录)
-│    │    ...
-│    │    └─ bill.wxml
-│    ├─ checked (出行地点打卡)
-│    │    ...
-│    │    └─ checked.wxml
-│    ├─ community (社区页面)
-│    │    ...
-│    │    └─ community.wxml
 │    ├─ eat (干饭地点投票)
 │    │    ...
 │    │    └─ eat.wxml
-│    ├─ eval (行程满意度打分)
-│    │    ...
-│    │    └─ eval.wxml
 │    ├─ half (半日日程投票)
 │    │    ...
 │    │    └─ half.wxml
-│    ├─ history (浏览历史)
-│    │    ...
-│    │    └─ history.wxml
-│    ├─ id (个人主页)
-│    │    ...
-│    │    └─ id.wxml
-│    ├─ list (物品清单)
-│    │    ...
-│    │    └─ list.wxml
 │    ├─ main (主行程规划页面)
 │    │    ...
 │    │    └─ main.wxml
 │    ├─ member (成员信息列表)
 │    │    ...
 │    │    └─ member.wxml
-│    ├─ memory (备忘录)
-│    │    ...
-│    │    └─ memory.wxml
-│    ├─ message (当地信息)
-│    │    ...
-│    │    └─ message.wxml
-│    ├─ note (旅行手札记录)
-│    │    ...
-│    │    └─ note.wxml
-│    ├─ report (中途离开时行动报备)
-│    │    ...
-│    │    └─ report.wxml
-│    ├─ share (旅行计划分享)
-│    │    ...
-│    │    └─ share.wxml
-│    ├─ star (收藏夹)
-│    │    ...
-│    │    └─ star.wxml
 │    ├─ whole (一日日程投票)
 │    │    ...
 │    │    └─ whole.wxml
