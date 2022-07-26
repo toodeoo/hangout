@@ -1,0 +1,16 @@
+<!--Pages/travel/plan/main/wish/wish/fail.wxml-->
+<view class="fail">
+    <view>憨憨，想偷看结果吗？</view>
+    <view>可惜只有组长有至高无上的权力汪！</view>
+    <view>乖乖回去动动你的脑子</view>
+    <view>开始智慧与勇气的较量吧！</view>
+</view>
+
+
+    <view class="hg">
+        <image src="/asset/img/hangou1.png" mode="heightFix"></image>
+    </view>
+
+    <view>
+        <button class="button" bindtap="onOK">好的</button>
+    </view>

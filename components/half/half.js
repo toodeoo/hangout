@@ -52,7 +52,7 @@ Component({
       },
       endVote: function(e){
         wx.redirectTo({
-          url: '/Pages/menu/menu',
+          url: '/Pages/travel/plan/main/wish/wish/result',
         })
       }
     }

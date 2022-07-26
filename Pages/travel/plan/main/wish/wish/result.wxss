@@ -1,0 +1,106 @@
+.select{
+    position: relative; 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #000;
+    left:0px;
+    margin: 15px;
+}
+
+.choice{
+    position: absolute; 
+    left: 80px; 
+    font-size: 24px; 
+    font-weight: 700; 
+    text-align: center; 
+    color: rgba(0,0,0,0.5);
+}
+
+.selected{
+    background-color: #D8CAAF;
+    height: 5vh;
+    width: 70vw;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 23px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.result{
+    position: relative; 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #000;
+    left:0px;
+    margin: 15px;
+    margin-top: 100px;
+}
+
+.wish-list{
+    position: relative;
+    top: 5%;
+  }
+  
+  .content{
+    width: 90%;
+    display: flex;
+  }
+  
+  .douzi{
+    float: left;
+    border-radius: 50%;
+    height: 35px; 
+    width: 35px; 
+    top: 8px;
+    left:18px;
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
+    justify-content: center;
+    background-color: #7B8B6F;
+  }
+
+  .section{
+    font-size:28rpx;
+    margin-left: 50rpx;
+    margin-top: 30rpx;
+   }
+   .on{display: block}
+   .off{display: none}
+
+
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; 
+    height: 42px; 
+    background: #d8caaf;
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    margin-top: 20px;
+}
+
+.fail{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ret{
+    color:#7B8B6F;
+    font-size: 45px;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.hg {
+    height: 150px;
+    right: 5px;
+    width: 150px;
+    position: absolute;
+    bottom: 20px;
+  }

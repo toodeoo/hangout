@@ -1,54 +1,50 @@
-// Pages/travel/plan/main/wish/wish/new.js
+// Pages/travel/plan/main/wish/wish/result.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-      arrive: ["请选择","半日行程","一日行程","干饭地点"],
-      arrive_index: 0
+        arrive: ["请选择","半日行程","一日行程","干饭地点"],
+        arrive_index: 0,
+        member_num: 8,
+        placeArr0: ["我要去游泳！","打麻将打麻将！！！"],
+        placeArr1: ["Let's 去看海哈哈哈！","环球影城环球影城gogogo！"],
+        placeArr2: ["我要喝茶颜悦色！","好饿！"],
     },
 
-    onRet:function(){
+    onOK: function(){
         wx.redirectTo({
-          url: '/Pages/menu/menu',
-        })
+            url: '/Pages/travel/plan/main/menu',
+          })
     },
 
-    ret:function(){
+    onRet: function(){
         wx.redirectTo({
           url: '/Pages/travel/plan/main/wish/wish/index',
         })
     },
 
     arriveSelect:function(e){
-      this.setData({
-          arrive_index: e.detail.value
-        })
-      if (e.detail.value == 1) {
-          this.setData({ reply1: true })
+        this.setData({
+            arrive_index: e.detail.value
+          })
+        if (e.detail.value == 1) {
+            this.setData({ reply1: true })
+           } else {
+            this.setData({ reply1: false })
+        }
+        if (e.detail.value == 2) {
+          this.setData({ reply2: true })
          } else {
-          this.setData({ reply1: false })
+          this.setData({ reply2: false })
+        }
+        if (e.detail.value == 3) {
+          this.setData({ reply3: true })
+         } else {
+          this.setData({ reply3: false })
       }
-      if (e.detail.value == 2) {
-        this.setData({ reply2: true })
-       } else {
-        this.setData({ reply2: false })
-      }
-      if (e.detail.value == 3) {
-        this.setData({ reply3: true })
-       } else {
-        this.setData({ reply3: false })
-    }
-  },
-
-  onOK: function(){
-    wx.redirectTo({
-      url: '/Pages/travel/plan/main/wish/wish/index',
-    })
-    //sumbit到后台保存
-},
-
+    },
     /**
      * 生命周期函数--监听页面加载
      */
