@@ -1,2 +1,56 @@
 <!--Pages/travel/plan/main/member/leader.wxml-->
-<text>Pages/travel/plan/main/member/leader.wxml</text>
+
+<view  style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+    <!-- <view class = "line" style="margin-left: 0;margin-top: 50px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view> -->
+    <!-- <image class = "leader" src="/asset/img/icon-leader.png"></image> -->
+
+    <view  style="display: block;">
+    <!-- 标题 -->
+        <view style="display: flex" class="title">
+            <view class="ret" bindtap="ret"> ＜ </view>
+            <image class = "leader" src="/asset/img/icon-leader.png"></image>
+            <view style="text-align: center;"> {{id}} </view>   
+        </view>
+    <!-- 线 -->
+        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 2px;background-color:  #7B8B6F;"></view>
+    <!-- 头像 -->
+        <view style="display: flex">
+            <image class="headpic" src="/asset/img/xht.png"></image>
+        </view>
+    <!-- 修改信息 -->
+        <view class="modify" bindtap="modify">
+            <text>修改信息</text>
+        </view>
+    <!-- 信息框 -->
+        <view style="display: flex">
+            <view style="margin-left: 25px;margin-top: 50px;width: 280px;height: 30px;background-color: #D8CAAF;">
+                <text class="age" style="margin-left: 10px;">年龄：{{age}}岁</text>
+                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
+            </view>
+        </view>
+
+        <view style="display: flex">
+            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
+                <text class="gender" style="margin-left: 10px;">性别：{{gender}}</text>
+                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
+            </view>
+        </view>
+
+        <view style="display: flex">
+            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
+                <text class="tele" style="margin-left: 10px;">联系电话：{{tele}}</text>
+                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
+            </view>
+        </view>
+
+        <view style="display: flex">
+            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
+                <text class="contact" style="margin-left: 10px;">紧急联系人：{{contact}}</text>
+                <!-- <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view> -->
+            </view>
+        </view>
+
+    </view>
+</view>

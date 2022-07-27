@@ -1,25 +1,52 @@
-// Pages/travel/plan/main/menu.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-        id: "silhouette",
+        username: "Silhouette",
+        tripList:[
+            {
+                id:1,
+                title:"wow！好好吃！",
+                destination:"武汉",
+                number:8,
+                checked:false 
+            },
+            {
+                id:2,
+                title:"圆南方群友的梦 ",
+                destination:"东北",
+                number:8,
+                checked:false 
+            },
+            {
+                id:3,
+                title:"想去海边！",
+                destination:"舟山",
+                number:7,
+                checked:false 
+            }
+        ]
+    },
+    goTrip($event){
+        let index = $event.currentTarget.dataset.index
+        let newTripList = this.data.tripList
+        newTripList.map(it=> it.checked = false)
+        newTripList[index].checked = !newTripList[index].checked 
+        this.setData({
+            tripList:newTripList
+        })
+        // 跳转到对应的页面
+        wx.navigateTo({
+          url: '/Pages/travel/plan/main/index/index',
+        })
     },
 
     onRet:function(){
         wx.redirectTo({
-          url: '/Pages/travel/home/home',
+          url: '/Pages/menu/menu',
         })
     },
-
-    add:function(){
-        wx.redirectTo({
-          url: '/Pages/travel/plan/new/create',
-        })
-    },
-
     /**
      * 生命周期函数--监听页面加载
      */

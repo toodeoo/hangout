@@ -1,1 +1,80 @@
-/* components/main/main.wxss */
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
+.leftHr{
+    padding: 0;
+    margin: 0;
+    width: 1px;
+    height:700px;
+    background-color:  #7B8B6F;
+}
+.title{
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #000;
+    width: 100%;
+    text-align: center;
+    border-bottom: 5rpx solid rgb(162, 162, 156);
+    padding:10rpx 0;
+}
+.time{
+    text-align: left;
+    font-weight: 900;
+    font-size: 35rpx;
+    width: 100%;
+    margin-left: 60rpx;
+    margin-top: 25rpx;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.tripDetail{
+    width: 90%;
+    background-color: rgb(221, 209, 186);
+    margin-top: 30rpx;
+    display: flex;
+}
+.tripDetail-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40rpx;
+    padding-left: 5rpx;
+    color: rgb(78, 86, 66);
+    background-color: rgb(162, 161, 147);
+    min-height: 120rpx;
+    width: 20%;
+}
+.tripDetail-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 35rpx;
+    padding: 10rpx 0 10rpx 40rpx;
+}
+.tripDetail-desc .nextIcon{
+    font-weight: bold;
+    font-size: 50rpx;
+}
+
+.ret{
+    padding-right: 60px;
+}
+
+.hg {
+    position: fixed;
+    right: 30rpx;
+    bottom: 30rpx;
+    width: 200rpx;
+    height: 200rpx;
+    z-index: -1;
+  }

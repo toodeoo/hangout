@@ -1,1 +1,68 @@
 /* Pages/travel/plan/main/member/member.wxss */
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
+.leader{
+    width: 40px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+.title{
+    position: relative; 
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #000;
+    top:15px;
+    left:40px;
+}
+
+.ret{
+    padding-right: 60px;
+}
+
+.headpic{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-top: 40px;
+    margin-left: 110px;
+}
+
+.tele{
+    font-size: 20px; 
+    font-weight: 500; 
+    color: #000;
+}
+
+.contact{
+    font-size: 20px; 
+    font-weight: 500; 
+    color: #000;
+}
+
+.age{
+    font-size: 20px; 
+    font-weight: 500; 
+    color: #000;
+}
+
+.gender{
+    font-size: 20px; 
+    font-weight: 500; 
+    color: #000;
+}
+
+.modify{
+    background-color: #D8CAAF;
+    font-size: 28px;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 80px;
+}

@@ -1,22 +1,24 @@
 <view style="display: flex;">
     <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
-
-    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
-
-    <view style="display: block">
-
-    <view style="display: flex" class="title">
-        <view> {{id}} 的行程</view>
+    <view class="leftHr"></view>
+    <view class="content">
+        <view class="title">
+            {{username}} 的行程
+        </view>
+        <!-- 行程信息 -->
+        <view class="tripInfo" style="border:{{item.checked?'2rpx solid black':''}}" wx:for="{{tripList}}" wx:key="index" bindtap="goTrip" data-index="{{index}}">
+            <!-- 标题 -->
+            <view class="tripInfo-title" style="background-color:{{item.checked?'rgb(212,205,183)':''}}">
+                {{"·  "+item.title}}
+            </view>
+            <!-- 简略info -->
+            <view class="tripInfo-info" style="background-color:{{item.checked?'rgb(188,174,148)':'rgb(216, 202, 175)'}}">
+                <text>目的地：{{item.destination}}</text>
+                <text>人数：{{item.number}}</text>
+            </view>
+        </view>
     </view>
-
-    <view>
-        <textarea>·</textarea>
-    </view>
-
-
     <view class="hg">
-        <image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image>
-    </view>
+            <image src="/asset/img/hangou2.png" mode="heightFix" class="hg"></image>
     </view>
 </view>
-

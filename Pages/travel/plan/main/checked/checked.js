@@ -1,34 +1,33 @@
-// Pages/travel/plan/main/member/leader.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-        id:["洗后提"],
-        tele:["12345678910"],
-        contact:["10987654321"],
-        gender:["黄油小狗"],
-        age:["3"]
+        inputVal:"",
+        src:""
     },
-
-    ret:function(){
-      wx.navigateBack({
-        delta: 1,
-      })
-    },
-
-    modify:function(){
-        wx.navigateTo({
-          url: '/Pages/id/id',
+    previous(){
+        // 跳回上一页
+        wx.navigateBack({
+          delta: 1,
         })
     },
-
-    onRet:function(){
-      wx.redirectTo({
-        url: '/Pages/menu/menu',
-      })
-  },
+    // 上传图片
+    uploadPhoto(){
+        let that = this
+        wx.chooseMedia({
+            count: 1,
+            mediaType: ['image','video'],
+            sourceType: ['album', 'camera'],
+            maxDuration: 30,
+            camera: 'back',
+            success(res) {
+                that.setData({
+                    src: res.tempFiles[0].tempFilePath
+                })
+            }
+          })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

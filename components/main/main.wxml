@@ -1,2 +1,23 @@
-<!--components/main/main.wxml-->
-<text>components/main/main.wxml</text>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+    <view class="leftHr"></view>
+    <view class="content">
+        <view class="title" style="display: flex">
+            <view class="ret" bindtap="ret"> ＜ </view>
+            {{tripTitle}}
+        </view>
+        <picker class="time" mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view >
+                {{displayDate}}
+            </view>
+        </picker>
+        <view wx:for="{{tripDetail[randomNum]}}" class="tripDetail" wx:key="index" bindtap="goCheck" data-opt="{{item}}">
+            <view class="tripDetail-title">{{item.title}}</view>
+            <view class="tripDetail-desc">
+                <text>{{item.desc}}</text>
+                <image wx:if="{{item.nextDesc}}" class="nextIcon" bindtap="previous" style="height: 50rpx;width:60rpx" src="/asset/img/downTrip.png"></image>
+                <text wx:if="{{item.nextDesc}}">{{item.nextDesc}}</text>
+            </view>
+        </view>
+    </view>
+</view>

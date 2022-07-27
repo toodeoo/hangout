@@ -1,2 +1,50 @@
-<!--components/wish/wish.wxml-->
-<text>components/wish/wish.wxml</text>
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+    <view class="leftHr"></view>
+    <view class="content">
+        <view class="title" style="display: flex">
+            <view class="ret" bindtap="ret"> ＜ </view>
+            {{tripTitle}}
+        </view>
+        
+        <view class="type">
+            <view class="type-option" bindtap="modalOpen" data-key="餐饮">餐饮
+                <image wx:if="{{isOpenMap['餐饮']}}" style="height: 40rpx; width:40rpx" src="/asset/img/down.png"></image>
+                <image wx:if="{{!isOpenMap['餐饮']}}" style="height: 40rpx; width:40rpx" src="/asset/img/up.png"></image>
+            </view>
+        </view>
+        <view wx:if="{{isOpenMap['餐饮']}}"  wx:for="{{activity['餐饮']}}" class="tripInfo" wx:key="index" data-index="{{index}}">
+                <view class="tripInfo-desc">
+                    <view>{{item.key}}</view>
+                    <input type="text" model:value="{{item.value}}"/>
+                </view>
+        </view>
+
+        <view class="type" bindtap="modalOpen" data-key="景点">
+            <view class="type-option">景点
+                <image wx:if="{{isOpenMap['景点']}}" style="height: 40rpx;width:40rpx" src="/asset/img/down.png"></image>
+                <image wx:if="{{!isOpenMap['景点']}}" style="height: 40rpx;width:40rpx" src="/asset/img/up.png"></image>
+            </view>
+        </view>
+        <view wx:if="{{isOpenMap['景点']}}" wx:for="{{activity['景点']}}" class="tripInfo" wx:key="index" data-index="{{index}}">
+                <view class="tripInfo-desc">
+                    <view>{{item.key}}</view>
+                    <input type="text" model:value="{{item.value}}"/>
+                </view>        
+        </view>
+
+        <view class="type" bindtap="modalOpen" data-key="住宿">
+            <view class="type-option">住宿
+                <image wx:if="{{isOpenMap['住宿']}}" style="height: 40rpx;width:40rpx" src="/asset/img/down.png"></image>
+                <image wx:if="{{!isOpenMap['住宿']}}" style="height: 40rpx;width:40rpx" src="/asset/img/up.png"></image>
+            </view>
+        </view>
+        <view wx:if="{{isOpenMap['住宿']}}" wx:for="{{activity['住宿']}}" class="tripInfo" wx:key="index" data-index="{{index}}">
+                <view class="tripInfo-desc">
+                    <view>{{item.key}}</view>
+                    <input type="text" model:value="{{item.value}}"/>
+                </view>        
+        </view>
+        <button class="addDesire">添加我的愿望</button>
+    </view>
+</view>

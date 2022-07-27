@@ -1,2 +1,26 @@
-<!--components/member/member.wxml-->
-<text>components/member/member.wxml</text>
+
+<view  style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+
+    <view  style="display: block;width: 326px;">
+    <!-- 标题 -->
+        <view style="display: flex" class="title">
+            <view class="ret" bindtap="ret"> ＜ </view>
+            <view style="text-align: center;"> 成员信息表 </view>   
+        </view>
+    <!-- 成员 -->
+        <view style="display: flex">
+            <view bindtap="goto" style="margin-left: 25px;margin-top: 50px;width: 280px;height: 40px;background-color: #D8CAAF;">
+                <image class="headpic" src="/asset/img/xht.png"></image>
+                <text class="id" >{{id1}}</text>
+            </view>
+        </view>
+        <view style="display: flex">
+            <view bindtap="goto2" style="margin-left: 25px;margin-top: 0px;width: 280px;height: 40px;background-color: #D8CAAF;">
+                <image class="headpic" src="/asset/img/xht.png"></image>
+                <text class="id" >{{id1}}</text>
+            </view>
+        </view>
+    </view>
+</view>

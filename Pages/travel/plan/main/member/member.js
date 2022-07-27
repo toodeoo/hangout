@@ -1,13 +1,34 @@
-// Pages/travel/plan/main/member/member.js
+// Pages/travel/plan/main/member/leader.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        id:["洗后提"],
+        tele:["12345678910"],
+        contact:["10987654321"],
+        gender:["黄油小狗"],
+        age:["3"]
     },
 
+    ret:function(){
+        wx.navigateBack({
+          delta: 1,
+        })
+    },
+
+    modify:function(){
+        wx.navigateTo({
+          url: '/Pages/id/id',
+        })
+    },
+
+    onRet:function(){
+      wx.redirectTo({
+        url: '/Pages/menu/menu',
+      })
+  },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -1,1 +1,91 @@
-/* components/wish/wish.wxss */
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
+.leftHr{
+    padding: 0;
+    margin: 0;
+    width: 1px;
+    height:700px;
+    background-color:  #7B8B6F;
+}
+.title{
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #000;
+    width: 100%;
+    text-align: center;
+    border-bottom: 5rpx solid rgb(162, 162, 156);
+    padding:10rpx 0;
+}
+.type{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+    font-size: 35rpx;
+    margin:20rpx  0;
+}
+.type .type-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.type .currentTrip{
+    text-decoration:underline;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+/* 行程信息 */
+.tripInfo{
+    width: 90%;
+    background-color: rgb(221, 209, 186);
+    display: flex;
+    border: 1rpx solid #7B8B6F;
+    height: 110rpx;
+}
+.tripInfo-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 30rpx;
+    padding: 10rpx 0 10rpx 40rpx;
+}
+.tripInfo-desc .nextIcon{
+    font-weight: bold;
+    font-size: 50rpx;
+}
+.addDesire{
+    background-color: rgb(228, 218, 202);
+    border: none;
+    width: 55%;
+    font-weight: bold;
+    height: 70rpx;
+    text-align: center;
+    line-height: 70rpx;
+    margin-top: 80rpx;
+    font-size: 30rpx;
+}
+
+.ret{
+    padding-right: 60px;
+}
+
+.hg {
+    position: fixed;
+    right: 30rpx;
+    bottom: 30rpx;
+    width: 200rpx;
+    height: 200rpx;
+    z-index: -1;
+}
