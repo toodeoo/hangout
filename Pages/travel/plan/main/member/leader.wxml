@@ -14,43 +14,22 @@
             <view style="text-align: center;"> {{id}} </view>   
         </view>
     <!-- 线 -->
-        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 2px;background-color:  #7B8B6F;"></view>
+        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
     <!-- 头像 -->
         <view style="display: flex">
             <image class="headpic" src="/asset/img/xht.png"></image>
         </view>
-    <!-- 修改信息 -->
-        <view class="modify" bindtap="modify">
-            <text>修改信息</text>
+
+        <view style="display: flex;">
+            <view style="height: 30px; width: 25px;"></view>
         </view>
+
     <!-- 信息框 -->
-        <view style="display: flex">
-            <view style="margin-left: 25px;margin-top: 50px;width: 280px;height: 30px;background-color: #D8CAAF;">
-                <text class="age" style="margin-left: 10px;">年龄：{{age}}岁</text>
-                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
-            </view>
+        <view class="info" wx:for="{{info}}" wx:key="index" data-index="{{index}}">
+            <view class="info_">
+                    <view>{{item.key}} :     </view>
+                    <input type="text" model:value="{{item.value}}"/>
+                </view>
         </view>
-
-        <view style="display: flex">
-            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
-                <text class="gender" style="margin-left: 10px;">性别：{{gender}}</text>
-                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
-            </view>
-        </view>
-
-        <view style="display: flex">
-            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
-                <text class="tele" style="margin-left: 10px;">联系电话：{{tele}}</text>
-                <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view>
-            </view>
-        </view>
-
-        <view style="display: flex">
-            <view style="margin-left: 25px;margin-top: 0px;width: 280px;height: 30px;background-color: #D8CAAF;">
-                <text class="contact" style="margin-left: 10px;">紧急联系人：{{contact}}</text>
-                <!-- <view style="margin-left: 0;margin-top: 3px;width: 280px;height: 1px;background-color:  #7B8B6F;"></view> -->
-            </view>
-        </view>
-
     </view>
 </view>

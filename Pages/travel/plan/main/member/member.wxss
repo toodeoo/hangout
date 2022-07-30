@@ -32,37 +32,22 @@
     margin-left: 110px;
 }
 
-.tele{
-    font-size: 20px; 
-    font-weight: 500; 
-    color: #000;
+.info{
+    width: 90%;
+    background-color: rgb(221, 209, 186);
+    display: flex;
+    border: 1rpx solid #7B8B6F;
+    height: 110rpx;
+    margin-left: 15px;
 }
 
-.contact{
-    font-size: 20px; 
-    font-weight: 500; 
-    color: #000;
-}
 
-.age{
-    font-size: 20px; 
-    font-weight: 500; 
-    color: #000;
-}
-
-.gender{
-    font-size: 20px; 
-    font-weight: 500; 
-    color: #000;
-}
-
-.modify{
-    background-color: #D8CAAF;
-    font-size: 28px;
+.info_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     font-weight: bold;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 80px;
+    font-size: 30rpx;
+    padding: 10rpx 0 10rpx 40rpx;
 }

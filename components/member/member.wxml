@@ -1,25 +1,34 @@
-
 <view  style="display: flex;">
     <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
     <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
 
-    <view  style="display: block;width: 326px;">
+    <view  style="display: block;">
     <!-- 标题 -->
         <view style="display: flex" class="title">
             <view class="ret" bindtap="ret"> ＜ </view>
             <view style="text-align: center;"> 成员信息表 </view>   
         </view>
+    <!-- 线 -->
+        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
     <!-- 成员 -->
-        <view style="display: flex">
-            <view bindtap="goto" style="margin-left: 25px;margin-top: 50px;width: 280px;height: 40px;background-color: #D8CAAF;">
-                <image class="headpic" src="/asset/img/xht.png"></image>
-                <text class="id" >{{id1}}</text>
+        <view class="leader" bindtap="goto">
+            <image class="headpic" src="/asset/img/xht.png"></image>
+            <view class="labordiv">
+                <view class="labor">{{labordiv}}</view>
             </view>
+            <view class="leader_">
+                <view>{{id1}}</view>
+            </view>
+            <image src="/asset/img/icon-leaderwithbg.png" class="leaderpic"></image>
         </view>
-        <view style="display: flex">
-            <view bindtap="goto2" style="margin-left: 25px;margin-top: 0px;width: 280px;height: 40px;background-color: #D8CAAF;">
-                <image class="headpic" src="/asset/img/xht.png"></image>
-                <text class="id" >{{id1}}</text>
+
+        <view class="member" bindtap="goto2">
+            <image class="headpic" src="/asset/img/xht.png"></image>
+            <view class="labordiv">
+                <view class="labor2">{{labordiv2}}</view>
+            </view>
+            <view class="member_">
+                <view>{{id1}}</view>
             </view>
         </view>
     </view>

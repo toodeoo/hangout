@@ -43,25 +43,28 @@
   
   .content{
     width: 90%;
+    background-color: rgb(221, 209, 186);
     display: flex;
+    border: 1rpx solid #7B8B6F;
+    height: 100rpx;
   }
   
   .douzi{
     float: left;
     border-radius: 50%;
-    height: 35px; 
-    width: 35px; 
-    top: 8px;
-    left:18px;
+    height: 45px; 
+    width: 45px; 
+    top: 4px;
+    left:10px;
     position: relative;
     text-align: center;
     font-weight: bolder;
     justify-content: center;
     background-color: #7B8B6F;
+    font-size: 23px;
   }
 
   .section{
-    font-size:28rpx;
     margin-left: 50rpx;
     margin-top: 30rpx;
    }

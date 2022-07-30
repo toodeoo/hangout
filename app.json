@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "Pages/travel/plan/main/index/index",
+    "entryPagePath": "Pages/homepage/homepage",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/menu/menu",
@@ -21,7 +21,6 @@
         "Pages/travel/plan/main/menu",
         "Pages/travel/plan/main/checked/checked",
         "Pages/travel/plan/main/index/index",
-        "Pages/travel/plan/main/wish/wish/wish",
         "Pages/travel/plan/main/wish/wish/new",
         "Pages/travel/plan/main/wish/wish/index",
         "Pages/travel/plan/main/wish/wish/result",
