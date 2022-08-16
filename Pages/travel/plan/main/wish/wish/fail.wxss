@@ -1,0 +1,25 @@
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 102px; 
+    height: 42px; 
+    background: #d8caaf;
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+}
+
+.fail{
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hg{
+    height: 350px;
+    width: 300px;
+    padding-left: 100px;
+    margin-top: 20px;
+}

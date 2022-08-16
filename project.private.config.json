@@ -1,5 +1,30 @@
 {
-  "setting": {},
-  "condition": {},
-  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+    "setting": {},
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "Pages/travel/plan/new/share",
+                    "query": "",
+                    "scene": 1044,
+                    "shareInfo": {
+                        "groupName": "测试模拟群0",
+                        "shareName": "uSGWVgoBDEBrse_Dj8fDdpavsu_xvIUsUVaCMET8NvY@cr4dev",
+                        "shareKey": "nG63Rx1GemmHc3iNupCZn30hko1s7m9m8w4UdTpUtUyXtd69DOBBMffeZg-OgrFgMZ53D6HIckgojL-XNikyIw~~"
+                    }
+                }
+            ]
+        }
+    }
 }

@@ -1,0 +1,35 @@
+<view style="display: flex;">
+    <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
+    <view class="leftHr"></view>
+    <view class="content">
+        <view class="title">
+            <image bindtap="previous" style="position: absolute;left: 100rpx;top: 25rpx;height: 40rpx;width:40rpx" src="/asset/img/previous.png"></image>
+            计划打卡
+        </view>
+        <view class="tripInfo" style="background-color:{{src?'':'rgb(196,196,196)'}};">
+            <image src="{{src}}"></image>
+        </view>
+        <view class="tripInfo-input">
+            <input type="text" placeholder="点击输入" model:value="{{inputVal}}" />
+        </view>
+        <view class="collectionFun">
+            <view class="collectionFun-daka">
+                <view>
+                    <image style="height: 40rpx;width:50rpx" src="/asset/img/daka.png"></image>
+                    <text style="padding-left:40rpx">我要打卡</text>
+                </view>
+                <switch color="rgb(134,135,121)"></switch>
+            </view>
+            <view class="collectionFun-groupPhoto">
+                <view>
+                    <image style="height: 40rpx;width:50rpx" src="/asset/img/team.png"></image>
+                    <text style="padding-left:40rpx">上传合照</text>
+                </view>
+                <image bindtap="uploadPhoto" style="height: 50rpx;width:50rpx" src="/asset/img/add.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="hg">
+            <image src="/asset/img/hangou2.png" mode="heightFix" class="hg"></image>
+    </view>
+</view>

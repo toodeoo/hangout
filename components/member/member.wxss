@@ -1,1 +1,103 @@
-/* components/member/member.wxss */
+.navi{
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+
+.title{
+    position: relative; 
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #000;
+    top:15px;
+    left:10px;
+}
+
+.ret{
+    padding-right: 60px;
+}
+
+.id{
+    font-size: 20px; 
+    font-weight: 500; 
+    color: #000;
+    margin-left: 25px;
+    
+}
+
+.headpic{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 8px;
+    margin-left: 10px; 
+}
+
+.leaderpic{
+    width: 40px;
+    height: 40px;
+    margin-top: 7px;
+    margin-left: 50px;
+}
+
+.leader{
+    width: 90%;
+    background-color: #D8CAAF;
+    display: flex;
+    border: 1rpx solid #7B8B6F;
+    height: 110rpx;
+    margin-top: 80rpx;
+    margin-left: 35rpx;
+}
+
+.leader_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 30rpx;
+    padding: 0rpx 0 10rpx 40rpx;
+}
+
+.member{
+    width: 90%;
+    background-color: #D8CAAF;
+    display: flex;
+    border: 1rpx solid #7B8B6F;
+    height: 110rpx;
+    margin-left: 35rpx;
+}
+
+.member_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 30rpx;
+    padding: 10rpx 0 10rpx 40rpx;
+}
+
+.labordiv{
+    background-color: #7B8B6F;
+    display: flex;
+    height: 20px;
+    width: 50px;
+    margin-top: 17px;
+    margin-left: 15px;
+}
+
+.labor{
+    color: #D8CAAF;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+.labor2{
+    color: #D8CAAF;
+    margin-left: 9px;
+    font-weight: bold;
+}

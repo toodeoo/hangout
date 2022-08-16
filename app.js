@@ -2,6 +2,8 @@
 App({
     onLaunch: function () {
     },
+  
+
     globalData: {
       userInfo: null,
       token: null

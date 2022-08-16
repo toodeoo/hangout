@@ -1,4 +1,4 @@
-// Pages/travel/plan/main/wish/vote/vote.js
+// Pages/travel/plan/main/wish/wish/fail.js
 Page({
 
     /**
@@ -6,6 +6,12 @@ Page({
      */
     data: {
 
+    },
+
+    onOK: function(){
+        wx.redirectTo({
+            url: '/Pages/travel/plan/main/wish/wish/index',
+          })
     },
 
     /**

@@ -1,13 +1,33 @@
-// Pages/travel/plan/main/wish/vote/index/index.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-
+        inputVal:"",
+        src:""
     },
-
+    previous(){
+        // 跳回上一页
+        wx.navigateBack({
+          delta: 1,
+        })
+    },
+    // 上传图片
+    uploadPhoto(){
+        let that = this
+        wx.chooseMedia({
+            count: 1,
+            mediaType: ['image','video'],
+            sourceType: ['album', 'camera'],
+            maxDuration: 30,
+            camera: 'back',
+            success(res) {
+                that.setData({
+                    src: res.tempFiles[0].tempFilePath
+                })
+            }
+          })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

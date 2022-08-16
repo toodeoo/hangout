@@ -1,31 +1,59 @@
-/* Pages/travel/plan/main/menu.wxss */
+/* Pages/travel/plan/main/menu/menu.wxss */
 .navi{
     width: 40px;
     height: 30px;
     margin: 5px;
     padding-top: 10px;
 }
-
+.leftHr{
+    padding: 0;
+    margin: 0;
+    width: 1px;
+    height:700px;
+    background-color:  #7B8B6F;
+}
 .title{
-    position: relative; 
     font-size: 25px; 
     font-weight: 900; 
     color: #000;
-    text-align: center;
-    top:15px;
-    left:45px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
 }
 
-.add{
-    color: #7B8B6F;
-    padding-left: 50px;
+/* 行程信息 */
+.tripInfo{
+    width: 90%;
+    background-color: rgb(228, 218, 202);
+    height: 180rpx;
+    margin-top: 80rpx;
+}
+.tripInfo-title{
+    display: flex;
+    align-items: center;
+    height: 68%;
+    font-weight: bold;
+    font-size: 45rpx;
+    padding-left: 5rpx;
+}
+.tripInfo-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32%;
+    padding-left:10rpx;
+    padding-right:20rpx;
+    border-top: 2rpx solid rgb(162, 167, 141);
 }
 
 .hg {
-    height: 150px;
-    right: 5px;
-    width: 150px;
-    left: 100px;
-    padding-top: 100px;
-    padding-left:100px;
+    position: fixed;
+    right: 30rpx;
+    bottom: 30rpx;
+    width: 200rpx;
+    height: 200rpx;
+    z-index: -1;
   }

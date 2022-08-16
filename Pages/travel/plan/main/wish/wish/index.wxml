@@ -1,4 +1,4 @@
-<!--Pages/wish/index.wxml-->
+
 <view hidden="{{currentTab == 0? false: true}}">
     <half />
 </view>

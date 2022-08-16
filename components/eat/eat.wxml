@@ -14,7 +14,7 @@
         <view id="wish-list" class="wish-list">
             <view class="content" bindtap="onShow" wx:for="{{placeArr}}" wx:key="*this">
               <cover-image src="/asset/img/wechat.png"></cover-image>
-                <input type="text" id="0" style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 14px; display: flex; align-items: center; " placeholder="{{example}}" placeholder-style="color: rgba(0, 0, 0, 0.6);" bindconfirm="sendWish"/>
+                <view id="0" style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 14px; display: flex; align-items: center; color: rgba(0, 0, 0, 0.6);">{{placeArr.length == 1 ? example : 1}}</view>
               <view style="width: 100%; height:1px;background-color:  #7B8B6F;"></view>
             </view>
         </view>

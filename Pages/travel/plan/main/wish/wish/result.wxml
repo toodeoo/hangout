@@ -1,0 +1,78 @@
+<!--Pages/travel/plan/main/wish/wish/result.wxml-->
+<view class="select">
+        选择分类
+</view>
+    <view class="choice">
+        <picker mode="selector" range="{{arrive}}" class="selected" bindchange="arriveSelect" value="{{arrive_index}}"><view>{{arrive[arrive_index]}}</view></picker>
+    </view>
+
+<view class="result">
+        投票结果 （共{{member_num}}人出行）
+</view>
+
+    <view class="section {{reply1?'on':'off'}}">
+        <view id="wish-list" class="wish-list">
+            <view class="content" wx:for="{{placeArr0}}" wx:key="*this">
+              <view class="douzi">148</view>
+              <view style="flex: 1;">
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+              </view>
+            </view>
+        </view>
+        <view class="fail">
+    <view>憨憨，博弈失败了吗？</view>
+    <view>没关系哟，</view>
+    <view>会在时间许可下</view>
+    <view>最大程度考虑你们的意见的汪！</view>
+</view>
+
+    <view>
+        <button class="button" bindtap="onOK">结束投票！</button>
+    </view>
+    </view>
+    <view class="section {{reply2?'on':'off'}}">
+        <view id="wish-list" class="wish-list">
+            <view class="content" wx:for="{{placeArr1}}" wx:key="*this">
+              <view class="douzi">148</view>
+              <view style="flex: 1;">
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+              </view>
+            </view>
+        </view>
+        <view class="fail">
+    <view>憨憨，博弈失败了吗？</view>
+    <view>没关系哟，</view>
+    <view>会在时间许可下</view>
+    <view>最大程度考虑你们的意见的汪！</view>
+</view>
+
+    <view>
+        <button class="button" bindtap="onOK">结束投票！</button>
+    </view>
+    </view>
+    <view class="section {{reply3?'on':'off'}}">
+        <view id="wish-list" class="wish-list">
+            <view class="content" wx:for="{{placeArr2}}" wx:key="*this">
+              <view class="douzi">148</view>
+              <view style="flex: 1;">
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+              </view>
+            </view>
+        </view>
+        <view class="fail">
+    <view>憨憨，博弈失败了吗？</view>
+    <view>没关系哟，</view>
+    <view>会在时间许可下</view>
+    <view>最大程度考虑你们的意见的汪！</view>
+</view>
+
+    <view>
+        <button class="button" bindtap="onOK">结束投票！</button>
+    </view>
+    </view>
+
+    <view style="display: flex;">
+        <view class="ret" bindtap="onRet">◀</view>
+        <view ><image src="/asset/img/hangou1.png" mode="heightFix" class="hg"></image></view>
+    </view>
+

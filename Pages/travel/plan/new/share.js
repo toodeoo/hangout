@@ -75,7 +75,18 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
-
+    onShareAppMessage() {
+      const promise = new Promise(resolve => {
+        setTimeout(() => {
+          resolve({
+            title: '您有一个新的行程邀请！'
+          })
+        }, 2000)
+      })
+      return {
+        title: '您有一个新的行程邀请！',
+        path: '/Pages/travel/plan/main/wish/wish/index',
+        promise 
+      }
     }
 })

@@ -19,7 +19,7 @@
             </view>
         </view>
         <view style="display: flex; float: right; position: relative;top: 5%; right: 10%;">
-          <view>点击结束投票</view>
+          <view> 点击结束投票</view>
           <image src="/asset/img/icon-handin.png" style="height: 20px; width: 20px;" bindtap="endVote"></image>
         </view>
         <button class="addwish" bindtap="addWish">
