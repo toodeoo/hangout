@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      username: ['未选择'],
+      user_id: 0
     },
 
     send:function(){
@@ -14,11 +15,37 @@ Page({
         })
     },
 
+    userSelect:function(e){
+      this.setData({
+          user_id: e.detail.value
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      wx.request({
+        url: 'https://hangout.wang/hangout/whisper/allUser?token=' + wx.getStorageSync('token'),
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data)
+          let code = res.data.code
+          if(code == 1){
+            let new_username = this.data.username.concat(res.data.username)
+            this.setData({
+              username: new_username
+            })
+          }
+          else{
+            wx.showModal({
+              content: '请刷新页面！',
+              success (res) {
+              }
+            })
+          }
+        }
+      })
     },
 
     /**

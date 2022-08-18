@@ -24,15 +24,9 @@
             <button bindtap="onTrval">></button>
         </view>
 
-        <view class="share">
-            <image src="/asset/img/video.png"></image>
-            <text decode="true" bindtap="onCommunity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;教学演示</text>
-            <button bindtap="onCommunity">></button>
-        </view>
-
         <view class="bot">
             <image src="/asset/img/icon-bot.png"></image>
-            <text decode="true" bindtap="onHGBot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;憨狗bot</text>
+            <text decode="true" bindtap="onHGBot">&nbsp;&nbsp;&nbsp;&nbsp;憨狗 bot</text>
             <button bindtap="onHGBot">></button>
         </view>
     </view>

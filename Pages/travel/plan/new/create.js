@@ -41,7 +41,7 @@ Page({
 
     OK:function(){
         wx.redirectTo({
-          url: '/Pages/travel/plan/new/share',
+          url: '/Pages/travel/plan/main/wish/wish/index',
         })
     },
 

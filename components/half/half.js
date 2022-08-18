@@ -11,7 +11,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-      example: "示例愿望：我想打麻将!!!",
+      example: " 示例愿望：在家打麻将!!!",
       wishArr: [1],
       origin: 200
     },
@@ -54,6 +54,24 @@ Component({
         wx.redirectTo({
           url: '/Pages/travel/plan/main/wish/wish/result',
         })
+      },
+
+      /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage() {
+      const promise = new Promise(resolve => {
+        setTimeout(() => {
+          resolve({
+            title: '您有一个新的行程邀请！'
+          })
+        }, 2000)
+      })
+      return {
+        title: '您有一个新的行程邀请！',
+        path: '/Pages/travel/plan/main/wish/wish/index',
+        promise 
       }
+    }
     }
 })

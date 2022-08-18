@@ -5,10 +5,12 @@
     <view style="padding: 0;margin: 0;width: 2px;height:700px;background-color:  #7B8B6F;"></view>
 
     <view class="wish" style="display: block;">
-        <view class="title">新增愿望
-          <view style="margin-top: 3%; width: 100%; height:2px;background-color:  #7B8B6F;"></view>
-        </view>
-        <view class="title" style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 18px;">
+      <view style="display: flex" class="title">
+        <view style="text-align: center;"> 新增愿望 </view>
+        <button style="width: 30px;height:30px;margin-left: 100px;" open-type="share"><image class="icon-share" src="/asset/img/share.png"></image></button> 
+      </view>
+
+        <view style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 20px;font-weight: bolder;">
           愿望列表-半日行程
         </view>
         <view id="wish-list" class="wish-list">

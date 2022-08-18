@@ -1,11 +1,14 @@
-// Pages/HGBot/Whisper/get/get.js
+
+var app = getApp();
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      code: 0,
+      username: null,
+      src: ['/asset/img/hangou1.png', '/asset/img/hangout3.png']
     },
 
     ret:function(){
@@ -25,11 +28,31 @@ Page({
           url: '/Pages/HGBot/Whisper/received/total',
         })
     },
+
+    click:function(){
+      if(this.data.code == 1){
+        wx.navigateTo({
+          url: '/Pages/HGBot/Whisper/received/received',
+        })
+      }
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      wx.request({
+        url: 'https://hangout.wang/hangout/whisper/newMsg?username=' + app.globalData.userInfo.nickName,
+        method: "GET",
+        success: (res)=>{
+          console.log(res.data)
+          this.setData({
+            code: res.data.code
+          })
+        },
+        fail: (res)=>{
+          console.log("11111")
+        }
+      })
     },
 
     /**

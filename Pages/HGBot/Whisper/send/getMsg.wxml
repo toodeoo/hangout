@@ -1,4 +1,4 @@
-<!--Pages/HGBot/Whisper/get/get.wxml-->
+
 <!--TODO: css样式 与 navToNext函数-->
 <view>
     <view class="ask">
@@ -16,7 +16,7 @@
         <button bindtap="onNext"  style="color: #7B8B6F;" size="mini">>>></button>
     </view>
     <view>
-        <image class="hg"  src="../../../../asset/img/hangou1.png" mode="heightFix"></image>
+        <image bindtap="click" class="hg"  src="{{src[code]}}" mode="heightFix"></image>
     </view>
 
     <view class="ret" bindtap="ret">◀</view>

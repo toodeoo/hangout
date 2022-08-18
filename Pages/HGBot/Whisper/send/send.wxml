@@ -1,11 +1,9 @@
 <!--Pages/HGBot/Whisper/send/send.wxml-->
-<!--TODO: css样式 send函数 picker选择器中的内容-->
 <view class="ask">
     <text>悄悄话要讲给谁听?</text>
 </view>
 <view class="choice">
-    <picker style="width: 420rpx; height: 70rpx; display: block; box-sizing: border-box; background-color: #D8CAAF;">
-    <text decode="ture">未选择&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</text>
+    <picker style="width: 420rpx; height: 70rpx; display: block; box-sizing: border-box; background-color: #D8CAAF;" mode="selector" range="{{username}}" class="selected" bindchange="userSelect" value="{{user_id}}">{{username[user_id]}}
     </picker>
 </view>
 <view class="OK" bindtap="send">
@@ -15,5 +13,5 @@
 </view>
 
 <view>
-    <image class="hg" mode="heightFix"  src="../../../../asset/img/hangou1.png"></image>
+    <image class="hg" mode="heightFix"  src="/asset/img/hangou1.png"></image>
 </view>

@@ -7,10 +7,13 @@
 }
 
 .title{
-  font-size: 22px; 
-  font-weight: 900; 
-  color: #000;
-  text-align: center;
+  position: relative; 
+    font-size: 25px; 
+    font-weight: 900; 
+    color: #000;
+    left:0px;
+    padding-left: 60px;
+    border-bottom: 5rpx solid rgb(162, 162, 156);
 }
 
 .wish {

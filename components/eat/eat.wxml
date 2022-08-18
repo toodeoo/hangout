@@ -6,9 +6,8 @@
 
     <view class="wish" style="display: block;">
         <view class="title">新增愿望
-          <view style="margin-top: 3%; width: 100%; height:2px;background-color:  #7B8B6F;"></view>
         </view>
-        <view class="title" style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 18px;">
+        <view style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 20px;font-weight: bolder;">
           愿望列表-干饭地点
         </view>
         <view id="wish-list" class="wish-list">
