@@ -3,13 +3,13 @@
 <view class="ask">
     <view>收到一条新的悄悄话</view>
 </view>
-<view class="whisper">
-    <textarea style="background-color: #D8CAAF;"></textarea>
+<view class="whisper" style="background-color: #D8CAAF;">
+{{whisper}}
 </view>
 <view class="list">
         <text>之前的悄悄话都收在这里哦</text>
         <button size="mini" bindtap="onNext"  style="color: #7B8B6F;">>>></button>
 </view>
 <view>
-    <image mode="heightFix"  src="../../../../asset/img/hangou1.png" class="hg"></image>
+    <image mode="heightFix"  src="/asset/img/hangou1.png" class="hg"></image>
 </view>

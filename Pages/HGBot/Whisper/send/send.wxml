@@ -6,6 +6,11 @@
     <picker style="width: 420rpx; height: 70rpx; display: block; box-sizing: border-box; background-color: #D8CAAF;" mode="selector" range="{{username}}" class="selected" bindchange="userSelect" value="{{user_id}}">{{username[user_id]}}
     </picker>
 </view>
+<!-- <view class="choice">
+    <picker mode="selector" bindchange="person" style="width: 420rpx; height: 70rpx; display: block; box-sizing: border-box; background-color: #D8CAAF;" value="{{index}}" range="{{array}}"> 
+    <text decode="ture">未选择&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</text>
+    </picker>
+</view> -->
 <view class="OK" bindtap="send">
     <view>
         <text>好了</text>

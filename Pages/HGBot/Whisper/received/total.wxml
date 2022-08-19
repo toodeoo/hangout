@@ -1,17 +1,22 @@
 <!--Pages/HGBot/Whisper/received/total.wxml-->
-<!--TODO: 从服务器中读取用户历史的悄悄话 css样式-->
+<view wx:if="{{code === 1}}">
 <view class="list" style="display: block;"
-    wx:for="{{time.length}}">
-    <view style="padding: 0;margin: 0;height: 25px;"></view>
-    {{time[item]}}
+  wx:for="{{whisper}}">
+    <view class="time">
+      {{item.time}}
+    </view> 
     <view>
-    <textarea class="whisper">{{whisper}}</textarea>
-    <view style="padding: 0;margin: 0;height: 25px;"></view>
+      <textarea class="whisper">{{item.text}}</textarea>
+      <view style="padding: 0;margin: 0;height: 25px;"></view>
     </view>
 </view>
+</view>
+
+<view wx:else class="no-data">暂时没有悄悄话汪！</view>
 
 <view class="hg">
-    <image mode="heightFix"  src="../../../../asset/img/hangou1.png"></image>
+    <image mode="heightFix"  src="/asset/img/hangou1.png"></image>
 </view>
 
 <view class="ret" bindtap="ret">◀</view>
+

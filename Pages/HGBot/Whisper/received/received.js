@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      whisper: null
     },
     
     onNext:function(){
@@ -16,8 +16,21 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-
+    onLoad: async function (options) {
+      wx.getStorage({
+        key: 'whisper',
+        success: (res)=>{
+          this.setData({
+            whisper: res.data
+          })
+        },
+        fail: ()=>{
+          console.log("failed")
+        }
+      })
+      wx.removeStorage({
+        key: 'whisper',
+      })
     },
 
     /**

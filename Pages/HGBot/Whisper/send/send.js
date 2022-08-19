@@ -6,19 +6,49 @@ Page({
      */
     data: {
       username: ['未选择'],
-      user_id: 0
+      user_id: 0,
     },
-
+  
     send:function(){
-        wx.redirectTo({
-          url: '/Pages/HGBot/Home/Home',
+        wx.request({
+          url: 'https://hangout.wang/hangout/whisper/write',
+          method: 'POST',
+          data: {
+              text: wx.getStorage({
+                key: 'text',
+                success(res){
+                  console.log("调用2后结果为"+res.data)
+                }
+              }),
+              person: wx.getStorage({
+                key: 'person',
+                success(res){
+                  console.log("调用2后结果为"+res.data)
+                }
+              })
+          },
+          dataType: 'json',
+          success: (res)=>{
+            console.log(res.data)
+          },
+          fail: (res)=>{
+            console.log("error")
+          }
         })
+  
+          wx.redirectTo({
+            url: '/Pages/HGBot/Home/Home',
+          })
     },
 
     userSelect:function(e){
-      this.setData({
-          user_id: e.detail.value
-        })
+        this.setData({
+            user_id: e.detail.value
+          })
+        wx.setStorage({
+            key:'person',
+            data:this.data.username[this.data.user_id],
+          })
     },
 
     /**
@@ -26,7 +56,7 @@ Page({
      */
     onLoad: function (options) {
       wx.request({
-        url: 'https://hangout.wang/hangout/whisper/allUser?token=' + wx.getStorageSync('token'),
+        url: 'https://hangout.wang/hangout/whisper/allUser?token=' + wx.getStorageSync('token'),
         method: 'GET',
         success:(res)=>{
           console.log(res.data)

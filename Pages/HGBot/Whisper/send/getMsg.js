@@ -11,6 +11,16 @@ Page({
       src: ['/asset/img/hangou1.png', '/asset/img/hangout3.png']
     },
 
+    getText:function(options){
+      wx.removeStorage({
+        key: 'text',
+      })
+        wx.setStorage({
+          key:'text',
+          data:options.detail.value,
+        })
+      },
+
     ret:function(){
       wx.reLaunch({
         url: '/Pages/HGBot/Home/Home',
@@ -48,6 +58,14 @@ Page({
           this.setData({
             code: res.data.code
           })
+          if(res.data.code == 1){
+            let whisper = res.data.whisper
+            console.log(whisper)
+            wx.setStorage({
+              key: 'whisper',
+              data: whisper
+            })
+          }
         },
         fail: (res)=>{
           console.log("11111")

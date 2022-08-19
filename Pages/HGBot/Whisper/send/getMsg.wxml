@@ -1,11 +1,10 @@
 
-<!--TODO: css样式 与 navToNext函数-->
 <view>
     <view class="ask">
         <view>哦呀，有秘密要告诉我吗？</view>
     </view>
     <view class="whisper">
-        <textarea placeholder="点击输入悄悄话" maxlength="-1" auto-focus="true">
+        <textarea placeholder="点击输入悄悄话" maxlength="-1" auto-focus="true" bindblur="getText">
         </textarea>
     </view>
     <view class="OK">

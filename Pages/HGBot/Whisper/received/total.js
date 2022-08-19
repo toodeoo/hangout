@@ -5,8 +5,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-        time:["2022.01.12","2022.01.10"],
-    },
+      whisper: [
+        // {
+        //   time: '2022-08-18 17:19:05',
+        //   text: '这是一句悄悄话1'
+        // },
+        // {
+        //   time: '2022-08-18 17:29:05',
+        //   text: '这是一句悄悄话1'
+        // },
+    ],
+      code: 0
+  },
 
     ret:function(){
         wx.reLaunch({
@@ -18,7 +28,17 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      wx.request({
+        url: 'https://hangout.wang/hangout/whisper/historyMsg?username='+app.globalData.userInfo.nickName,
+        method: "GET",
+        success: (res)=>{
+          console.log(res.data)
+          this.setData({
+            code: res.data.code,
+            whisper: res.data.whisper
+          })
+        }
+      })
     },
 
     /**
