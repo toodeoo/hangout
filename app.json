@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "Pages/HGBot/Whisper/send/getMsg",
+    "entryPagePath": "Pages/HGBot/Vote/received/received",
     "pages": [
         "Pages/homepage/homepage",
         "Pages/menu/menu",

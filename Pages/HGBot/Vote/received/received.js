@@ -5,8 +5,17 @@ Page({
      * 页面的初始数据
      */
     data: {
-        userName:"洗后提",
-        array:[1,2]
+        array:[
+          // {
+          // "name": "Nihao",
+          // "checked": false
+          // },
+          // {
+          //   "name": "昨天",
+          //   "checked": false
+          // }
+        ],
+        vote:[]
     },
 
     checkboxChange(e) {
@@ -20,25 +29,54 @@ Page({
           for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
             if (items[i].value === values[j]) {
               items[i].checked = true
+              this.setData({
+                'vote[i]' : array[i].name + '+1'
+              })
               break
             }
           }
         }
+        console.log(this.data.vote)
     },
 
-    onAdd: function(){
-      const length = this.data.array.length
-      this.data.array = this.data.array.concat([length + 1])
-      this.setData({
-          array:this.data.array
+    onOK:function(){
+      wx.request({
+        url: 'https://hangout.wang/hangout/vote/vote',
+        method: 'POST',
+        data:{
+          token: wx.getStorageSync('token'),
+          vote: this.data.vote,
+        },
+        success:(res)=>{
+          console.log(res.data.code)
+        }
       })
-  },
+      wx.redirectTo({
+        url: '/Pages/HGBot/Home/Home',
+      })
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      wx.request({
+        url: 'https://hangout.wang/hangout/vote/getVote?token=' + wx.getStorageSync('token'),
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data)
+          this.setData({
+            vote: res.data.vote,
+            array: res.data.vote,
+          })
+          for (let i = 0, lenI = this.data.array.length; i < lenI; ++i) {
+            this.setData({
+              ['array['+ i + ']']: {"name": this.data.array[i].split('+')[0], checked: false}
+            })
+          }
+          console.log(this.data.array)
+        }
+      })
     },
 
     /**

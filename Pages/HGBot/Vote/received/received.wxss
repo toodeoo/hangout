@@ -28,31 +28,6 @@
     color: #000;
 }
 
-.add{
-    display: flex;
-    padding-left: 20%;
-    margin-left: 5px;
-}
-
-.add button{
-    color: #d8caaf;
-    padding: 0;
-    margin: 0;
-    background-color: inherit;
-}
-.add button:after{
-    content: 0;
-}
-
-.add button::after{
-    border: 0;
-}
-
-.add image{
-    width: 23.25px;
-    height:23.25px;
-}
-
 .button{
     display:flex;
     align-items: center;
@@ -64,7 +39,6 @@
     text-align: center; 
     color: #000;
 }
-
 
 .hg{
     position: sticky;

@@ -10,7 +10,7 @@ Page({
 
     onOK: function(){
         wx.redirectTo({
-            url: '/Pages/travel/plan/main/wish/wish/index',
+            url: '/Pages/menu/menu',
           })
     },
 
