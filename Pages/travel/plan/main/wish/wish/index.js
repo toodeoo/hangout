@@ -31,13 +31,62 @@ Page({
         currentTab: e.target.dataset.current,
       });
     }
+    if(e.target.dataset.current == 0){
+      const half = this.selectComponent('#half')
+      wx.request({
+        url: 'https://hangout.wang/hangout/wish/getWish?class=half&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data.wishList)
+          half.setData({
+            wishList: res.data.wishList
+          })
+        }
+      })
+    }
+    else if(e.target.dataset.current == 1){
+      const whole = this.selectComponent('#whole')
+      wx.request({
+        url: 'https://hangout.wang/hangout/wish/getWish?class=whole&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data.wishList)
+          whole.setData({
+            wishList: res.data.wishList
+          })
+        }
+      })
+    }
+    else {
+      const eat = this.selectComponent("#eat")
+      wx.request({
+        url: 'https://hangout.wang/hangout/wish/getWish?class=eat&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data.wishList)
+          eat.setData({
+            wishList: res.data.wishList
+          })
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    const half = this.selectComponent('#half')
+      wx.request({
+        url: 'https://hangout.wang/hangout/wish/getWish?class=half&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data.wishList)
+          half.setData({
+            wishList: res.data.wishList
+          })
+        }
+      })
   },
 
   /**
@@ -51,7 +100,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
   },
 
   /**

@@ -1,14 +1,14 @@
 
 <view hidden="{{currentTab == 0? false: true}}">
-    <half />
+    <half id="half" />
 </view>
 
 <view hidden="{{currentTab == 1? false: true}}">
-    <whole />
+    <whole id="whole" />
 </view>
 
 <view hidden="{{currentTab == 2? false: true}}">
-    <eat />
+    <eat id="eat" />
 </view>
 
 <view class="tab-bar">

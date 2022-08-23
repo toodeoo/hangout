@@ -6,7 +6,9 @@ Page({
      */
     data: {
       arrive: ["请选择","半日行程","一日行程","干饭地点"],
-      arrive_index: 0
+      arrive_index: 0,
+      class: ["half", "whole", "eat"],
+      text: null
     },
 
     onRet:function(){
@@ -43,10 +45,36 @@ Page({
   },
 
   onOK: function(){
+    if(this.data.arrive_index!=0){
+      wx.request({
+        url: 'https://hangout.wang/hangout/wish/postWish',
+        method: 'POST',
+        data:{
+          class: this.data.class[this.data.arrive_index-1],
+          token: 'osDXq5IFPw3eERUD8LejfgAF0108',
+          wish: this.data.text,
+          travelId: 1
+        },
+        success:(res)=>{
+          console.log(res.data.code)
+        },
+        fail:(res)=>{
+          console.log(res.errMsg)
+        }
+      })
+    }
+    
     wx.redirectTo({
       url: '/Pages/travel/plan/main/wish/wish/index',
     })
-    //sumbit到后台保存
+},
+
+getInput(e){
+  console.log(e.detail)
+  this.setData({
+      text: e.detail.value
+  })
+  console.log(this.data.text)
 },
 
     /**

@@ -19,36 +19,36 @@ Page({
     },
 
     checkboxChange(e) {
-        console.log('checkbox发生change事件，携带value值为：', e.detail.value)
-    
-        const items = this.data.array
-        const values = e.detail.value
-        for (let i = 0, lenI = items.length; i < lenI; ++i) {
-          items[i].checked = false
-    
-          for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
-            if (items[i].value === values[j]) {
-              items[i].checked = true
-              this.setData({
-                'vote[i]' : array[i].name + '+1'
-              })
-              break
-            }
-          }
-        }
-        console.log(this.data.vote)
+      const list = e.detail.value;
+      this.setData({
+        vote: list
+      })
+      console.log(this.data.vote)
     },
 
     onOK:function(){
+      let data = [];
+      const vote = this.data.vote;
+      const arr = this.data.array;
+      for(let i = 0, j = 0; i < arr.length; i++){
+        if(arr[i].name === vote[j]){
+          data.push(vote[j] + "+1");
+          j++;
+        }
+        else {
+          data.push(arr[i].name + "+0");
+        }
+      }
+      console.log(data)
       wx.request({
         url: 'https://hangout.wang/hangout/vote/vote',
         method: 'POST',
         data:{
           token: wx.getStorageSync('token'),
-          vote: this.data.vote,
+          vote: data,
         },
         success:(res)=>{
-          console.log(res.data.code)
+          console.log(this.data.code)
         }
       })
       wx.redirectTo({
@@ -64,17 +64,18 @@ Page({
         url: 'https://hangout.wang/hangout/vote/getVote?token=' + wx.getStorageSync('token'),
         method: 'GET',
         success:(res)=>{
-          console.log(res.data)
-          this.setData({
-            vote: res.data.vote,
-            array: res.data.vote,
-          })
-          for (let i = 0, lenI = this.data.array.length; i < lenI; ++i) {
-            this.setData({
-              ['array['+ i + ']']: {"name": this.data.array[i].split('+')[0], checked: false}
-            })
+          console.log(res.data.vote)
+          // this.setData({
+          //   array: res.data.vote,
+          // })
+          let arr = [], vote = res.data.vote;
+          for(let i = 0; i < vote.length; i++){
+            arr.push({"name": vote[i].split("+")[0], "checked": false})
           }
-          console.log(this.data.array)
+          console.log(arr);
+          this.setData({
+            array: arr
+          })
         }
       })
     },

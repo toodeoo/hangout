@@ -27,13 +27,13 @@
     <textarea class="other"type="text"></textarea>
     </view>
     <view class="section {{reply1?'on':'off'}}">
-    <textarea class="other" placeholder="半日行程" type="text"></textarea>
+    <textarea class="other" placeholder="半日行程" type="text" bindinput="getInput"></textarea>
     </view>
     <view class="section {{reply2?'on':'off'}}">
-    <textarea class="other" placeholder="一日行程" type="text"></textarea>
+    <textarea class="other" placeholder="一日行程" type="text" bindinput="getInput"></textarea>
     </view>
     <view class="section {{reply3?'on':'off'}}">
-    <textarea class="other" placeholder="干饭地点" type="text"></textarea>
+    <textarea class="other" placeholder="干饭地点" type="text" bindinput="getInput"></textarea>
     </view>
 
     <view style="display: flex;">

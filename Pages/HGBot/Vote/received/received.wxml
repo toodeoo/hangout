@@ -10,7 +10,7 @@
 
 <view class="choice">
 <checkbox-group bindchange="checkboxChange">
-      <checkbox  value="{{item.name}}" checked="{{item.check}}" name="{{index}}" style="display: flex; margin-bottom: 15px;" wx:for="{{array}}" wx:key="*this">
+      <checkbox  value="{{item.name}}" checked="{{item.checked}}" name="{{index}}" style="display: flex; margin-bottom: 15px;" wx:for="{{array}}" wx:key="*this">
         <text> {{index + 1}} 、 {{item.name}}</text>
       </checkbox>
 </checkbox-group>

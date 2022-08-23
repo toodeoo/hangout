@@ -11,9 +11,30 @@ Component({
      * 组件的初始数据
      */
     data: {
-      example: " 示例愿望：在家打麻将!!!",
-      wishArr: [1],
-      origin: 200
+      example: "  示例愿望：在家打麻将!!!",
+      origin: 200,
+      wishList:[
+        // {
+        //   wish: "去看海！",
+        //   avatar: ['/asset/img/wechat.png', '/asset/img/icon-star.png']
+        // },
+        // {
+        //   wish: "滑雪滑雪",
+        //   avatar: ['/asset/img/icon-vote.png']
+        // },
+        // {
+        //   wish: "play games",
+        //   avatar: ['/asset/img/icon-weather.png', '/asset/img/link.png', '/asset/img/team.png']
+        // },
+        // {
+        //   wish: "泡汤",
+        //   avatar: ['/asset/img/share.png']
+        // },
+        // {
+        //   wish: "treat or trick",
+        //   avatar: ['/asset/img/subicon-up.png', '/asset/img/video.png']
+        // }
+    ]
     },
 
     /**
@@ -23,13 +44,18 @@ Component({
       onShow: function(e) {
         console.log(e.target.id);
         let origin  = this.data.origin;
+        let that = this;
         wx.showModal({
           title: '你投入的豆子数是',
+          placeholderText: '剩余的豆子数为' + origin,
           editable: true,
           success (res){
             if(res.confirm){
               let t = res.content;
               let x = origin - parseInt(t);
+              that.setData({
+                origin: x
+              })
               wx.showToast({
                 title: '剩余豆子数为' + x,
                 icon: 'none'
@@ -43,17 +69,10 @@ Component({
         console.log(e.detail.value);
       },
 
-      addWish: function(e){
-          const length = this.data.wishArr.length
-          this.data.wishArr = this.data.wishArr.concat([length + 1])
-          this.setData({
-              wishArr:this.data.wishArr
+      addWish: function(){
+          wx.redirectTo({
+            url: '/Pages/travel/plan/main/wish/wish/new',
           })
-      },
-      endVote: function(e){
-        wx.redirectTo({
-          url: '/Pages/travel/plan/main/wish/wish/result',
-        })
       },
 
       /**
@@ -73,5 +92,6 @@ Component({
         promise 
       }
     }
+
     }
 })

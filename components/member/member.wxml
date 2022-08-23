@@ -1,6 +1,6 @@
 <view  style="display: flex;">
     <image class="navi" src="/asset/img/navi.png" bindtap="onRet"></image>
-    <view style="padding: 0;margin: 0;width: 1px;height:700px;background-color:  #7B8B6F;"></view>
+    <view class="leftHr"></view>
 
     <view  style="display: block;">
     <!-- 标题 -->
@@ -9,7 +9,7 @@
             <view style="text-align: center;"> 成员信息表 </view>   
         </view>
     <!-- 线 -->
-        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
+        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 0px;background-color:  #7B8B6F;"></view>
     <!-- 成员 -->
         <view class="leader" bindtap="goto">
             <image class="headpic" src="/asset/img/xht.png"></image>

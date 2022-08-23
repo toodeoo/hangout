@@ -47,12 +47,11 @@
 
 .addwish{
   background-color: #D8CAAF;
-  opacity: 0.5;
+  opacity: 0.8;
   color: #000;
   font-size: 16px;
   height: 40px;
   width: 170px;
   position: relative;
-  float: left;
   top: 10%;
 }

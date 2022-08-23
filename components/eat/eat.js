@@ -12,8 +12,8 @@ Component({
      */
     data: {
       example: "示例愿望：KFC!今天星期四!",
-      placeArr: [1],
-      origin: 200
+      origin: 200,
+      wishList: []
     },
 
     /**
@@ -45,16 +45,24 @@ Component({
       },
 
       addWish: function(e){
-          const length = this.data.placeArr.length
-          this.data.placeArr = this.data.placeArr.concat([length + 1])
-          this.setData({
-              placeArr:this.data.placeArr
-          })
+        wx.redirectTo({
+          url: '/Pages/travel/plan/main/wish/wish/new',
+        })
       },
       endVote: function(e){
-        wx.redirectTo({
-          url: '/Pages/travel/plan/main/wish/wish/result',
-        })
-      }
+          wx.showModal({
+            title: '确定结束投票吗',
+            success (res){
+              if (res.confirm) {
+                wx.request({
+                  url: 'url',
+                })
+                wx.redirectTo({
+                  url: '/Pages/travel/plan/main/wish/wish/result',
+                })
+              }
+            }
+          })
+        },
     }
 })

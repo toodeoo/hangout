@@ -5,20 +5,24 @@
     <view style="padding: 0;margin: 0;width: 2px;height:700px;background-color:  #7B8B6F;"></view>
 
     <view class="wish" style="display: block;">
-        <view class="title">新增愿望
-        </view>
+      <view style="display: flex" class="title">
+        <view style="text-align: center;"> 新增愿望 </view>
+        <button style="width: 30px;height:30px;margin-left: 100px;" open-type="share"><image class="icon-share" src="/asset/img/share.png"></image></button> 
+      </view>
+
         <view style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 20px;font-weight: bolder;">
-          愿望列表-干饭地点
+          愿望列表-一日行程
         </view>
         <view id="wish-list" class="wish-list">
-            <view class="content" bindtap="onShow" wx:for="{{placeArr}}" wx:key="*this">
-              <cover-image src="/asset/img/wechat.png"></cover-image>
-                <view id="0" style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 14px; display: flex; align-items: center; color: rgba(0, 0, 0, 0.6);">{{placeArr.length == 1 ? example : 1}}</view>
-              <view style="width: 100%; height:1px;background-color:  #7B8B6F;"></view>
+          <view type="text" style="width: 80%; background-color: #D8CAAF; height: 50px;font-size: 16px; display: flex; align-items: center;color: rgba(0, 0, 0, 0.6);">{{example}}</view>
+
+            <view class="content" bindtap="onShow" wx:for="{{wishList}}">
+              <cover-image wx:for="{{item.avatar}}" wx:for-item="items" src="{{items}}"></cover-image>
+                <view style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 20px; display: flex; align-items: center;border: 2rpx solid #7B8B6F;text-indent:1em;" bindconfirm="sendWish"> {{item.wish}}</view>
             </view>
         </view>
         <view style="display: flex; float: right; position: relative;top: 5%; right: 10%;">
-          <view>点击结束投票</view>
+          <view bindtap="addWish">点击结束投票</view>
           <image src="/asset/img/icon-handin.png" style="height: 20px; width: 20px;" bindtap="endVote"></image>
         </view>
         <button class="addwish" bindtap="addWish">

@@ -7,16 +7,24 @@
 
 
 .title{
-    position: relative; 
-    font-size: 25px; 
-    font-weight: 900; 
-    color: #000;
-    top:15px;
-    left:10px;
+  font-size: 25px; 
+  font-weight: 900; 
+  color: #000;
+  text-align: center;
+  border-bottom: 5rpx solid rgb(162, 162, 156);
+  padding:10rpx 0;
 }
 
 .ret{
     padding-right: 60px;
+}
+
+.leftHr{
+  padding: 0;
+  margin: 0;
+  width: 1px;
+  height:700px;
+  background-color:  #7B8B6F;
 }
 
 .id{

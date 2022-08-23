@@ -1,4 +1,4 @@
-<!--Pages/HGBot/Vote/Vote.wxml-->
+<!--Pages/HGBot/Vote/send/send.wxml-->
 <!--TODO: 添加input后，下方元素向下平移-->
 <view class="ques">
     <view> {{userName}} 想要我帮忙</view>
@@ -13,13 +13,13 @@
     <view class="choice">
         <view style="display: flex; margin-bottom: 15px;text-align: center;" wx:for="{{array}}" wx:key="*this">
             {{item}} 、
-            <input id="{{item}}" type="text" style="height: 28px;width: 200px;" confirm-type="next" placeholder="_________________________________" bindinput="getInput" />
+            <input data-index="{{index}}" id="{{item}}" type="text" style="height: 28px;width: 200px;" confirm-type="next" placeholder="_________________________________" bindinput="getInput" />
         </view>
     </view>
 
     <view class="add">
         <button bindtap="onAdd">
-            <image src="../../../../asset/img/icon-add.png" style="align-items: center;"></image>
+            <image src="/asset/img/icon-add.png" style="align-items: center;"></image>
         </button>
     </view>
 
@@ -27,7 +27,7 @@
         <button class="button" bindtap="onOK">好了</button>
     </view>
     <view class="hg">
-        <image src="../../../../asset/img/hangou1.png" mode="heightFix"></image>
+        <image src="/asset/img/hangou1.png" mode="heightFix"></image>
     </view>
 
 </view>
