@@ -11,7 +11,7 @@
                 {{displayDate}}
             </view>
         </picker>
-        <view wx:for="{{tripDetail[randomNum]}}" class="tripDetail" wx:key="index" bindtap="goCheck" data-opt="{{item}}">
+        <view wx:for="{{tripDetail}}" class="tripDetail" wx:key="index" bindtap="goCheck" data-opt="{{item}}">
             <view class="tripDetail-title">{{item.title}}</view>
             <view class="tripDetail-desc">
                 <text>{{item.desc}}</text>

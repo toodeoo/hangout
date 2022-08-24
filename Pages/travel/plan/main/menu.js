@@ -40,6 +40,7 @@ Page({
         // })
 
         wx.setStorageSync('travelId', id)
+        wx.setStorageSync('theme', this.data.tripList[id].theme)
         
         // 跳转到对应的页面
         wx.navigateTo({

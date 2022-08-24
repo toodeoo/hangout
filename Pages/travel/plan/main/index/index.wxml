@@ -1,6 +1,6 @@
 <!--Pages/travel/plan/main/index/index.wxml-->
 <view hidden="{{currentTab == 0? false: true}}">
-<main />
+<main id="{{id}}" />
 </view>
 
 <view hidden="{{currentTab == 1? false: true}}">
