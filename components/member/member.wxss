@@ -100,7 +100,7 @@
 
 .labor{
     color: #D8CAAF;
-    margin-left: 18px;
+    margin-left: 10px;
     font-weight: bold;
 }
 
