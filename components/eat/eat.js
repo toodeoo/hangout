@@ -12,8 +12,8 @@ Component({
      */
     data: {
       example: "示例愿望：KFC!今天星期四!",
-      origin: 200,
-      wishList: []
+      wishList: [],
+      postlist: []
     },
 
     /**
@@ -21,23 +21,32 @@ Component({
      */
     methods: {
       onShow: function(e) {
-        console.log(e.target.id);
-        let origin  = this.data.origin;
+        let that = this;
+        let wish = {wish: this.data.wishList[e.target.id].wish, douzi: 0}
+        let origin  = wx.getStorageSync('douzi');
         wx.showModal({
           title: '你投入的豆子数是',
+          placeholderText: '剩余的豆子数为' + origin,
           editable: true,
           success (res){
             if(res.confirm){
               let t = res.content;
               let x = origin - parseInt(t);
+              wish.douzi = parseInt(t);
+              let temp = that.data.postlist;
+              temp.push(wish)
+              that.setData({
+                postlist: temp
+              })
+              wx.setStorageSync('douzi', x)
               wx.showToast({
                 title: '剩余豆子数为' + x,
                 icon: 'none'
-              });
-              r = x;
+              })
+  
             }
           }
-        });
+        })
       },
 
       sendWish: function(e){
@@ -54,9 +63,6 @@ Component({
             title: '确定结束投票吗',
             success (res){
               if (res.confirm) {
-                wx.request({
-                  url: 'url',
-                })
                 wx.redirectTo({
                   url: '/Pages/travel/plan/main/wish/wish/result',
                 })

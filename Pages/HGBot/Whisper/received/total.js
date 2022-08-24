@@ -1,4 +1,5 @@
 // Pages/HGBot/Whisper/received/total.js
+const app = getApp();
 Page({
 
     /**

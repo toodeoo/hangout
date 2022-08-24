@@ -12,7 +12,7 @@ Component({
      */
     data: {
       example: "  示例愿望：在家打麻将!!!",
-      origin: 200,
+      postlist: [],
       wishList:[
         // {
         //   wish: "去看海！",
@@ -42,9 +42,9 @@ Component({
      */
     methods: {
       onShow: function(e) {
-        console.log(e.target.id);
-        let origin  = this.data.origin;
         let that = this;
+        let wish = {wish: that.data.wishList[e.target.id].wish, douzi: 0}
+        let origin  = wx.getStorageSync('douzi');
         wx.showModal({
           title: '你投入的豆子数是',
           placeholderText: '剩余的豆子数为' + origin,
@@ -53,16 +53,22 @@ Component({
             if(res.confirm){
               let t = res.content;
               let x = origin - parseInt(t);
+              wish.douzi = parseInt(t);
+              let temp = that.data.postlist;
+              temp.push(wish)
               that.setData({
-                origin: x
+                postlist: temp
               })
+              wx.setStorageSync('douzi', x)
               wx.showToast({
                 title: '剩余豆子数为' + x,
                 icon: 'none'
               })
+  
             }
           }
         })
+        console.log(that.data.postlist)
       },
 
       sendWish: function(e){

@@ -6,15 +6,15 @@
             {{username}} 的行程
         </view>
         <!-- 行程信息 -->
-        <view class="tripInfo" style="border:{{item.checked?'2rpx solid black':''}}" wx:for="{{tripList}}" wx:key="index" bindtap="goTrip" data-index="{{index}}">
+        <view class="tripInfo" style="border:{{item.checked?'2rpx solid black':''}}" wx:for="{{tripList}}" wx:key="index" bindtap="goTrip" data-index="{{index}}" data-id="{{item.travelId}}">
             <!-- 标题 -->
             <view class="tripInfo-title" style="background-color:{{item.checked?'rgb(212,205,183)':''}}">
-                {{"·  "+item.title}}
+                {{"·  "+item.theme}}
             </view>
             <!-- 简略info -->
             <view class="tripInfo-info" style="background-color:{{item.checked?'rgb(188,174,148)':'rgb(216, 202, 175)'}}">
-                <text>目的地：{{item.destination}}</text>
-                <text>人数：{{item.number}}</text>
+                <text>目的地：{{item.place}}</text>
+                <text>人数：{{item.peopleNum}}</text>
             </view>
         </view>
     </view>

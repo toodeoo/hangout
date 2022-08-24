@@ -18,7 +18,7 @@
 
             <view class="content" bindtap="onShow" wx:for="{{wishList}}">
               <cover-image wx:for="{{item.avatar}}" wx:for-item="items" src="{{items}}"></cover-image>
-                <view style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 20px; display: flex; align-items: center;border: 2rpx solid #7B8B6F;text-indent:1em;" bindconfirm="sendWish"> {{item.wish}}</view>
+                <view style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 20px; display: flex; align-items: center;border: 2rpx solid #7B8B6F;text-indent:1em;" bindconfirm="sendWish" id="{{index}}"> {{item.wish}}</view>
             </view>
         </view>
         <button class="addwish" bindtap="addWish">

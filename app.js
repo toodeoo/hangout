@@ -1,8 +1,8 @@
 //app.js
 App({
     data:{
-      username: null,
-      avatar: null,
+      username: "未知",
+      avatar: "https://github.com/topdeoo/topdeoo.github.io/blob/main/img/avatar.png",
       code: 0,
     },
 
@@ -32,15 +32,16 @@ App({
           wx.login({
             timeout: 3000,
             success:(res)=>{
-              this.code = res.code
-              console.log(this.code)
+              this.data.code = res.code
+              console.log(this.data.code)
               wx.request({
                 url: 'https://hangout.wang/hangout/user/login',
                 method: 'POST',
                 data: {
                   username: this.data.username,
                   avatar: this.data.avatar,
-                  code: this.data.code
+                  code: this.data.code,
+                  phoneCode: ""
                 },
                 dataType: 'json',
                 success:(res)=>{
@@ -49,7 +50,7 @@ App({
                   this.globalData.token = res.token
                 },
                 fail:(res)=>{
-                  console.log("1111")
+                  console.log(res.errMsg)
                 }
               })
             },

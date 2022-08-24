@@ -1,44 +1,49 @@
+let app = getApp()
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        username: "Silhouette",
+        username: "",
         tripList:[
-            {
-                id:1,
-                title:"wow！好好吃！",
-                destination:"武汉",
-                number:8,
-                checked:false 
-            },
-            {
-                id:2,
-                title:"圆南方群友的梦 ",
-                destination:"东北",
-                number:8,
-                checked:false 
-            },
-            {
-                id:3,
-                title:"想去海边！",
-                destination:"舟山",
-                number:7,
-                checked:false 
-            }
+            // {
+            //     id:1,
+            //     title:"wow！好好吃！",
+            //     destination:"武汉",
+            //     number:8,
+            //     checked:false 
+            // },
+            // {
+            //     id:2,
+            //     title:"圆南方群友的梦 ",
+            //     destination:"东北",
+            //     number:8,
+            //     checked:false 
+            // },
+            // {
+            //     id:3,
+            //     title:"想去海边！",
+            //     destination:"舟山",
+            //     number:7,
+            //     checked:false 
+            // }
         ]
     },
     goTrip($event){
-        let index = $event.currentTarget.dataset.index
-        let newTripList = this.data.tripList
-        newTripList.map(it=> it.checked = false)
-        newTripList[index].checked = !newTripList[index].checked 
-        this.setData({
-            tripList:newTripList
-        })
+        // let index = $event.currentTarget.dataset.index
+        let id = $event.currentTarget.dataset.id
+        // let newTripList = this.data.tripList
+        // newTripList.forEach(it=> it.checked = false)
+        // newTripList[index].checked = !newTripList[index].checked 
+        // this.setData({
+        //     tripList:newTripList
+        // })
+
+        wx.setStorageSync('travelId', id)
+        
         // 跳转到对应的页面
         wx.navigateTo({
-          url: '/Pages/travel/plan/main/index/index',
+          url: '/Pages/travel/plan/main/index/index?id=' + id,
         })
     },
 
@@ -51,7 +56,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let token = wx.getStorageSync('token')
+      this.setData({
+        username: wx.getStorageSync('username')
+      })
+      wx.request({
+        url: 'https://hangout.wang/hangout/travel/list',
+        method: 'GET',
+        data: { token: token},
+        success: (res) => {
+          console.log(res.data.travelIntro)
+          this.setData({
+            tripList: res.data.travelIntro
+          })
+        }
+      })
     },
 
     /**

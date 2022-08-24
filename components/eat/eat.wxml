@@ -11,14 +11,14 @@
       </view>
 
         <view style="text-align: left; left: 5%; position: relative; top: 2%; font-size: 20px;font-weight: bolder;">
-          愿望列表-一日行程
+          愿望列表-干饭行程
         </view>
         <view id="wish-list" class="wish-list">
           <view type="text" style="width: 80%; background-color: #D8CAAF; height: 50px;font-size: 16px; display: flex; align-items: center;color: rgba(0, 0, 0, 0.6);">{{example}}</view>
 
             <view class="content" bindtap="onShow" wx:for="{{wishList}}">
               <cover-image wx:for="{{item.avatar}}" wx:for-item="items" src="{{items}}"></cover-image>
-                <view style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 20px; display: flex; align-items: center;border: 2rpx solid #7B8B6F;text-indent:1em;" bindconfirm="sendWish"> {{item.wish}}</view>
+                <view style="width: 100%; background-color: #D8CAAF; height: 50px;font-size: 20px; display: flex; align-items: center;border: 2rpx solid #7B8B6F;text-indent:1em;" bindconfirm="sendWish" id="{{index}}"> {{item.wish}}</view>
             </view>
         </view>
         <view style="display: flex; float: right; position: relative;top: 5%; right: 10%;">

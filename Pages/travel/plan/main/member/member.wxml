@@ -10,13 +10,13 @@
     <!-- 标题 -->
         <view style="display: flex" class="title">
             <view class="ret" bindtap="ret"> ＜ </view>
-            <view style="text-align: center;"> {{id}} </view>   
+            <view style="text-align: center;"> {{username}} </view>   
         </view>
     <!-- 线 -->
         <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
     <!-- 头像 -->
         <view style="display: flex">
-            <image class="headpic" src="/asset/img/xht.png"></image>
+            <image class="headpic" src="{{info.avatar}}"></image>
         </view>
     
         <view style="display: flex;">
@@ -24,11 +24,52 @@
         </view>
 
         <!-- 信息框 -->
-        <view class="info" wx:for="{{info}}" wx:key="index" data-index="{{index}}">
+        <!-- <view class="info" wx:for="{{info}}" wx:key="index" data-index="{{index}}">
             <view class="info_">
-                    <view>{{item.key}} :     </view>
-                    <input type="text" model:value="{{item.value}}"/>
+                    <view>性别 :     </view>
+                    <input type="text" model:value="{{item.sex}}"/>
                 </view>
+        </view> -->
+
+        <view class="info" >
+            <view class="info_">
+                    <view>性别 :     </view>
+                    <input type="text" model:value="{{info.sex}}" bindinput="getChange_sex"/>
+                </view>
+        </view>
+
+        <view class="info" >
+            <view class="info_">
+                    <view>年龄 :     </view>
+                    <input type="text" model:value="{{info.age}}" bindinput="getChange_age"/>
+                </view>
+        </view>
+
+        <view class="info" >
+            <view class="info_">
+                    <view>联系电话 :     </view>
+                    <input type="text" model:value="{{info.phone}}" bindinput="getChange_phone"/>
+                </view>
+        </view>
+
+        <view class="info" >
+            <view class="info_">
+                    <view>紧急联系人 :     </view>
+                    <input type="text" model:value="{{info.sosPhone}}" bindinput="getChange_sosphone"/>
+                </view>
+        </view>
+
+        <view class="info" >
+            <view class="info_">
+                    <view>分工 :     </view>
+                    <input type="text" model:value="{{info.work}}" bindinput="getChange_work"/>
+                </view>
+        </view>
+
+        <view class="OK" bindtap="modify">
+            <view>
+                <text>完成修改</text>
+            </view>
         </view>
 
     </view>

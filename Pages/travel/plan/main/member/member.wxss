@@ -37,7 +37,7 @@
     background-color: rgb(221, 209, 186);
     display: flex;
     border: 1rpx solid #7B8B6F;
-    height: 110rpx;
+    height: 100rpx;
     margin-left: 15px;
 }
 
@@ -50,4 +50,18 @@
     font-weight: bold;
     font-size: 30rpx;
     padding: 10rpx 0 10rpx 40rpx;
+}
+
+.OK{
+    position: absolute; 
+    left: 135px; 
+    top: 550px; 
+    font-size: 22px; 
+    text-align: center; 
+    color: #000;
+    background-color: #d8caaf;
+    width: 102px; 
+    height: 38px; 
+    justify-items: center;
+    align-items: center;
 }

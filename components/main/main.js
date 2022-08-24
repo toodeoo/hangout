@@ -71,6 +71,7 @@ Component({
         goCheck($event) {
             let opt = $event.currentTarget.dataset.opt
             console.log(opt, 'ashdjhasjdhjashsdja')
+            wx.setStorageSync('time', opt.title)
             wx.navigateTo({
                 url: '/Pages/travel/plan/main/checked/checked',
             })

@@ -7,7 +7,7 @@
             计划打卡
         </view>
         <view class="tripInfo" style="background-color:{{src?'':'rgb(196,196,196)'}};">
-            <image src="{{src}}"></image>
+            <image src="{{imagePath}}"></image>
         </view>
         <view class="tripInfo-input">
             <input type="text" placeholder="点击输入" model:value="{{inputVal}}" />
