@@ -4,7 +4,15 @@ Page({
      */
     data: {
         inputVal:"",
-        src:""
+        src:"",
+        imagePath: "",
+        dict: {
+          "早饭": "breakfast",
+          "上午": "morning",
+          "午饭": "lunch",
+          "下午": "afternoon",
+          "晚饭": "dinner"
+        }
     },
     previous(){
         // 跳回上一页
@@ -21,18 +29,57 @@ Page({
             sourceType: ['album', 'camera'],
             maxDuration: 30,
             camera: 'back',
-            success(res) {
+            success: (res) => {
                 that.setData({
-                    src: res.tempFiles[0].tempFilePath
+                  imagePath: res.tempFiles[0].tempFilePath
                 })
+                wx.uploadFile({
+                  filePath: res.tempFiles[0].tempFilePath,
+                  name: 'file',
+                  url: 'https://hangout.wang/hangout/travel/uploadImg',
+                  formData:{
+                    travelId: wx.getStorageSync('travelId'),
+                    token: wx.getStorageSync('token'),
+                    time: that.data.dict[wx.getStorageSync('time')],
+                    text: this.data.inputVal //文字信息
+                  },
+                  success: (res)=>{
+                    console.log(res)
+                  },
+                  fail: (res)=>{
+                    console.log(res.errMsg)
+                  }
+                }).onProgressUpdate(
+                  (res)=>{
+                    console.log(res.progress)
+                  }
+                );
             }
           })
+    },
+    getImagePath: function(e) {
+      let that = this;
+      wx.request({
+        url: 'https://hangout.wang/hangout/travel/downloadImg',
+        method: 'GET',
+        data: {
+          token: wx.getStorageSync('token'),
+          travelId: wx.getStorageSync('travelId'),
+          time: that.data.dict[wx.getStorageSync('time')]
+        },
+        success: (res) => {
+          let path = res.data.travelImg.filePath
+          that.setData({
+            imagePath: path
+          })
+        }
+      })
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.id = options.id
     },
 
     /**
@@ -46,7 +93,8 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      this.getImagePath()
+      console.log(this.data.imagePath)
     },
 
     /**

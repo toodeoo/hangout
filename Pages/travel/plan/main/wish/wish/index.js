@@ -87,6 +87,7 @@ Page({
           })
         }
       })
+      wx.setStorageSync('douzi', 200)
   },
 
   /**
@@ -113,7 +114,68 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    const half = this.selectComponent("#half").data.postlist;
+    const whole = this.selectComponent("#whole").data.postlist;
+    const eat = this.selectComponent("#eat").data.postlist;
+    console.log(half)
+    let isLeader = wx.getStorageSync('isLeader');
+    let data = {token: wx.getStorageSync('token'), isLeader:isLeader, item: [
+      {class: "half", wishList: []},
+      {class: "whole", wishList: []},
+      {class: "eat", wishList: []}
+    ]}
+    let temp = new Map();
+    for(let i = 0; i < half.length; i++){
+      if(temp.has(half[i].wish)){
+        let j = temp.get(half[i].wish)
+        j = j + half[i].douzi
+        temp.set(half[i].wish, j)
+      }
+      else {
+        temp.set(half[i].wish, half[i].douzi);
+      }
+    }
+    for(let [k, v] of temp){
+      data.item[0].wishList.push({wish: k, douzi: v})
+    }
+    temp.clear();
+    for(let i = 0; i < whole.length; i++){
+      if(temp.has(whole[i].wish)){
+        let j = temp.get(whole[i].wish)
+        j = j + whole[i].douzi
+        temp.set(whole[i].wish, j)
+      }
+      else {
+        temp.set(whole[i].wish, whole[i].douzi);
+      }
+    }
+    for(let [k, v] of temp){
+      data.item[1].wishList.push({wish: k, douzi: v})
+    }
+    temp.clear();
+    for(let i = 0; i < eat.length; i++){
+      if(temp.has(eat[i].wish)){
+        let j = temp.get(eat[i].wish)
+        j = j + eat[i].douzi
+        temp.set(eat[i].wish, j)
+      }
+      else {
+        temp.set(eat[i].wish, eat[i].douzi);
+      }
+    }
+    for(let [k, v] of temp){
+      data.item[2].wishList.push({wish: k, douzi: v})
+    }
+    wx.request({
+      url: 'https://hangout.wang/hangout/wish/endVote',
+      method: 'POST',
+      data: data,
+      success: (res)=>{
+        if(isLeader == 1){
+          wx.setStorageSync('wishList', res.data.wishList)
+        }
+      }
+    })
   },
 
   /**
