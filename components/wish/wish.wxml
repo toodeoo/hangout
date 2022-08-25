@@ -45,6 +45,6 @@
                     <input type="text" model:value="{{item.value}}"/>
                 </view>        
         </view>
-        <button class="addDesire">添加我的愿望</button>
+        <picker mode="selector" range="{{class}}" class="addDesire" bindchange="classSelect" value="{{class_index}}"><view>添加我的愿望</view></picker>
     </view>
 </view>

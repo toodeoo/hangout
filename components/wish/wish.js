@@ -11,6 +11,8 @@ Component({
      * 组件的初始数据
      */
     data: {
+      class:["/","餐饮","景点","住宿"],
+      class_index: 0,
         isOpenMap:{
             "餐饮":true,
             "景点":true,
@@ -27,13 +29,20 @@ Component({
                 {key:"洗后提：",value:"隔音好点而就行"}
             ],
         },
-        tripTitle: "圆南方群友的梦"
+        tripTitle: wx.getStorageSync('theme')
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
+      
+      classSelect:function(e){
+        this.setData({
+            class_index: e.detail.value
+          })
+      },
+
         onRet:function(){
             wx.redirectTo({
               url: '/Pages/menu/menu',
@@ -53,5 +62,19 @@ Component({
               url: '/Pages/travel/plan/main/menu',
             })
         },
-    }
+    },
+
+    ready:function(options){
+      wx.request({
+        url: 'https://hangout.wang/hangout/travel/getWish?travelId=' + wx.getStorageSync('travelId'),
+        method: 'GET',
+        success:(res)=>{
+          console.log(res.data)
+          this.setData({
+            activity: res.data.class
+          })
+        }
+      })
+    },
+
 })

@@ -68,6 +68,7 @@ Page({
           time: that.data.dict[wx.getStorageSync('time')]
         },
         success: (res) => {
+          console.log(res.data)
           let path = res.data.travelImg.filePath
           that.setData({
             imagePath: path
@@ -75,6 +76,12 @@ Page({
         }
       })
     },
+
+    onRet:function(){
+      wx.redirectTo({
+        url: '/Pages/menu/menu',
+      })
+  },
     /**
      * 生命周期函数--监听页面加载
      */

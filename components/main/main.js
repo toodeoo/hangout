@@ -45,13 +45,15 @@ Component({
       randomNum: 0,
       date: "07-21",
       displayDate: String,
-      tripTitle: wx.getStorageSync('theme')
+      tripTitle: String
   },
 
   /**
    * 组件的方法列表
    */
-      bindDateChange(e) {
+      
+      methods: {
+        bindDateChange(e) {
           console.log('picker发送选择改变，携带值为', e)
           let value = e.detail.value
           wx.showLoading({
@@ -68,14 +70,15 @@ Component({
               wx.hideLoading()
           }, 500)
       },
-      goCheck($event) {
+        goCheck($event) {
           let opt = $event.currentTarget.dataset.opt
+          wx.setStorageSync('time', opt.title)
           console.log(opt, 'ashdjhasjdhjashsdja')
           wx.navigateTo({
               url: '/Pages/travel/plan/main/checked/checked',
           })
       },
-      methods: {
+
         ret:function(){
           wx.redirectTo({
             url: '/Pages/travel/plan/main/menu',
@@ -113,9 +116,11 @@ Component({
             temp[2].desc = res.data.lunch;
             temp[3].desc = res.data.afternoon;
             temp[4].desc = res.data.dinner;
+            let theme = wx.getStorageSync('theme')
             this.setData({
               displayDate: res.data.date,
-              tripDetail: temp
+              tripDetail: temp,
+              tripTitle: theme
             })
           } 
         })
