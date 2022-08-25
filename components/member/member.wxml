@@ -9,7 +9,7 @@
             <view style="text-align: center;"> 成员信息表 </view>   
         </view>
     <!-- 线 -->
-        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
+        <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 0px;background-color:  #7B8B6F;"></view>
     <!-- 成员 -->
         <view class="leader" bindtap="goto" id="leader">
             <image class="headpic" src='{{leader.avatar}}'></image>
