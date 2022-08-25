@@ -11,7 +11,7 @@
     <!-- 线 -->
         <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>
     <!-- 成员 -->
-        <view class="leader" bindtap="goto">
+        <view class="leader" bindtap="goto" id="leader">
             <image class="headpic" src='{{leader.avatar}}'></image>
             <view class="labordiv">
                 <view class="labor">{{leader.work}}</view>
@@ -22,7 +22,7 @@
             <image src="/asset/img/icon-leaderwithbg.png" class="leaderpic"></image>
         </view>
 
-        <view class="member" bindtap="goto2" wx:for="{{member}}" wx:key="index" data-index="{{index}}">
+        <view class="member" bindtap="goto2" wx:for="{{member}}" wx:key="index" data-index="{{index}}" id="{{index}}">
             <image class="headpic" src='{{item.avatar}}'></image>
             <view class="labordiv">
                 <view class="labor2">{{item.work}}</view>

@@ -27,8 +27,38 @@ Page({
         return false;
       } else {
         that.setData({
-          currentTab: e.target.dataset.current,
+          currentTab: e.target.dataset.current
         });
+      }
+
+      if(e.target.dataset.current === 1){
+        const m = this.selectComponent(".wish")
+        let act = m.data.activity;
+        wx.request({
+          url: 'https://hangout.wang/hangout/travel/getWish?travelId=' + wx.getStorageSync('travelId'),
+          method: 'GET',
+          success:(res)=>{
+            console.log(res.data)
+            if(res.data.eat != undefined){
+              for(let i in res.data.eat){
+                let j = i.split("：");
+                act["餐饮"] .push({key: j[0], value: j[1]});
+              }
+            }
+            if(res.data.place != undefined){
+              for(let i in res.data.eat){
+                let j = i.split("：");
+                act["景点"] .push({key: j[0], value: j[1]});
+              }
+            }
+            if(res.data.hotel != undefined){
+              for(let i in res.data.eat){
+                let j = i.split("：");
+                act["住宿"] .push({key: j[0], value: j[1]});
+              }
+            }
+          }
+        })
       }
     },
     

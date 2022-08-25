@@ -19,17 +19,16 @@ Component({
             "住宿":true
         },
         activity:{
-            "餐饮":[
-                {key:"Yuky：",value:"东北吃撸串"},
-                {key:"Austin：",value:"有一家店味道很不错"},
-                {key:"阿夕：",value:"不要辣、不要香菜"}
-            ],
+            "餐饮":[],
             "景点":[],
-            "住宿":[
-                {key:"洗后提：",value:"隔音好点而就行"}
-            ],
+            "住宿":[],
         },
-        tripTitle: wx.getStorageSync('theme')
+        tripTitle: wx.getStorageSync('theme'),
+        dict: {
+          "餐饮": "eat",
+          "景点": "place",
+          "住宿": "hotel"
+        }
     },
 
     /**
@@ -38,9 +37,35 @@ Component({
     methods: {
       
       classSelect:function(e){
-        this.setData({
-            class_index: e.detail.value
-          })
+        let flag = this.data.class[e.detail.value]
+        console.log(flag)
+        let username = wx.getStorageSync('username')
+        let act = this.data.activity
+        wx.showModal({
+          title: "输入你的愿望",
+          editable: true,
+          success: (res)=>{
+            if(res.confirm){
+              wx.request({
+                url: 'https://hangout.wang/hangout/travel/postWish',
+                method: 'POST',
+                data:{
+                  token: wx.getStorageSync('token'),
+                  class: this.data.dict[flag],
+                  text: res.content,
+                  travelId: wx.getStorageSync('travelId')
+                },
+                success: (res)=>{
+                  console.log(res.data.code)
+                }
+              })
+              act[flag].push({key: username + "： ", value: res.content})
+              this.setData({
+                activity: act
+              })
+            }
+          }
+        })
       },
 
         onRet:function(){
@@ -62,19 +87,6 @@ Component({
               url: '/Pages/travel/plan/main/menu',
             })
         },
-    },
-
-    ready:function(options){
-      wx.request({
-        url: 'https://hangout.wang/hangout/travel/getWish?travelId=' + wx.getStorageSync('travelId'),
-        method: 'GET',
-        success:(res)=>{
-          console.log(res.data)
-          this.setData({
-            activity: res.data.class
-          })
-        }
-      })
-    },
+    }
 
 })
