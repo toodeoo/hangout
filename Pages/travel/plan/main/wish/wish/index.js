@@ -78,8 +78,12 @@ Page({
   onLoad(options) {
     const half = this.selectComponent('#half')
       wx.request({
-        url: 'https://hangout.wang/hangout/wish/getWish?class=half&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        url: 'https://hangout.wang/hangout/wish/getWish?class=half',
         method: 'GET',
+        data:{
+          token: wx.getStorageSync('token'),
+          travelId: wx.getStorageSync('travelId')
+        },
         success:(res)=>{
           console.log(res.data.wishList)
           half.setData({

@@ -30,7 +30,7 @@ Page({
      */
     onLoad: function (options) {
       wx.request({
-        url: 'https://hangout.wang/hangout/whisper/historyMsg?username='+app.globalData.userInfo.nickName,
+        url: 'https://hangout.wang/hangout/whisper/historyMsg?username='+ wx.getStorageSync('username'),
         method: "GET",
         success: (res)=>{
           console.log(res.data)

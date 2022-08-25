@@ -6,6 +6,7 @@ Page({
    */
   data: {
     username: wx.getStorageSync('username'),
+    isLeader: 0,
     info:[
 
     ]
@@ -47,9 +48,9 @@ wx.setStorage({
 },
 
   ret:function(){
-      wx.redirectTo({
-        url: '/Pages/menu/menu',
-      })
+    wx.navigateBack({
+      delta: 1,
+    })
   },
 
   modify:function(){
@@ -75,21 +76,22 @@ wx.setStorage({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let travelId = wx.getStorage({
-      key:'travelId'
-    })
+    let travelId = wx.getStorageSync('travelId')
     wx.request({
-      url: 'https://hangout.wang/hangout/member/details?travelId=0&username=未知',
+      url: 'https://hangout.wang/hangout/member/details',
       method: "GET",
+      data:{
+        travelId: travelId,
+        username: wx.getStorageSync('tempusername')
+      },
       success: (res)=>{
         console.log(res.data)
         let isLeader = res.data.isLeader;
-        if(isLeader == 0){
-            this.setData({
-              info: res.data,
-            })
-        }
-        
+        this.setData({
+          isLeader: isLeader,
+          info: res.data
+        })
+        wx.removeStorageSync('tempusername')
     }
     
   })

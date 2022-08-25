@@ -28,7 +28,7 @@
 }
 /* 行程信息 */
 .tripInfo{
-    width: 70%;
+    width: 600rpx;
     height: 300rpx;
     margin-top: 80rpx;
 }

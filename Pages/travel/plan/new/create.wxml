@@ -12,7 +12,7 @@
 
     <view class="go">
         <view>给行程取个炫酷的名字吧！</view>
-        <textarea style="height: 5vh;width: 70vw;background-color: #D8CAAF;"></textarea>
+        <textarea style="height: 5vh;width: 70vw;background-color: #D8CAAF;" bindblur="getTheme"></textarea>
     </view>
 
     <view class="arrive">

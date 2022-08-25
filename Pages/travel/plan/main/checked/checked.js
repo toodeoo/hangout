@@ -57,21 +57,26 @@ Page({
             }
           })
     },
-    getImagePath: function(e) {
+   getImagePath: function(e) {
       let that = this;
+      let token = wx.getStorageSync('token');
+      let travelId = wx.getStorageSync('travelId');
+      let time = that.data.dict[wx.getStorageSync('time')];
       wx.request({
         url: 'https://hangout.wang/hangout/travel/downloadImg',
         method: 'GET',
         data: {
-          token: wx.getStorageSync('token'),
-          travelId: wx.getStorageSync('travelId'),
-          time: that.data.dict[wx.getStorageSync('time')]
+          token: token,
+          travelId: travelId,
+          time: time
         },
         success: (res) => {
-          console.log(res.data)
+          console.log(res.data.travelImg)
           let path = res.data.travelImg.filePath
+          let text = res.data.travelImg.text
           that.setData({
-            imagePath: path
+            imagePath: path,
+            inputVal: text
           })
         }
       })
@@ -101,7 +106,6 @@ Page({
      */
     onShow: function () {
       this.getImagePath()
-      console.log(this.data.imagePath)
     },
 
     /**

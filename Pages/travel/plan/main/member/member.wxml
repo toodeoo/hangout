@@ -8,9 +8,10 @@
 
     <view  style="display: block;">
     <!-- 标题 -->
-        <view style="display: flex" class="title">
+    <view style="display: flex" class="title">
             <view class="ret" bindtap="ret"> ＜ </view>
-            <view style="text-align: center;"> {{username}} </view>   
+            <image wx:if="{{isLeader == 1}}" class = "leader" src="/asset/img/icon-leader.png"></image>
+            <view style="text-align: center;"> {{id}} </view>   
         </view>
     <!-- 线 -->
         <view style="margin-left: 0;margin-top: 25px;width: 330px;height: 1px;background-color:  #7B8B6F;"></view>

@@ -11,7 +11,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-      leader:[],
+      leader: Object,
       member:[]
   },
 
@@ -20,12 +20,14 @@ Component({
      */
     methods: {
 
-        goto:function(){
+        goto:function(e){
+          wx.setStorageSync('tempusername', this.data.leader.username)
             wx.navigateTo({
-              url: '/Pages/travel/plan/main/member/leader',
+              url: '/Pages/travel/plan/main/member/member',
             })
         },
-        goto2:function(){
+        goto2:function(e){
+          wx.setStorageSync('tempusername', this.data.member[e.currentTarget.dataset.index].username)
             wx.navigateTo({
               url: '/Pages/travel/plan/main/member/member',
             })
