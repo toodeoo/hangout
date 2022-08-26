@@ -85,19 +85,24 @@ Component({
      * 用户点击右上角分享
      */
     onShareAppMessage() {
-      const promise = new Promise(resolve => {
-        setTimeout(() => {
-          resolve({
-            title: '您有一个新的行程邀请！'
-          })
-        }, 2000)
+      wx.updateShareMenu({
+          isPrivateMessage: true,
+          withShareTicket: true,
+          activityId: wx.getStorageSync('activityId'),
       })
-      return {
-        title: '您有一个新的行程邀请！',
-        path: '/Pages/travel/plan/main/wish/wish/index',
-        promise 
-      }
-    }
+      const promise = new Promise(resolve => {
+          setTimeout(() => {
+            resolve({
+              title: '您有一个新的行程邀请！'
+              })
+          }, 2000)
+          })
+          return {
+              title: '您有一个新的行程邀请！',
+              path: '/Pages/travel/plan/main/wish/wish/index',
+              promise 
+        }
+  }
 
     }
 })
