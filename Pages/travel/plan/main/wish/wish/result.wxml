@@ -12,10 +12,10 @@
 
     <view class="section {{reply1?'on':'off'}}">
         <view id="wish-list" class="wish-list">
-            <view class="content" wx:for="{{placeArr0}}" wx:key="*this">
-              <view class="douzi">148</view>
+            <view class="content" wx:for="{{half}}" wx:key="*this">
+              <view class="douzi">{{item.summaryDouzi}}</view>
               <view style="flex: 1;">
-                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item.wish}}</view>
               </view>
             </view>
         </view>
@@ -32,10 +32,10 @@
     </view>
     <view class="section {{reply2?'on':'off'}}">
         <view id="wish-list" class="wish-list">
-            <view class="content" wx:for="{{placeArr1}}" wx:key="*this">
-              <view class="douzi">148</view>
+            <view class="content" wx:for="{{whole}}" wx:key="*this">
+              <view class="douzi">{{item.summaryDouzi}}</view>
               <view style="flex: 1;">
-                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item.wish}}</view>
               </view>
             </view>
         </view>
@@ -52,10 +52,10 @@
     </view>
     <view class="section {{reply3?'on':'off'}}">
         <view id="wish-list" class="wish-list">
-            <view class="content" wx:for="{{placeArr2}}" wx:key="*this">
-              <view class="douzi">148</view>
+            <view class="content" wx:for="{{eat}}" wx:key="*this">
+              <view class="douzi">{{item.summaryDouzi}}</view>
               <view style="flex: 1;">
-                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item}}</view>
+                <view id="0" style="justify-content: center;align-items: center;flex-direction: row;font-weight: bold;font-size: 20px;padding: 10rpx 0 10rpx 40rpx;"> {{item.wish}}</view>
               </view>
             </view>
         </view>

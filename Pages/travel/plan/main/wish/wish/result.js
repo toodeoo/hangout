@@ -7,13 +7,14 @@ Page({
     data: {
         arrive: ["请选择","半日行程","一日行程","干饭地点"],
         arrive_index: 0,
-        member_num: 8,
-        placeArr0: ["我要去游泳！","打麻将打麻将！！！"],
-        placeArr1: ["Let's 去看海哈哈哈！","环球影城环球影城gogogo！"],
-        placeArr2: ["我要喝茶颜悦色！","好饿！"],
+        member_num: 0,
+        half: [],
+        whole: [],
+        eat: []
     },
 
     onOK: function(){
+      wx.removeStorageSync('wishList')
         wx.redirectTo({
             url: '/Pages/travel/plan/main/menu',
           })
@@ -49,7 +50,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let wishList = wx.getStorageSync('wishList')
+      this.setData({
+        half: wishList.half,
+        whole: wishList.whole,
+        eat: wishList.eat,
+        member_num: wx.getStorageSync('memberNum')
+      })
     },
 
     /**
