@@ -107,7 +107,7 @@ Component({
           url: 'https://hangout.wang/hangout/travel/details',
           method: 'GET',
           data: {
-            travelId: this.id
+            travelId: wx.getStorageSync('travelId')
           },
           success: (res) => {
             console.log(res.data)

@@ -33,9 +33,15 @@ Page({
     }
     if(e.target.dataset.current == 0){
       const half = this.selectComponent('#half')
+      let travelId = wx.getStorageSync('travelId')
+      let token = wx.getStorageSync('token')
       wx.request({
-        url: 'https://hangout.wang/hangout/wish/getWish?class=half&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        url: 'https://hangout.wang/hangout/wish/getWish?class=half',
         method: 'GET',
+        data: {
+          token: token,
+          travelId: travelId
+        },
         success:(res)=>{
           console.log(res.data.wishList)
           half.setData({
@@ -46,9 +52,15 @@ Page({
     }
     else if(e.target.dataset.current == 1){
       const whole = this.selectComponent('#whole')
+      let travelId = wx.getStorageSync('travelId')
+      let token = wx.getStorageSync('token')
       wx.request({
-        url: 'https://hangout.wang/hangout/wish/getWish?class=whole&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        url: 'https://hangout.wang/hangout/wish/getWish?class=whole',
         method: 'GET',
+        data: {
+          token: token,
+          travelId: travelId
+        },
         success:(res)=>{
           console.log(res.data.wishList)
           whole.setData({
@@ -59,9 +71,15 @@ Page({
     }
     else {
       const eat = this.selectComponent("#eat")
+      let travelId = wx.getStorageSync('travelId')
+      let token = wx.getStorageSync('token')
       wx.request({
-        url: 'https://hangout.wang/hangout/wish/getWish?class=eat&token=osDXq5IFPw3eERUD8LejfgAF0108&travelId=1',
+        url: 'https://hangout.wang/hangout/wish/getWish?class=eat',
         method: 'GET',
+        data: {
+          token: token,
+          travelId: travelId
+        },
         success:(res)=>{
           console.log(res.data.wishList)
           eat.setData({
@@ -121,9 +139,9 @@ Page({
     const half = this.selectComponent("#half").data.postlist;
     const whole = this.selectComponent("#whole").data.postlist;
     const eat = this.selectComponent("#eat").data.postlist;
-    console.log(half)
     let isLeader = wx.getStorageSync('isLeader');
-    let data = {token: wx.getStorageSync('token'), isLeader:isLeader, item: [
+    let travelId = wx.getStorageSync('travelId')
+    let data = {token: wx.getStorageSync('token'), isLeader:isLeader, travelId: travelId, item: [
       {class: "half", wishList: []},
       {class: "whole", wishList: []},
       {class: "eat", wishList: []}
@@ -170,6 +188,7 @@ Page({
     for(let [k, v] of temp){
       data.item[2].wishList.push({wish: k, douzi: v})
     }
+    console.log(data)
     wx.request({
       url: 'https://hangout.wang/hangout/wish/endVote',
       method: 'POST',
@@ -177,6 +196,10 @@ Page({
       success: (res)=>{
         if(isLeader == 1){
           wx.setStorageSync('wishList', res.data.wishList)
+          wx.setStorageSync('memberNum', res.data.memberNum)
+          wx.redirectTo({
+            url: '/Pages/travel/plan/main/wish/wish/result',
+          })
         }
       }
     })

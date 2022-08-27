@@ -40,23 +40,27 @@ Page({
           success:(res)=>{
             console.log(res.data)
             if(res.data.eat != undefined){
-              for(let i in res.data.eat){
-                let j = i.split("：");
+              for(let i of res.data.eat){
+                let j = i.split(" ");
+                console.log(j[0])
                 act["餐饮"] .push({key: j[0], value: j[1]});
               }
             }
             if(res.data.place != undefined){
-              for(let i in res.data.eat){
-                let j = i.split("：");
+              for(let i of res.data.place){
+                let j = i.split(" ");
                 act["景点"] .push({key: j[0], value: j[1]});
               }
             }
             if(res.data.hotel != undefined){
-              for(let i in res.data.eat){
-                let j = i.split("：");
+              for(let i of res.data.hotel){
+                let j = i.split(" ");
                 act["住宿"] .push({key: j[0], value: j[1]});
               }
             }
+            m.setData({
+              activity: act
+            })
           }
         })
       }

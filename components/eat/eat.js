@@ -64,7 +64,7 @@ Component({
             success (res){
               if (res.confirm) {
                 wx.redirectTo({
-                  url: '/Pages/travel/plan/main/wish/wish/result',
+                  url: '/Pages/travel/plan/main/wish/wish/fail',
                 })
               }
             }
