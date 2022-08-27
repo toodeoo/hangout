@@ -51,9 +51,9 @@ Page({
         method: 'POST',
         data:{
           class: this.data.class[this.data.arrive_index-1],
-          token: 'osDXq5IFPw3eERUD8LejfgAF0108',
+          token: wx.getStorageSync('token'),
           wish: this.data.text,
-          travelId: 1
+          travelId: wx.getStorageSync('travelId')
         },
         success:(res)=>{
           console.log(res.data.code)

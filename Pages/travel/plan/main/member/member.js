@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: wx.getStorageSync('username'),
+    username: String,
     isLeader: 0,
     info:[
 
@@ -13,38 +13,23 @@ Page({
 },
 
 getChange_sex:function(e){
-  wx.setStorage({
-    key:"sex",
-    data:e.detail.value
-  })
+  wx.setStorageSync('sex', e.detail.value)
 },
 
 getChange_age:function(e){
-wx.setStorage({
-  key:"age",
-  data:e.detail.value
-})
+  wx.setStorageSync('age', e.detail.value)
 },
 
 getChange_phone:function(e){
-wx.setStorage({
-  key:"phone",
-  data:e.detail.value
-})
+  wx.setStorageSync('phone', e.detail.value)
 },
 
 getChange_sosphone:function(e){
-wx.setStorage({
-  key:"sosphone",
-  data:e.detail.value
-})
+wx.setStorageSync('sosphone', e.detail.value)
 },
 
 getChange_work:function(e){
-wx.setStorage({
-  key:"work",
-  data:e.detail.value
-})
+  wx.setStorageSync('work', e.detail.value)
 },
 
   ret:function(){
@@ -64,12 +49,15 @@ wx.setStorage({
           phone: wx.getStorageSync('phone'),
           sosphone: wx.getStorageSync('sosphone'),
           work: wx.getStorageSync('work'),
-          travelId: 0,
+          travelId: wx.getStorageSync('travelId'),
           token: wx.getStorageSync('token')
       },
       success: (res)=>{
         console.log(res.data)
       }
+      })
+      wx.navigateBack({
+        delta: 1,
       })
   },
   /**
@@ -89,7 +77,8 @@ wx.setStorage({
         let isLeader = res.data.isLeader;
         this.setData({
           isLeader: isLeader,
-          info: res.data
+          info: res.data,
+          username: wx.getStorageSync('tempusername')
         })
         wx.removeStorageSync('tempusername')
     }

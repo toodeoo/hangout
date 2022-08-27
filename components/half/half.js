@@ -85,10 +85,9 @@ Component({
      * 用户点击右上角分享
      */
     onShareAppMessage() {
-      wx.updateShareMenu({
-          isPrivateMessage: true,
-          withShareTicket: true,
-          activityId: wx.getStorageSync('activityId'),
+      wx.showShareMenu({
+        withShareTicket: true,
+        menus: ['shareAppMessage'],
       })
       const promise = new Promise(resolve => {
           setTimeout(() => {
