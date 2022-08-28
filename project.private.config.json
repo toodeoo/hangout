@@ -25,17 +25,6 @@
             "groupIdx": 0,
             "groupName": "测试模拟群0"
           }
-        },
-        {
-          "name": "",
-          "pathName": "Pages/travel/plan/main/wish/wish/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": 1007,
-          "groupInfo": {
-            "groupIdx": 0,
-            "groupName": "测试模拟群0"
-          }
         }
       ]
     }

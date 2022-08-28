@@ -24,45 +24,37 @@
             <view style="height: 30px; width: 25px;"></view>
         </view>
 
-        <!-- 信息框 -->
-        <!-- <view class="info" wx:for="{{info}}" wx:key="index" data-index="{{index}}">
-            <view class="info_">
-                    <view>性别 :     </view>
-                    <input type="text" model:value="{{item.sex}}"/>
-                </view>
-        </view> -->
-
         <view class="info" >
             <view class="info_">
-                    <view>性别 :     </view>
+                    <view>性别: </view>
                     <input type="text" model:value="{{info.sex}}" bindinput="getChange_sex"/>
                 </view>
         </view>
 
         <view class="info" >
             <view class="info_">
-                    <view>年龄 :     </view>
+                    <view>年龄: </view>
                     <input type="text" model:value="{{info.age}}" bindinput="getChange_age"/>
                 </view>
         </view>
 
         <view class="info" >
             <view class="info_">
-                    <view>联系电话 :     </view>
+                    <view>联系电话: </view>
                     <input type="text" model:value="{{info.phone}}" bindinput="getChange_phone"/>
                 </view>
         </view>
 
         <view class="info" >
             <view class="info_">
-                    <view>紧急联系人 :     </view>
-                    <input type="text" model:value="{{info.sosPhone}}" bindinput="getChange_sosphone"/>
-                </view>
+                    <text style="width: 35%;">紧急联系人: </text>
+                    <input type="text" maxlength="15" model:value="{{info.sosPhone}}" bindinput="getChange_sosphone"/>
+              </view>
         </view>
 
         <view class="info" >
             <view class="info_">
-                    <view>分工 :     </view>
+                    <view>分工: </view>
                     <input type="text" model:value="{{info.work}}" bindinput="getChange_work"/>
                 </view>
         </view>

@@ -38,6 +38,12 @@ getChange_work:function(e){
     })
   },
 
+  onRet:function(){
+    wx.redirectTo({
+      url: '/Pages/menu/menu',
+    })
+},
+
   modify:function(){
       wx.request({
         url: 'https://hangout.wang/hangout/user/modifyMsg',

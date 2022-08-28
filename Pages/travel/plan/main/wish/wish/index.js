@@ -1,4 +1,5 @@
 // Pages/wish/index.js
+const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -91,6 +92,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage'],
+    })
     const half = this.selectComponent("#half");
     wx.request({
       url: "https://hangout.wang/hangout/wish/getWish?class=half",
@@ -106,6 +111,7 @@ Page({
         });
       },
     });
+    console.log("here is getWish")
     wx.setStorageSync("douzi", 200);
   },
 
@@ -216,5 +222,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {},
+  onShareAppMessage() {
+    const act = wx.getStorageSync('activityId');
+    console.log(act)
+      return {
+          title: '您有一个新的行程邀请！',
+          path: '/Pages/travel/plan/main/wish/wish/index?activityId=' + act,
+    }
+  },
 });

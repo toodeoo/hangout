@@ -9,20 +9,20 @@ App({
 
   onShow: function (e) {
     console.log(e);
-    wx.setStorageSync("shareTicket_", e.shareTicket);
+    console.log(wx.getStorageSync('token'))
     wx.getShareInfo({
-      shareTicket: wx.getStorageSync('shareTicket_'),
+      shareTicket: e.shareTicket,
       success: (res)=>{
-        console.log(res.errMsg)
         wx.request({
           url: "https://hangout.wang/hangout/travel/share",
           method: "POST",
           data: {
             token: wx.getStorageSync("token"),
-            activityId: wx.getStorageSync('activityId')
+            activityId: e.query.activityId
           },
           success: (res) => {
-            console.log(res.data);
+            console.log(res)
+            console.log("travelId = " + res.data.travelId);
             wx.setStorageSync("travelId", res.data.travelId);
           },
         });
@@ -31,6 +31,7 @@ App({
   },
 
   onLaunch: function (e) {
+    wx.setStorageSync("shareTicket_", e.shareTicket);
     wx.authorize({
       scope: "scope.userInfo",
       success: () => {

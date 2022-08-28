@@ -23,7 +23,9 @@ Page({
             this.getRd()
         }
         else {
-            console.log("范围太小")
+            wx.showModal({
+              title: '范围太小啦'
+            })
         }
     },
 

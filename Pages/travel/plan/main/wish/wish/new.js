@@ -56,7 +56,7 @@ Page({
           travelId: wx.getStorageSync('travelId')
         },
         success:(res)=>{
-          console.log(res.data.code)
+          console.log("post wish code is " + res.data.code)
         },
         fail:(res)=>{
           console.log(res.errMsg)

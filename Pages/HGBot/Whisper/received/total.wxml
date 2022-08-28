@@ -6,7 +6,7 @@
       {{item.time}}
     </view> 
     <view>
-      <textarea class="whisper">{{item.text}}</textarea>
+      <view class="whisper">{{item.text}}</view>
       <view style="padding: 0;margin: 0;height: 25px;"></view>
     </view>
 </view>
