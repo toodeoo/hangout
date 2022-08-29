@@ -43,23 +43,86 @@ Page({
               for(let i of res.data.eat){
                 let j = i.split(" ");
                 console.log(j[0])
-                act["餐饮"] .push({key: j[0], value: j[1]});
+                let flag = 0;
+                for(let k of act["餐饮"]){
+                  if(k.value === j[1]){
+                    flag = 1;
+                    break;
+
+                  }
+                  else {
+                    continue
+                  }
+                }
+                if(flag == 0 || act["餐饮"].length == 0){
+                  act["餐饮"] .push({key: j[0], value: j[1]});
+                }
               }
             }
             if(res.data.place != undefined){
               for(let i of res.data.place){
                 let j = i.split(" ");
-                act["景点"] .push({key: j[0], value: j[1]});
+                let flag = 0;
+                for(let k of act["景点"]){
+                  if(k.value === j[1]){
+                    flag = 1;
+                    break;
+
+                  }
+                  else {
+                    continue
+                  }
+                }
+                if(flag == 0 || act["景点"].length == 0){
+                  act["景点"] .push({key: j[0], value: j[1]});
+                }
               }
             }
             if(res.data.hotel != undefined){
               for(let i of res.data.hotel){
                 let j = i.split(" ");
-                act["住宿"] .push({key: j[0], value: j[1]});
+                let flag = 0;
+                for(let k of act["住宿"]){
+                  if(k.value === j[1]){
+                    flag = 1;
+                    break;
+
+                  }
+                  else {
+                    continue
+                  }
+                }
+                if(flag == 0 || act["住宿"].length == 0){
+                  act["住宿"] .push({key: j[0], value: j[1]});
+                }
               }
             }
             m.setData({
               activity: act
+            })
+          }
+        })
+      }
+      else if(e.target.dataset.current === 2){
+        const m = this.selectComponent("#member")
+        let travelId = wx.getStorageSync('travelId')
+        wx.request({
+          url: 'https://hangout.wang/hangout/member/list?travelId='+travelId,
+          method: "GET",
+          success: (res)=>{
+            let leader;
+            let member = []
+            for(let i of res.data.member){
+              if(i.isLeader == 1){
+                leader = i
+              }
+              else {
+                member.push(i)
+              }
+            }
+            m.setData({
+              leader: leader,
+              member: member
             })
           }
         })

@@ -23,7 +23,7 @@ Component({
             "景点":[],
             "住宿":[],
         },
-        tripTitle: wx.getStorageSync('theme'),
+        tripTitle: String,
         dict: {
           "餐饮": "eat",
           "景点": "place",
@@ -87,6 +87,10 @@ Component({
               url: '/Pages/travel/plan/main/menu',
             })
         },
+    },
+    ready: function (params) {
+      this.setData({
+        tripTitle: wx.getStorageSync('theme')
+      })
     }
-
 })

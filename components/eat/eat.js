@@ -63,6 +63,7 @@ Component({
             title: '确定结束投票吗',
             success (res){
               if (res.confirm) {
+                wx.setStorageSync('endVote', 1)
                 wx.redirectTo({
                   url: '/Pages/travel/plan/main/wish/wish/fail',
                 })

@@ -19,7 +19,7 @@ Page({
          region:e.detail.value     //将用户选择的省市区赋值给region
      })
      //console.log(this.data.region)
-     wx.setStorageSync('region', e.detail.value[0]+e.detail.value[1]+e.detail.value[1])
+     wx.setStorageSync('region', e.detail.value[0]+e.detail.value[1]+e.detail.value[2])
   },
 
   onRet:function(){
@@ -60,6 +60,7 @@ Page({
           console.log(res.data),
           wx.setStorageSync('travelId', res.data.travelId)
           wx.setStorageSync('activityId', res.data.activityId)
+          wx.setStorageSync('isLeader', 1)
         },
       }) 
 

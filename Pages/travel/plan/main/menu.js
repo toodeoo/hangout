@@ -32,6 +32,7 @@ Page({
     goTrip($event){
         // let index = $event.currentTarget.dataset.index
         let id = $event.currentTarget.dataset.id
+        console.log(id)
         // let newTripList = this.data.tripList
         // newTripList.forEach(it=> it.checked = false)
         // newTripList[index].checked = !newTripList[index].checked 
@@ -40,7 +41,9 @@ Page({
         // })
 
         wx.setStorageSync('travelId', id)
-        wx.setStorageSync('theme', this.data.tripList[id].theme)
+        let len = this.data.tripList.length
+        console.log(this.data.tripList[len - id - 1].theme)
+        wx.setStorageSync('theme', this.data.tripList[len - id - 1].theme)
         
         // 跳转到对应的页面
         wx.navigateTo({

@@ -44,29 +44,4 @@ Component({
             })
         },
     },
-    ready: function(){
-      let travelId = wx.getStorageSync('travelId')
-      wx.request({
-        url: 'https://hangout.wang/hangout/member/list?travelId='+travelId,
-        method: "GET",
-        success: (res)=>{
-          let leader;
-          let member = []
-          for(let i of res.data.member){
-            if(i.isLeader == 1){
-              leader = i
-            }
-            else {
-              member.push(i)
-            }
-          }
-          console.log(leader)
-          console.log(member)
-          this.setData({
-            leader: leader,
-            member: member
-          })
-        }
-      })
-    }
 })

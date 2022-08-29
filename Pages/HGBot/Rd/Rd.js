@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        id:"洗后提",
+        id: String,
         a:0,
         b:0,
         rd:0,
@@ -23,7 +23,9 @@ Page({
             this.getRd()
         }
         else {
-            console.log("范围太小")
+            wx.showModal({
+              title: '范围太小啦'
+            })
         }
     },
 
@@ -63,7 +65,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        id: wx.getStorageSync('username')
+      })
     },
 
     /**

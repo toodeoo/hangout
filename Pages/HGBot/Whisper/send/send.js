@@ -14,18 +14,8 @@ Page({
           url: 'https://hangout.wang/hangout/whisper/write',
           method: 'POST',
           data: {
-              text: wx.getStorage({
-                key: 'text',
-                success(res){
-                  console.log("调用2后结果为"+res.data)
-                }
-              }),
-              person: wx.getStorage({
-                key: 'person',
-                success(res){
-                  console.log("调用2后结果为"+res.data)
-                }
-              })
+              text: wx.getStorageSync('text'),
+              person: wx.getStorageSync('person')
           },
           dataType: 'json',
           success: (res)=>{

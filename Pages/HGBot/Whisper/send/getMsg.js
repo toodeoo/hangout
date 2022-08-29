@@ -61,10 +61,7 @@ Page({
           if(res.data.code == 1){
             let whisper = res.data.whisper
             console.log(whisper)
-            wx.setStorage({
-              key: 'whisper',
-              data: whisper
-            })
+            wx.setStorageSync('whisper', whisper)
           }
         },
         fail: (res)=>{

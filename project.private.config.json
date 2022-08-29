@@ -14,6 +14,17 @@
             "shareName": "uSGWVgoBDEBrse_Dj8fDdpavsu_xvIUsUVaCMET8NvY@cr4dev",
             "shareKey": "nG63Rx1GemmHc3iNupCZn30hko1s7m9m8w4UdTpUtUyXtd69DOBBMffeZg-OgrFgMZ53D6HIckgojL-XNikyIw~~"
           }
+        },
+        {
+          "name": "",
+          "pathName": "Pages/travel/plan/main/wish/wish/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": 1044,
+          "groupInfo": {
+            "groupIdx": 0,
+            "groupName": "测试模拟群0"
+          }
         }
       ]
     }

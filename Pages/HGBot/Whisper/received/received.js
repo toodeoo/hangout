@@ -16,21 +16,12 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: async function (options) {
-      wx.getStorage({
-        key: 'whisper',
-        success: (res)=>{
-          this.setData({
-            whisper: res.data
-          })
-        },
-        fail: ()=>{
-          console.log("failed")
-        }
+    onLoad: function (options) {
+      let w = wx.getStorageSync('whisper')
+      this.setData({
+        whisper: w
       })
-      wx.removeStorage({
-        key: 'whisper',
-      })
+      wx.removeStorageSync('whisper')
     },
 
     /**

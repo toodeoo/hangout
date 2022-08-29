@@ -7,8 +7,31 @@ App({
     code: 0,
   },
 
+  onShow: function (e) {
+    console.log(e);
+    console.log(wx.getStorageSync('token'))
+    wx.getShareInfo({
+      shareTicket: e.shareTicket,
+      success: (res)=>{
+        wx.request({
+          url: "https://hangout.wang/hangout/travel/share",
+          method: "POST",
+          data: {
+            token: wx.getStorageSync("token"),
+            activityId: e.query.activityId
+          },
+          success: (res) => {
+            console.log(res)
+            console.log("travelId = " + res.data.travelId);
+            wx.setStorageSync("travelId", res.data.travelId);
+          },
+        });
+      }
+    })
+  },
+
   onLaunch: function (e) {
-    let shareTicket_ = e.shareTicket;
+    wx.setStorageSync("shareTicket_", e.shareTicket);
     wx.authorize({
       scope: "scope.userInfo",
       success: () => {
@@ -27,57 +50,40 @@ App({
     });
     console.log(this.data.username);
 
-    wx.checkSession({
-      success: (res) => {},
-      fail: () => {
-        wx.login({
-          timeout: 3000,
+    // wx.checkSession({
+    //   success: (res) => {},
+    //   fail: () => {
+
+    //   },
+    // });
+
+    wx.login({
+      timeout: 3000,
+      success: (res) => {
+        this.data.code = res.code;
+        console.log(this.data.code);
+        wx.request({
+          url: "https://hangout.wang/hangout/user/login",
+          method: "POST",
+          data: {
+            username: this.data.username,
+            avatar: this.data.avatar,
+            code: this.data.code,
+            phoneCode: "",
+          },
+          dataType: "json",
           success: (res) => {
-            this.data.code = res.code;
-            console.log(this.data.code);
-            wx.request({
-              url: "https://hangout.wang/hangout/user/login",
-              method: "POST",
-              data: {
-                username: this.data.username,
-                avatar: this.data.avatar,
-                code: this.data.code,
-                phoneCode: "",
-              },
-              dataType: "json",
-              success: (res) => {
-                console.log(res.data);
-                wx.setStorageSync("token", res.data.token);
-                this.globalData.token = res.token;
-              },
-              fail: (res) => {
-                console.log(res.errMsg);
-              },
-            });
+            console.log(res.data);
+            wx.setStorageSync("token", res.data.token);
+            this.globalData.token = res.token;
           },
           fail: (res) => {
-            console.log("0000");
+            console.log(res.errMsg);
           },
         });
       },
-    });
-
-    wx.authPrivateMessage({
-      shareTicket: shareTicket_,
-      success: (res) => {
-        wx.request({
-          url: "https://hangout.wang/hangout/travel/share",
-          method: "POST",
-          data: {
-            encryptedData: res.encryptedData,
-            iv: res.iv,
-            token: wx.getStorageSync("token"),
-          },
-          success: (res) => {
-            console.log(res.data);
-            wx.setStorageSync("travelId", res.data.travelId);
-          },
-        });
+      fail: (res) => {
+        console.log("0000");
       },
     });
   },
