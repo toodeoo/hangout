@@ -1,5 +1,5 @@
 // Pages/wish/index.js
-const app = getApp()
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -94,8 +94,8 @@ Page({
   onLoad(options) {
     wx.showShareMenu({
       withShareTicket: true,
-      menus: ['shareAppMessage'],
-    })
+      menus: ["shareAppMessage"],
+    });
     const half = this.selectComponent("#half");
     wx.request({
       url: "https://hangout.wang/hangout/wish/getWish?class=half",
@@ -111,7 +111,7 @@ Page({
         });
       },
     });
-    console.log("here is getWish")
+    console.log("here is getWish");
     wx.setStorageSync("douzi", 200);
   },
 
@@ -139,8 +139,8 @@ Page({
       const half = this.selectComponent("#half").data.postlist;
       const whole = this.selectComponent("#whole").data.postlist;
       const eat = this.selectComponent("#eat").data.postlist;
-      let isLeader = wx.getStorageSync("isLeader");
       let travelId = wx.getStorageSync("travelId");
+      let isLeader = wx.getStorageSync('isLeader');
       let data = {
         token: wx.getStorageSync("token"),
         isLeader: isLeader,
@@ -191,11 +191,13 @@ Page({
         data.item[2].wishList.push({ wish: k, douzi: v });
       }
       console.log(data);
+      console.log(isLeader)
       wx.request({
         url: "https://hangout.wang/hangout/wish/endVote",
         method: "POST",
         data: data,
         success: (res) => {
+          console.log(res.data)
           if (isLeader == 1) {
             wx.setStorageSync("wishList", res.data.wishList);
             wx.setStorageSync("memberNum", res.data.memberNum);
@@ -204,9 +206,13 @@ Page({
             });
           }
         },
+        fail: (res)=>{
+          console.log(res.errMsg)
+          console.log("endVote failed")
+        }
       });
     }
-    wx.removeStorageSync('endVote')
+    wx.removeStorageSync("endVote");
   },
 
   /**
@@ -223,11 +229,14 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {
-    const act = wx.getStorageSync('activityId');
-    console.log(act)
-      return {
-          title: '您有一个新的行程邀请！',
-          path: '/Pages/travel/plan/main/wish/wish/index?activityId=' + act,
-    }
+    const act = wx.getStorageSync("activityId");
+    console.log(act);
+    return {
+      title: "您有一个新的行程邀请！",
+      path:
+        "/Pages/travel/plan/main/wish/wish/index?activityId=" +
+        act +
+        "&isLeader=0",
+    };
   },
 });
