@@ -52,9 +52,9 @@ Page({
     onLoad: function (options) {
       let wishList = wx.getStorageSync('wishList')
       this.setData({
-        half: wishList.half,
-        whole: wishList.whole,
-        eat: wishList.eat,
+        half: wishList.half.sort((a, b)=>{return b.summaryDouzi - a.summaryDouzi}),
+        whole: wishList.whole.sort((a, b)=>{return b.summaryDouzi - a.summaryDouzi}),
+        eat: wishList.eat.sort((a, b)=>{return b.summaryDouzi - a.summaryDouzi}),
         member_num: wx.getStorageSync('memberNum')
       })
     },

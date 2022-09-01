@@ -42,8 +42,12 @@ Page({
 
         wx.setStorageSync('travelId', id)
         let len = this.data.tripList.length
-        console.log(this.data.tripList[len - id - 1].theme)
-        wx.setStorageSync('theme', this.data.tripList[len - id - 1].theme)
+        let t = len - id - 1
+        if(len == 1){
+          t = 0
+        }
+        console.log(this.data.tripList)
+        wx.setStorageSync('theme', this.data.tripList[t].theme)
         
         // 跳转到对应的页面
         wx.navigateTo({
